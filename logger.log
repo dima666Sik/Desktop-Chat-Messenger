@@ -1,0 +1,1674 @@
+[INFO ] 2023-08-26 16:28:12.381 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:28:16.038 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:28:16.454 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `dd` was not existed!
+[INFO ] 2023-08-26 16:28:16.705 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:28:16.729 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-08-26 16:28:16.984 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:28:17.034 [AWT-EventQueue-0] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-08-26 16:28:24.185 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:28:24.395 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:28:24.424 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:28:24.683 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:28:24.692 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - User with this email `dd` was existed!
+[INFO ] 2023-08-26 16:37:30.973 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:37:34.131 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:37:34.657 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:37:34.991 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:40:23.190 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:40:26.659 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:40:27.228 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:40:28.217 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:41:46.848 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:41:51.212 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:41:51.765 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:41:52.221 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:42:58.089 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:43:01.467 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:43:01.982 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:43:02.344 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:47:19.270 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:47:23.818 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:47:24.319 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:47:24.718 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:48:20.583 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:48:24.013 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:48:24.544 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:48:24.916 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:48:24.966 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 16:48:43.346 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:48:46.171 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:48:46.694 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:48:47.063 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:48:47.098 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 16:53:40.649 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:53:44.133 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:53:44.683 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:53:45.045 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:53:45.089 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 16:54:20.150 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:54:23.228 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:54:23.699 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:54:24.009 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:54:24.038 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 16:57:46.741 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 16:57:49.619 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:57:50.109 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 16:57:50.445 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 16:57:50.477 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 17:10:56.574 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 17:11:00.096 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:11:00.670 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 17:11:01.055 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:11:01.086 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 17:11:01.342 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:11:01.394 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 17:12:33.578 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 17:12:36.670 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:12:37.191 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 17:12:37.472 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:12:37.498 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 17:12:37.699 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:12:37.734 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 17:13:07.627 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 17:13:10.455 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:13:10.937 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 17:13:11.270 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:13:11.315 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was existed!
+[INFO ] 2023-08-26 17:59:55.152 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 17:59:58.919 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:59:59.464 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 17:59:59.867 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 17:59:59.916 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was existed!
+[INFO ] 2023-08-26 18:00:00.159 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:00:00.177 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 18:12:50.961 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:12:54.589 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:12:55.122 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not found!
+[WARN ] 2023-08-26 18:12:55.122 [AWT-EventQueue-0] AuthServiceImpl - User is empty! Finding user wasn't successful!
+[INFO ] 2023-08-26 18:13:03.574 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:13:03.879 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:13:03.890 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `dd` was not existed!
+[INFO ] 2023-08-26 18:13:04.136 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:13:04.145 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-08-26 18:13:04.335 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:13:04.394 [AWT-EventQueue-0] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-08-26 18:13:08.145 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:13:08.316 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:13:08.344 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 18:13:08.655 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:13:08.700 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 18:13:08.902 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:13:08.912 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 18:13:09.141 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:13:09.171 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 18:17:38.430 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:17:42.262 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:17:42.761 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `dd` was not existed!
+[INFO ] 2023-08-26 18:17:43.089 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:17:43.120 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-08-26 18:17:43.365 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:17:43.425 [AWT-EventQueue-0] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-08-26 18:17:47.077 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:17:47.281 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:17:47.314 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 18:17:47.615 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:17:47.653 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `World chat` was not existed!
+[INFO ] 2023-08-26 18:17:47.872 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:17:47.881 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 18:17:48.099 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:17:48.126 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 18:47:01.412 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:47:05.252 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:47:05.733 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 18:47:06.144 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:47:06.178 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was not existed!
+[INFO ] 2023-08-26 18:47:06.421 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:47:06.469 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 18:47:06.688 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:47:06.704 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 18:47:51.178 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:47:54.680 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:47:55.174 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 18:47:55.561 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:47:55.611 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 18:47:55.944 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:47:55.961 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 18:51:02.256 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:51:05.465 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:51:05.971 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 18:51:06.346 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:51:06.397 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 18:51:06.666 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:51:06.682 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 18:51:41.741 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:51:44.738 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:51:45.261 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 18:51:45.656 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:51:45.707 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 18:51:45.975 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:51:45.994 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 18:52:11.268 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 18:52:14.326 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:52:14.974 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 18:52:15.376 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:52:15.428 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 18:52:15.700 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 18:52:15.715 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 19:01:46.039 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 19:01:49.901 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:01:50.460 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 19:01:50.869 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:01:50.950 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 19:01:51.256 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:01:51.275 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 19:02:07.393 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:02:07.408 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Termopasta` was not existed!
+[INFO ] 2023-08-26 19:02:07.706 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:02:07.804 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 19:04:22.529 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 19:04:26.323 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:04:26.941 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 19:04:27.314 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:04:27.368 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 19:04:27.650 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:04:27.669 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 19:04:45.967 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:04:45.977 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Chat with him` was not existed!
+[INFO ] 2023-08-26 19:04:46.178 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:04:46.210 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 19:12:12.084 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 19:12:16.169 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:12:16.775 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 19:12:17.164 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:12:17.209 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 19:12:17.495 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 19:12:17.519 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 22:18:03.286 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 22:18:07.384 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:18:07.933 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 22:18:08.387 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:18:08.437 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 22:18:08.696 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:18:08.722 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 22:58:37.807 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 22:58:41.642 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:58:42.611 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 22:58:43.332 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:58:43.395 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 22:58:43.787 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:58:43.810 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 22:59:05.547 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 22:59:08.832 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:59:09.239 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `ss` was not existed!
+[INFO ] 2023-08-26 22:59:09.517 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:59:09.546 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-08-26 22:59:09.773 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:59:09.895 [AWT-EventQueue-0] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-08-26 22:59:15.043 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 22:59:15.308 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:59:15.355 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 22:59:15.636 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:59:15.662 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was not existed!
+[INFO ] 2023-08-26 22:59:15.967 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:59:15.976 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-26 22:59:16.168 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 22:59:16.195 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 23:49:15.454 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 23:49:20.043 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:49:20.765 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 23:49:21.233 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:49:21.298 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 23:49:21.729 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:49:21.753 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 23:49:35.865 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 23:49:39.110 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:49:39.633 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 23:49:39.941 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:49:39.987 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 23:49:40.226 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:49:40.242 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 23:50:51.695 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 23:50:55.769 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:50:56.476 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 23:50:57.081 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:50:57.190 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 23:50:57.645 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:50:57.675 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-26 23:51:18.788 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-26 23:51:22.526 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:51:23.160 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-26 23:51:23.517 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:51:23.567 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-26 23:51:23.817 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-26 23:51:23.834 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:01:52.835 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:01:57.352 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:01:58.037 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:01:58.549 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:01:58.613 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:01:58.929 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:01:58.950 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:02:02.569 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:02:05.417 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:02:05.874 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:02:06.199 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:02:06.237 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:02:06.502 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:02:06.518 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:07:56.910 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:08:01.006 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:08:01.531 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:08:01.931 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:08:01.981 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:08:02.249 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:08:02.265 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:13:56.526 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:14:00.159 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:14:00.865 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:14:01.313 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:14:01.374 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:14:01.663 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:14:01.687 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:14:33.266 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:14:36.498 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:14:37.075 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:14:37.457 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:14:37.509 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:14:37.767 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:14:37.792 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:16:03.310 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:16:06.795 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:16:07.369 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:16:07.762 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:16:07.817 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:16:08.122 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:16:08.143 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:16:29.137 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:16:32.011 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:16:32.572 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:16:33.107 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:16:33.168 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:16:33.723 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:16:33.741 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:31:30.128 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:31:35.676 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:31:36.180 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:31:36.618 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:31:36.685 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:31:36.998 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:31:37.021 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:31:37.837 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:31:41.654 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:31:42.433 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:31:42.935 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:31:43.004 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:31:43.431 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:31:43.459 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:37:36.525 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:37:40.145 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:37:40.666 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:37:41.038 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:37:41.085 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:37:41.344 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:37:41.363 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:42:03.669 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:42:07.173 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:42:07.813 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:42:08.300 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:42:08.352 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:42:08.650 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:42:08.672 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:44:44.211 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:44:47.617 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:44:48.159 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:44:48.568 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:44:48.631 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:44:48.941 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:44:48.960 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 00:48:51.051 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 00:48:55.047 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:48:55.655 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 00:48:56.060 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:48:56.112 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 00:48:56.389 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 00:48:56.409 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 01:29:29.020 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 01:29:32.914 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:29:33.466 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 01:29:33.949 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:29:33.999 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 01:29:34.320 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:29:34.347 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 01:32:25.840 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 01:32:29.393 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:32:29.990 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 01:32:30.450 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:32:30.518 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 01:32:30.863 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:32:30.891 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 01:33:59.928 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 01:34:03.518 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:34:04.084 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 01:34:04.496 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:34:04.552 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 01:34:04.864 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:34:04.886 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 01:35:30.256 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 01:35:33.741 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:35:34.296 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 01:35:34.689 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:35:34.739 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 01:35:35.023 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:35:35.044 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 01:37:55.840 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 01:37:58.868 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:37:59.441 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 01:37:59.842 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:37:59.891 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 01:38:00.203 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:38:00.223 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 01:50:29.217 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 01:50:33.290 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:50:34.112 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 01:50:34.572 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:50:34.629 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 01:50:34.998 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:50:35.019 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 01:53:50.757 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 01:53:54.172 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:53:54.725 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 01:53:55.119 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:53:55.163 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 01:53:55.414 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 01:53:55.434 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 11:18:02.904 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 11:18:07.335 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:18:07.905 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 11:18:08.318 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:18:08.383 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 11:18:08.708 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:18:08.734 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 11:49:31.115 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 11:49:35.251 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:49:35.855 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 11:49:36.364 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:49:39.763 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 11:49:40.211 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:49:41.877 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 11:51:47.001 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 11:51:50.431 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:51:50.939 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 11:51:51.292 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:51:51.337 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 11:51:51.575 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 11:51:51.646 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 12:05:28.056 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 12:05:31.510 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:05:32.026 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 12:05:32.397 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:05:32.448 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 12:05:32.681 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:05:32.702 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 12:07:16.303 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 12:07:19.230 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:07:19.846 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 12:07:20.272 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:07:20.320 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 12:07:21.048 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:07:21.071 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 12:10:39.003 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 12:10:42.067 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:10:42.612 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 12:10:42.957 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:10:42.999 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 12:10:43.242 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:10:43.261 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 12:13:55.603 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 12:13:58.974 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:13:59.590 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 12:14:00.032 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:14:00.093 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 12:14:00.410 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:14:00.433 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 12:15:07.562 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 12:15:10.415 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:15:10.882 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 12:15:11.212 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:15:11.262 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 12:15:11.577 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:15:11.599 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 12:16:04.762 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 12:16:08.173 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:16:08.743 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 12:16:09.143 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:16:09.203 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 12:16:09.493 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 12:16:09.512 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-27 17:31:04.757 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[ERROR] 2023-08-27 17:31:06.557 [AWT-EventQueue-0] DBConnector - org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling DriverManager#getConnection [Unknown database 'app_word_chat'] [null]
+[ERROR] 2023-08-27 17:31:06.558 [AWT-EventQueue-0] AuthServiceImpl - Cannot create user!
+ua.desktop.chat.messenger.dao.exceptions.DAOException: Get session was not successful!
+	at ua.desktop.chat.messenger.dao.util.DBConnector.getSession(DBConnector.java:27) ~[classes/:?]
+	at ua.desktop.chat.messenger.dao.mysql.impl.UserDAOMySQLImpl.findUserByEmailAndPassword(UserDAOMySQLImpl.java:68) ~[classes/:?]
+	at ua.desktop.chat.messenger.domain.impl.auth.AuthServiceImpl.authorization(AuthServiceImpl.java:61) ~[classes/:?]
+	at ua.desktop.chat.messenger.ui.swing.auth.AuthorizationView.authorization(AuthorizationView.java:64) ~[classes/:?]
+	at ua.desktop.chat.messenger.ui.swing.auth.AuthorizationView.lambda$new$1(AuthorizationView.java:34) ~[classes/:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6635) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6400) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2263) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117) ~[?:?]
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:190) ~[?:?]
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:235) ~[?:?]
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:233) ~[?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:233) ~[?:?]
+	at java.awt.Dialog.show(Dialog.java:1070) ~[?:?]
+	at java.awt.Component.show(Component.java:1716) ~[?:?]
+	at java.awt.Component.setVisible(Component.java:1663) ~[?:?]
+	at java.awt.Window.setVisible(Window.java:1031) ~[?:?]
+	at java.awt.Dialog.setVisible(Dialog.java:1005) ~[?:?]
+	at ua.desktop.chat.messenger.ui.swing.auth.AuthorizationView.<init>(AuthorizationView.java:40) ~[classes/:?]
+	at ua.desktop.chat.messenger.ui.swing.menuview.HomeView.lambda$new$1(HomeView.java:25) ~[classes/:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967) [?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308) [?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405) [?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) [?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) [?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6635) [?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3342) [?:?]
+	at java.awt.Component.processEvent(Component.java:6400) [?:?]
+	at java.awt.Container.processEvent(Container.java:2263) [?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:5011) [?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2321) [?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) [?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918) [?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547) [?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488) [?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2307) [?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2772) [?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4843) [?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772) [?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) [?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) [?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95) [?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) [?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:743) [?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) [?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) [?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:117) [?:?]
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:190) [?:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313) [?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770) [?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:721) [?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:715) [?:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) [?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:740) [?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling DriverManager#getConnection [Unknown database 'app_word_chat'] [null]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:277) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:125) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:451) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:102) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at ua.desktop.chat.messenger.dao.util.DBConnector.getSession(DBConnector.java:22) ~[classes/:?]
+	... 94 more
+Caused by: org.hibernate.exception.SQLGrammarException: Error calling DriverManager#getConnection [Unknown database 'app_word_chat'] [null]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:123) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionCreator.makeConnection(DriverManagerConnectionCreator.java:39) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:501) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:367) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:552) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:105) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:81) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:125) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:248) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:283) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:150) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:125) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:451) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:102) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at ua.desktop.chat.messenger.dao.util.DBConnector.getSession(DBConnector.java:22) ~[classes/:?]
+	... 94 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'app_word_chat'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:189) ~[java.sql:?]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionCreator.makeConnection(DriverManagerConnectionCreator.java:36) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:501) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:367) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:552) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:105) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:81) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:125) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:248) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:283) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:150) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:125) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:451) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:102) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at ua.desktop.chat.messenger.dao.util.DBConnector.getSession(DBConnector.java:22) ~[classes/:?]
+	... 94 more
+[INFO ] 2023-08-27 17:32:17.836 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-27 17:32:22.154 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 17:32:22.763 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-27 17:32:23.319 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 17:32:23.435 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-27 17:32:24.518 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-27 17:32:24.535 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 02:50:20.620 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 02:50:25.340 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:50:26.046 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 02:50:26.551 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:50:26.617 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 02:50:26.963 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:50:26.985 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 02:58:04.621 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 02:58:08.618 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:58:09.319 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 02:58:09.803 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:58:09.853 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 02:58:10.111 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:58:10.132 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 02:59:30.513 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 02:59:34.139 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:59:34.797 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 02:59:35.190 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:59:35.247 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 02:59:35.552 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 02:59:35.573 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:01:14.111 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:01:17.786 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:01:18.458 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:01:18.978 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:01:19.074 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:01:19.503 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:01:19.532 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:04:01.126 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:04:04.422 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:04:05.155 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:04:05.604 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:04:05.654 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:04:05.935 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:04:05.956 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:06:52.728 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:06:56.162 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:06:56.958 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:06:57.555 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:06:57.664 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:06:58.021 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:06:58.056 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:07:03.237 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:07:03.234586300
+[INFO ] 2023-08-28 03:08:29.709 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:08:33.247 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:08:34.073 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:08:34.694 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:08:34.792 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:08:35.200 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:08:35.226 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:08:39.193 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:08:39.190160700
+[INFO ] 2023-08-28 03:10:18.027 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:10:21.242 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:10:21.844 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:10:22.245 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:10:22.308 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:10:22.602 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:10:22.622 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:10:25.796 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:10:25.794366200
+[INFO ] 2023-08-28 03:12:32.401 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:12:37.139 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:12:37.931 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:12:38.543 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:12:38.635 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:12:39.035 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:12:39.063 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:12:45.589 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T03:12:45.589367600
+[INFO ] 2023-08-28 03:14:36.506 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:14:40.310 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:14:41.083 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:14:41.531 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:14:41.590 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:14:41.915 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:14:41.936 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:14:51.999 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:14:55.125 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:14:55.665 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:14:56.034 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:14:56.100 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:14:56.384 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:14:56.403 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:15:01.875 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T03:15:01.872864400
+[INFO ] 2023-08-28 03:15:18.311 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:15:18.311947
+[INFO ] 2023-08-28 03:19:03.466 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:19:07.121 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:19:08.057 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:19:08.802 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:19:08.877 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:19:09.264 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:19:09.287 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:19:17.594 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:19:20.837 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:19:21.412 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:19:21.750 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:19:21.800 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:19:22.037 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:19:22.055 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:19:57.513 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:19:57.510205200
+[INFO ] 2023-08-28 03:19:57.516 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T03:19:57.516173100
+[INFO ] 2023-08-28 03:21:58.844 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:22:04.364 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:22:05.025 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:22:05.362 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:22:05.415 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:22:05.684 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:22:05.703 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:22:07.085 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:22:10.568 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:22:11.136 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:22:11.463 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:22:11.502 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:22:11.761 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:22:12.172 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:22:17.966 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T03:22:17.963307100
+[INFO ] 2023-08-28 03:22:31.600 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:22:31.600763800
+[INFO ] 2023-08-28 03:26:15.766 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:26:20.571 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:26:21.497 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:26:21.905 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:26:21.977 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:26:22.308 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:26:22.373 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:26:25.278 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:26:28.684 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:26:29.283 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:26:29.707 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:26:29.780 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:26:30.141 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:26:30.165 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:26:39.371 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T03:26:39.367326700
+[INFO ] 2023-08-28 03:26:39.375 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:26:39.375340500
+[INFO ] 2023-08-28 03:28:55.374 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:29:00.285 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 03:29:01.479 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:29:02.565 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:29:03.122 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:29:03.209 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:29:03.664 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:29:03.700 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:29:05.971 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:29:06.596 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 03:29:06.995 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:29:07.055 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 03:29:07.366 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 03:29:07.384 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 03:29:12.596 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T03:29:12.593882400
+[INFO ] 2023-08-28 03:29:16.661 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T03:29:16.661893900
+[INFO ] 2023-08-28 08:39:34.141 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:39:38.857 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:39:39.831 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:39:40.456 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:39:40.547 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:39:40.865 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:39:40.890 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 08:39:50.441 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:39:54.674 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:39:55.277 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:39:55.588 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:39:55.635 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:39:55.922 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:39:55.938 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 08:40:11.842 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T08:40:11.838577600
+[INFO ] 2023-08-28 08:40:11.846 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T08:40:11.846614400
+[INFO ] 2023-08-28 08:50:09.763 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:50:15.010 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:50:15.724 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:50:16.044 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:50:16.090 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:50:16.336 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:50:16.354 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 08:50:17.517 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:50:21.501 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:50:22.126 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:50:22.613 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:50:22.673 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:50:22.985 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:50:23.006 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 08:51:35.397 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:51:39.695 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:51:40.287 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:51:40.623 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:51:40.671 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:51:40.986 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:51:41.006 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 08:51:45.524 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:51:48.690 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:51:49.228 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:51:49.590 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:51:49.645 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:51:49.894 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:51:49.912 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 08:52:08.577 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T08:52:08.574777
+[INFO ] 2023-08-28 08:53:14.372 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T08:53:14.371157100
+[INFO ] 2023-08-28 08:57:37.917 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:57:41.760 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:57:42.675 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:57:43.113 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:57:43.165 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:57:43.518 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:57:43.542 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 08:57:44.506 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 08:57:48.192 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:57:48.806 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 08:57:49.122 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:57:49.164 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 08:57:49.423 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 08:57:49.442 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 09:17:24.002 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 09:17:28.910 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 09:17:29.505 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 09:17:29.875 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 09:17:29.926 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 09:17:30.218 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 09:17:30.239 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 09:17:36.789 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 09:17:40.721 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 09:17:41.370 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 09:17:41.900 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 09:17:41.952 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 09:17:42.284 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 09:17:42.310 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:28:16.399 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:28:21.053 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:28:21.729 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:28:22.377 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:28:22.431 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:28:22.698 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:28:22.718 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:28:33.728 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:28:38.503 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:28:39.645 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:28:40.177 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:28:40.234 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:28:40.548 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:28:40.570 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:30:00.438 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:30:06.545 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:30:07.777 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:30:08.296 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:30:08.363 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:30:08.656 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:30:08.676 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:30:10.786 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:30:14.361 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:30:14.947 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:30:15.322 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:30:15.382 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:30:15.768 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:30:15.790 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:32:57.876 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:33:01.873 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:33:02.497 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:33:03.502 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:33:03.609 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:33:04.115 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:33:04.146 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:36:38.045 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:36:42.140 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:36:42.709 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:36:43.238 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:36:43.884 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:36:44.236 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:36:44.261 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:36:52.367 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:36:56.254 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:36:56.857 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:36:57.224 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:36:57.269 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:36:57.497 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:36:57.513 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:38:12.459 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:38:16.670 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:38:17.696 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:38:18.769 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:38:18.874 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:38:19.235 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:38:19.264 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:38:26.805 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:38:30.882 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:38:31.620 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:38:31.979 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:38:32.037 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:38:32.344 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:38:32.362 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:42:30.712 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:42:34.316 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:42:34.998 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:42:35.695 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:42:35.752 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:42:36.020 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:42:36.037 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:42:36.930 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:42:40.545 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:42:41.213 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:42:41.609 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:42:41.671 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:42:42.004 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:42:42.029 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:45:47.553 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:45:52.517 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:45:53.375 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:45:53.382 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:45:54.082 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:45:54.149 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:45:54.501 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:45:54.523 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:45:59.790 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:46:00.556 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:46:00.961 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:46:01.028 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:46:01.361 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:46:01.389 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:47:00.596 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:47:05.332 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:47:06.225 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:47:06.819 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:47:06.898 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:47:07.249 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:47:07.270 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 18:47:12.695 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 18:47:16.528 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:47:17.118 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 18:47:17.422 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:47:17.475 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 18:47:17.735 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 18:47:17.758 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 19:39:50.146 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 19:39:54.066 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:41:06.665 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 19:41:12.408 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:41:13.095 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 19:41:13.573 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:41:13.645 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 19:41:14.007 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:41:14.037 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 19:49:18.605 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 19:49:22.453 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:49:23.086 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 19:49:23.500 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:49:23.567 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 19:49:23.954 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:49:23.984 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 19:49:27.572 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T19:49:27.567751500
+[INFO ] 2023-08-28 19:49:37.200 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 19:49:40.253 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:49:40.737 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 19:49:41.054 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:49:41.096 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 19:49:41.336 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 19:49:41.353 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 19:49:44.735 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T19:49:44.735586400
+[INFO ] 2023-08-28 22:58:21.533 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 22:58:25.691 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:26.321 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `dd` was not existed!
+[INFO ] 2023-08-28 22:58:26.668 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:26.700 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-08-28 22:58:26.962 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:27.029 [AWT-EventQueue-0] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-08-28 22:58:39.317 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 22:58:39.563 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:39.573 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `ss` was not existed!
+[INFO ] 2023-08-28 22:58:39.809 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:39.818 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-08-28 22:58:40.055 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:40.064 [AWT-EventQueue-0] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-08-28 22:58:44.949 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 22:58:45.156 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:45.189 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 22:58:45.484 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:45.517 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was not existed!
+[INFO ] 2023-08-28 22:58:45.716 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:45.727 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-28 22:58:45.961 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:45.990 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 22:58:55.337 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 22:58:59.408 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:58:59.975 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 22:59:00.315 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:59:00.349 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was not existed!
+[INFO ] 2023-08-28 22:59:00.611 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:59:00.671 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Create chat was successful!
+[INFO ] 2023-08-28 22:59:00.911 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 22:59:00.934 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 22:59:32.694 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T22:59:32.688117600
+[INFO ] 2023-08-28 22:59:32.700 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T22:59:32.700112900
+[INFO ] 2023-08-28 23:08:28.826 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 23:08:32.818 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:08:33.413 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 23:08:33.785 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 23:08:33.805 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:08:33.853 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 23:08:34.130 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:08:34.147 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 23:08:37.870 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:08:38.707 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 23:08:39.317 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:08:39.401 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 23:08:39.687 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T23:08:39.676449300
+[INFO ] 2023-08-28 23:08:39.980 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:08:40.007 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 23:08:44.217 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-28T23:08:44.217088600
+[INFO ] 2023-08-28 23:15:51.740 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 23:15:55.748 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:15:56.536 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 23:15:56.986 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:15:57.031 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 23:15:57.357 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:15:57.378 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 23:16:00.663 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T23:16:00.657901800
+[INFO ] 2023-08-28 23:16:47.165 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 23:16:50.304 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:16:50.866 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 23:16:51.260 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:16:51.311 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 23:16:51.575 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:16:51.593 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 23:16:54.347 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T23:16:54.342820100
+[INFO ] 2023-08-28 23:52:37.766 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 23:52:42.362 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:52:47.878 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 23:52:48.307 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:52:48.376 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 23:52:48.939 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:52:48.971 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 23:52:55.499 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T23:52:55.490171600
+[INFO ] 2023-08-28 23:54:56.420 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-28 23:55:00.160 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:55:00.863 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-28 23:55:01.268 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:55:01.325 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-28 23:55:01.676 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-28 23:55:01.701 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-28 23:55:05.411 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-28T23:55:05.404698600
+[INFO ] 2023-08-29 00:02:51.809 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:02:56.263 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:02:57.080 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:02:57.523 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:02:57.579 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:02:57.890 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:02:57.910 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:03:02.667 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:03:02.661079100
+[INFO ] 2023-08-29 00:09:22.894 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:09:27.516 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:09:28.452 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:09:30.182 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:09:30.295 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:09:31.163 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:09:31.192 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:09:38.295 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-29T00:09:38.289525100
+[INFO ] 2023-08-29 00:13:29.403 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:13:34.536 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:13:35.409 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:13:36.055 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:13:36.127 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:13:36.506 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:13:36.527 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:13:43.984 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:13:43.978476700
+[INFO ] 2023-08-29 00:15:12.132 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:15:15.943 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:15:16.765 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:15:17.216 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:15:17.286 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:15:17.636 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:15:17.656 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:15:20.791 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:15:20.786830100
+[INFO ] 2023-08-29 00:23:39.013 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:23:56.610 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:23:57.192 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:23:57.611 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:23:57.650 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:23:57.881 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:23:57.896 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:24:01.972 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:24:01.965325900
+[INFO ] 2023-08-29 00:27:42.745 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:27:47.347 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:27:47.988 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:27:48.374 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:27:48.431 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:27:48.799 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:27:48.819 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:34:25.384 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:34:29.932 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:34:30.666 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:34:31.231 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:34:31.315 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:34:31.789 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:34:31.819 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:34:35.736 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:34:35.728879700
+[INFO ] 2023-08-29 00:35:54.114 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:35:57.573 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:35:58.146 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:35:58.537 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:35:58.597 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:35:58.885 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:35:58.909 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:36:02.014 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:36:02.007761100
+[INFO ] 2023-08-29 00:42:00.874 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:42:05.267 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:42:05.912 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:42:06.954 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:42:07.052 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:42:07.485 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:42:07.510 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:42:10.983 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:42:10.977816900
+[INFO ] 2023-08-29 00:44:22.910 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:44:26.763 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:44:27.442 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:44:27.970 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:44:28.040 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:44:28.396 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:44:28.420 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:44:32.392 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:44:32.386842700
+[INFO ] 2023-08-29 00:45:37.366 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 00:45:40.722 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:45:41.315 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 00:45:41.732 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:45:41.809 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 00:45:42.247 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 00:45:42.274 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 00:45:45.518 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T00:45:45.510818800
+[INFO ] 2023-08-29 10:14:31.675 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:14:38.227 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:14:39.569 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:14:40.538 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:14:40.669 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:14:41.198 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:14:41.227 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:14:44.894 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:14:44.880717600
+[INFO ] 2023-08-29 10:15:23.434 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:15:29.938 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:15:31.047 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:15:31.825 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:15:31.972 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:15:32.763 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:15:32.796 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:15:40.685 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:15:40.684373
+[INFO ] 2023-08-29 10:16:18.170 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:16:24.512 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:16:25.527 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:16:26.271 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:16:26.388 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:16:27.025 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:16:27.058 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:16:31.732 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:16:31.720671300
+[INFO ] 2023-08-29 10:16:48.482 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:16:54.313 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:16:55.413 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:16:56.298 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:16:56.396 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:16:57.423 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:16:57.455 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:17:00.998 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-29T10:17:00.998501900
+[INFO ] 2023-08-29 10:22:46.860 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:22:53.548 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:22:55.061 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:22:55.929 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:22:56.031 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:22:56.558 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:22:56.587 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:23:01.138 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:23:01.127068300
+[INFO ] 2023-08-29 10:24:15.322 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:24:22.096 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:24:23.120 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:24:23.837 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:24:23.938 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:24:24.418 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:24:24.448 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:24:28.589 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:24:28.575441200
+[INFO ] 2023-08-29 10:32:07.990 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:32:16.760 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:32:18.801 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:32:19.977 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:32:20.086 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:32:20.589 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:32:20.622 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:32:24.346 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:32:24.330463600
+[INFO ] 2023-08-29 10:36:18.696 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:36:27.318 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:36:28.921 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:36:29.902 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:36:30.001 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:36:30.477 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:36:30.508 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:36:34.040 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:36:34.026965900
+[INFO ] 2023-08-29 10:40:56.264 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 10:41:02.816 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:41:04.189 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 10:41:05.130 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:41:05.237 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 10:41:05.790 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 10:41:05.822 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 10:41:12.682 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T10:41:12.671862300
+[INFO ] 2023-08-29 14:32:28.676 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:32:33.894 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:32:34.461 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:32:34.899 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:32:34.951 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:32:35.242 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:32:35.258 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:32:38.712 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T14:32:38.706558600
+[INFO ] 2023-08-29 14:35:54.505 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:35:59.879 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:36:00.656 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:36:01.384 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:36:01.484 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:36:02.067 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:36:02.094 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:36:05.635 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T14:36:05.628050600
+[INFO ] 2023-08-29 14:38:22.501 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:38:26.358 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:38:27.093 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:38:27.580 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:38:27.637 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:38:27.934 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:38:27.951 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:38:30.521 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T14:38:30.512430600
+[INFO ] 2023-08-29 14:39:29.080 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:39:32.405 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:39:33.100 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:39:33.606 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:39:33.666 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:39:33.961 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:39:33.978 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:39:36.804 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T14:39:36.795193900
+[INFO ] 2023-08-29 14:46:31.235 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:46:35.105 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:46:35.968 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:46:36.504 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:46:36.572 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:46:36.931 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:46:36.952 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:46:40.823 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T14:46:40.816922600
+[INFO ] 2023-08-29 14:48:16.662 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:48:20.411 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:48:21.076 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:48:21.858 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:48:21.926 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:48:22.223 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:48:22.245 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:50:25.564 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:50:29.639 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:50:30.247 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:50:30.684 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:50:30.743 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:50:31.043 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:50:31.059 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:51:28.355 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:51:31.801 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:51:32.663 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:51:33.169 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:51:33.243 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:51:33.587 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:51:33.609 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:53:01.293 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:53:05.510 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:53:06.085 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:53:06.476 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:53:06.530 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:53:06.837 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:53:06.852 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:53:10.961 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T14:53:10.956338200
+[INFO ] 2023-08-29 14:55:20.736 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 14:55:25.897 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:55:26.710 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 14:55:27.279 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:55:27.342 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 14:55:27.730 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 14:55:27.755 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 14:55:31.650 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T14:55:31.643478500
+[INFO ] 2023-08-29 20:30:00.331 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 20:30:04.504 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 20:30:05.270 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 20:30:05.775 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 20:30:06.100 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 20:30:06.544 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 20:30:06.573 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 20:30:09.711 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T20:30:09.708448600
+[INFO ] 2023-08-29 20:30:30.073 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 20:30:34.265 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 20:30:34.805 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 20:30:35.156 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 20:30:35.199 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 20:30:35.438 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 20:30:35.456 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 20:30:41.403 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-29T20:30:41.403938800
+[INFO ] 2023-08-29 20:36:44.765 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 20:36:48.814 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 21:14:05.998 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 21:14:09.944 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 21:14:16.637 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 21:14:20.235 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 21:14:20.297 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 21:14:20.618 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 21:14:20.635 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 21:14:24.678 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T21:14:24.674750800
+[INFO ] 2023-08-29 21:48:38.254 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 21:48:43.635 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 21:48:44.854 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 21:48:45.470 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 21:48:45.566 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 21:48:46.074 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 21:48:46.106 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 21:49:19.369 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T21:49:19.365043600
+[INFO ] 2023-08-29 22:08:32.810 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 22:08:37.855 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:08:38.735 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 22:08:40.613 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:08:40.716 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 22:08:42.446 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:08:42.469 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 22:08:51.194 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T22:08:51.191184100
+[INFO ] 2023-08-29 22:15:48.512 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 22:15:52.824 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:15:53.527 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 22:15:54.099 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:15:54.147 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 22:15:54.427 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:15:54.444 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 22:15:57.869 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T22:15:57.867472900
+[INFO ] 2023-08-29 22:22:06.024 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 22:22:10.816 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:22:11.464 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 22:22:12.067 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:22:12.142 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 22:22:12.438 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 22:22:12.456 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 23:36:33.610 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-29 23:36:37.556 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 23:36:38.161 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-29 23:36:38.620 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 23:36:38.683 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-29 23:36:39.009 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-29 23:36:39.030 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-29 23:36:42.632 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-29T23:36:42.629966
+[INFO ] 2023-08-30 00:10:12.148 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 00:10:16.053 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:10:17.495 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 00:10:18.792 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:10:18.878 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 00:10:19.345 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:10:19.373 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 00:22:42.305 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 00:22:46.674 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:22:47.401 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 00:22:47.824 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:22:47.879 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 00:22:48.256 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:22:48.276 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 00:35:28.344 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 00:35:31.862 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:35:32.436 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 00:35:32.773 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:35:32.826 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 00:35:33.104 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:35:33.121 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 00:38:17.496 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 00:38:21.989 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:38:22.749 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 00:38:23.123 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:38:23.167 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 00:38:23.415 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:38:23.433 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 00:42:52.407 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 00:42:56.755 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:42:57.337 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 00:42:57.735 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:42:57.793 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 00:42:58.125 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 00:42:58.144 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 01:26:52.478 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 01:26:57.127 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:26:57.728 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 01:26:58.160 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:26:58.229 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 01:26:58.549 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:26:58.570 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 01:46:38.229 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 01:46:42.855 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:46:43.507 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 01:46:44.039 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:46:44.106 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 01:46:44.446 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:46:44.469 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 01:47:24.810 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 01:47:29.855 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:47:30.660 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 01:47:31.224 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:47:31.322 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 01:47:31.787 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:47:31.815 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 01:47:34.872 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T01:47:34.869799100
+[INFO ] 2023-08-30 01:51:59.547 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 01:52:03.101 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:52:03.708 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 01:52:04.090 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:52:04.148 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 01:52:04.422 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:52:04.436 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 01:52:07.491 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T01:52:07.487741300
+[INFO ] 2023-08-30 01:55:31.112 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 01:55:34.809 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:55:35.439 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 01:55:35.806 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:55:35.856 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 01:55:36.157 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:55:36.174 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 01:55:39.133 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T01:55:39.130089200
+[INFO ] 2023-08-30 01:57:25.349 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 01:57:28.570 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:57:29.412 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 01:57:30.006 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:57:30.071 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 01:57:30.352 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 01:57:30.367 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 01:57:33.751 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T01:57:33.748870300
+[INFO ] 2023-08-30 02:03:08.449 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:03:11.576 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:03:12.143 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:03:12.590 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:03:12.648 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:03:12.896 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:03:12.910 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:03:19.262 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T02:03:19.259181500
+[INFO ] 2023-08-30 02:03:39.140 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:03:42.275 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:03:42.834 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:03:43.165 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:03:43.212 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:03:43.464 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:03:43.480 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:04:05.192 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:04:08.427 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:04:08.995 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:04:09.350 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:04:09.406 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:04:09.689 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:04:09.709 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:04:12.922 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T02:04:12.919079700
+[INFO ] 2023-08-30 02:08:32.120 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:08:35.659 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:08:36.299 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:08:36.697 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:08:36.750 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:08:37.028 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:08:37.045 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:09:32.187 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:09:35.540 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:09:36.121 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:09:36.498 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:09:36.555 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:09:36.861 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:09:36.876 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:09:40.069 [Thread-0] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T02:09:40.065517100
+[INFO ] 2023-08-30 02:12:35.676 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:12:40.811 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:12:41.670 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:12:42.409 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:12:42.495 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:12:43.141 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:12:43.166 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:12:46.721 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T02:12:46.716952600
+[INFO ] 2023-08-30 02:14:10.646 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:14:14.827 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:14:15.552 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:14:15.988 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:14:16.040 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:14:16.530 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:14:16.548 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:14:19.438 [main] ClientHandler - SERVER: ss was added into world chat!	Time added into chat: 2023-08-30T02:14:19.438705600
+[INFO ] 2023-08-30 02:18:09.546 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:18:13.008 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:18:13.583 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:18:13.985 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:18:14.046 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:18:14.358 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:18:14.375 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:18:17.650 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T02:18:17.647534300
+[INFO ] 2023-08-30 02:29:15.340 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 02:29:20.167 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:29:20.858 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 02:29:21.555 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:29:21.668 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 02:29:22.173 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 02:29:22.206 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 02:29:26.976 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T02:29:26.972535
+[INFO ] 2023-08-30 09:50:43.639 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 09:50:54.202 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 09:50:56.258 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 09:50:57.633 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 09:50:57.786 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 09:50:58.498 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 09:50:58.541 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 09:54:14.156 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T09:54:12.731312500
+[INFO ] 2023-08-30 09:55:39.840 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 09:55:46.095 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 09:55:47.576 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 09:55:48.970 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 09:55:49.076 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 09:55:49.686 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 09:55:49.723 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 09:56:13.344 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T09:56:13.029917300
+[INFO ] 2023-08-30 11:40:32.969 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:40:37.958 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:40:42.739 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:40:46.183 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:40:46.269 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:40:46.586 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:40:46.605 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:40:52.297 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:40:52.292674100
+[INFO ] 2023-08-30 11:43:43.225 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:43:47.974 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:43:48.707 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:43:49.278 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:43:49.346 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:43:49.854 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:43:49.885 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:43:53.076 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:43:53.072665800
+[INFO ] 2023-08-30 11:44:38.476 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:44:42.854 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:44:43.430 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:44:43.788 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:44:43.861 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:44:44.124 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:44:44.139 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:44:47.886 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:44:47.882739100
+[INFO ] 2023-08-30 11:45:22.641 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:45:26.580 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:45:27.137 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:45:27.448 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:45:27.498 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:45:27.758 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:45:27.776 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:45:32.811 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:45:32.807817900
+[INFO ] 2023-08-30 11:49:43.734 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:49:48.026 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:49:48.623 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:49:48.998 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:49:49.051 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:49:49.309 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:49:49.325 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:49:52.665 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:49:52.664849
+[INFO ] 2023-08-30 11:51:51.490 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:51:55.154 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:51:55.691 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:51:56.017 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:51:56.058 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:51:56.319 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:51:56.336 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:51:59.554 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:51:59.551319400
+[INFO ] 2023-08-30 11:52:42.863 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:52:47.232 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:52:48.015 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:52:48.456 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:52:48.521 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:52:48.805 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:52:48.820 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:52:52.421 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:52:52.418092600
+[INFO ] 2023-08-30 11:53:50.095 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:53:54.372 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:53:55.068 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:53:55.427 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:53:55.478 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:53:55.727 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:53:55.768 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:54:11.648 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:54:11.645743
+[INFO ] 2023-08-30 11:56:48.179 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:56:51.643 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:56:52.262 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:56:52.617 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:56:52.685 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:56:53.033 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:56:53.054 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 11:56:56.130 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T11:56:56.127597500
+[INFO ] 2023-08-30 11:59:36.439 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 11:59:40.890 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:59:41.739 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 11:59:42.119 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:59:42.174 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 11:59:42.416 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 11:59:42.428 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 12:00:20.796 [main] ClientHandler - SERVER: dd was added into world chat!	Time added into chat: 2023-08-30T12:00:20.792219300
+[INFO ] 2023-08-30 12:04:41.887 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 12:04:46.204 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:04:46.777 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 12:04:47.182 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:04:47.232 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 12:04:47.522 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:04:47.536 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 12:05:47.199 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 12:05:50.448 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:05:51.176 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 12:05:51.649 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:05:51.717 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 12:05:51.994 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:05:52.007 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 12:08:41.906 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 12:08:45.777 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:08:46.607 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 12:08:47.038 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:08:47.093 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 12:08:47.363 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 12:08:47.378 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 18:32:26.042 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 18:32:30.811 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 18:32:31.376 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 18:32:31.767 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 18:32:31.836 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 18:32:32.130 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 18:32:32.147 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 18:37:06.988 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 18:37:10.738 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 18:37:11.442 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 18:37:11.817 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 18:37:11.874 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 18:37:12.194 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 18:37:12.212 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 19:45:46.747 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 19:45:50.492 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 19:45:51.154 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 19:45:51.586 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 19:45:51.646 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 19:45:51.969 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 19:45:51.987 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 20:01:03.478 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 20:01:07.039 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 20:01:07.633 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 20:01:07.996 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 20:01:08.042 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 20:01:08.352 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 20:01:08.372 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
+[INFO ] 2023-08-30 20:03:57.680 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-08-30 20:04:01.193 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 20:04:01.977 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-08-30 20:04:02.430 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 20:04:02.500 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Chat with this name `Global chat` was existed!
+[INFO ] 2023-08-30 20:04:02.871 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-08-30 20:04:02.894 [AWT-EventQueue-0] ChatSystemMessageDAOMySQLImpl - Read chats was successful!
