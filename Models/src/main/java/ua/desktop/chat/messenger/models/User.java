@@ -2,14 +2,12 @@ package ua.desktop.chat.messenger.models;
 
 import jakarta.persistence.*;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "users")
-public class User implements Serializable {
-    private static final long serialVersionUID = -6104010981474468005L;
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -4,10 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-import ua.desktop.chat.messenger.auth.dao.exceptions.DAOException;
+import ua.desktop.chat.messenger.dao.exceptions.DAOException;
 import ua.desktop.chat.messenger.auth.dao.ifaces.UserDAO;
 import ua.desktop.chat.messenger.auth.dao.query.hql.QueryUser;
-import ua.desktop.chat.messenger.auth.dao.util.DBConnector;
+import ua.desktop.chat.messenger.dao.util.DBConnector;
 import ua.desktop.chat.messenger.models.User;
 
 public class UserDAOMySQLImpl implements UserDAO {

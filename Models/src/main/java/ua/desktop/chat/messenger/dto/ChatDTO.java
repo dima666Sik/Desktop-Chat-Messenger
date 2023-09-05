@@ -1,32 +1,19 @@
-package ua.desktop.chat.messenger.models;
+package ua.desktop.chat.messenger.dto;
 
-import jakarta.persistence.*;
 import ua.desktop.chat.messenger.env.TypeChat;
+import ua.desktop.chat.messenger.models.User;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Objects;
 
-@Entity
-@Table(name = "chats")
-public class Chat {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ChatDTO implements Serializable {
+    private static final long serialVersionUID = 8683709059678144396L;
     private Long id;
-    @Column(name = "name_chat")
     private String nameChat;
-    @Enumerated(EnumType.STRING)
-    @Column(name = "type_chat")
     private TypeChat typeChat;
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
-    private User user;
-    @OneToMany(mappedBy = "chat", fetch = FetchType.LAZY)
-    private List<Message> messageList;
+    private UserDTO user;
 
-    public Chat() {
-    }
-
-    public Chat(String nameChat, TypeChat typeChat, User user) {
+    public ChatDTO(String nameChat, TypeChat typeChat, UserDTO user) {
         this.nameChat = nameChat;
         this.typeChat = typeChat;
         this.user = user;
@@ -56,31 +43,34 @@ public class Chat {
         this.typeChat = typeChat;
     }
 
-
-    public User getUser() {
+    public UserDTO getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserDTO user) {
         this.user = user;
     }
 
-    public List<Message> getMessageList() {
-        return messageList;
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        ChatDTO chatDTO = (ChatDTO) object;
+        return Objects.equals(id, chatDTO.id) && Objects.equals(nameChat, chatDTO.nameChat) && typeChat == chatDTO.typeChat && Objects.equals(user, chatDTO.user);
     }
 
-    public void setMessageList(List<Message> messageList) {
-        this.messageList = messageList;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nameChat, typeChat, user);
     }
 
     @Override
     public String toString() {
-        return "Chat{" +
+        return "ChatDTO{" +
                 "id=" + id +
                 ", nameChat='" + nameChat + '\'' +
                 ", typeChat=" + typeChat +
                 ", user=" + user +
-                ", messageList=" + messageList +
                 '}';
     }
 }

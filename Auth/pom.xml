@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>ua.desktop.chat.messenger</groupId>
-            <artifactId>Models</artifactId>
+            <artifactId>DatabaseCon</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

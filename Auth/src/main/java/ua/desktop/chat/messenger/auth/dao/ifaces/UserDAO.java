@@ -1,6 +1,6 @@
 package ua.desktop.chat.messenger.auth.dao.ifaces;
 
-import ua.desktop.chat.messenger.auth.dao.exceptions.DAOException;
+import ua.desktop.chat.messenger.dao.exceptions.DAOException;
 import ua.desktop.chat.messenger.models.User;
 
 public interface UserDAO {

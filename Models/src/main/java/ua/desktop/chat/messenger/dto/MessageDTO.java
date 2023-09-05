@@ -1,27 +1,17 @@
-package ua.desktop.chat.messenger.models;
+package ua.desktop.chat.messenger.dto;
 
-import jakarta.persistence.*;
+import ua.desktop.chat.messenger.models.Chat;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
-@Entity
-@Table(name = "messages")
-public class Message {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class MessageDTO {
     private Long id;
     private String message;
-    @Column(name = "local_date_time")
     private LocalDateTime localDateTime;
-    @ManyToOne
-    @JoinColumn(name = "chat_id", referencedColumnName = "id",nullable = false)
-    private Chat chat;
+    private ChatDTO chat;
 
-    public Message() {
-    }
-
-    public Message(String message, LocalDateTime localDateTime, Chat chat) {
+    public MessageDTO(String message, LocalDateTime localDateTime, ChatDTO chat) {
         this.message = message;
         this.localDateTime = localDateTime;
         this.chat = chat;
@@ -51,17 +41,30 @@ public class Message {
         this.localDateTime = localDateTime;
     }
 
-    public Chat getChat() {
+    public ChatDTO getChat() {
         return chat;
     }
 
-    public void setChat(Chat chat) {
+    public void setChat(ChatDTO chat) {
         this.chat = chat;
     }
 
     @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        MessageDTO that = (MessageDTO) object;
+        return Objects.equals(id, that.id) && Objects.equals(message, that.message) && Objects.equals(localDateTime, that.localDateTime) && Objects.equals(chat, that.chat);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, message, localDateTime, chat);
+    }
+
+    @Override
     public String toString() {
-        return "Message{" +
+        return "MessageDTO{" +
                 "id=" + id +
                 ", message='" + message + '\'' +
                 ", localDateTime=" + localDateTime +

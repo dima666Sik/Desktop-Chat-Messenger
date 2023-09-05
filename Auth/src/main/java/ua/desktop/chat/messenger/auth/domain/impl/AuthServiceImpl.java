@@ -2,7 +2,7 @@ package ua.desktop.chat.messenger.auth.domain.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ua.desktop.chat.messenger.auth.dao.exceptions.DAOException;
+import ua.desktop.chat.messenger.dao.exceptions.DAOException;
 import ua.desktop.chat.messenger.auth.dao.ifaces.UserDAO;
 import ua.desktop.chat.messenger.auth.dao.util.DAOFactory;
 import ua.desktop.chat.messenger.auth.dao.util.Encryption;

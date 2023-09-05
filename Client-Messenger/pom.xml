@@ -20,12 +20,12 @@
     <dependencies>
         <dependency>
             <groupId>ua.desktop.chat.messenger</groupId>
-            <artifactId>Models</artifactId>
+            <artifactId>ParserJson</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>ua.desktop.chat.messenger</groupId>
-            <artifactId>ParserJson</artifactId>
+            <artifactId>Auth</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

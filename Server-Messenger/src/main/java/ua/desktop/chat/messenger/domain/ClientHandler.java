@@ -1,5 +1,9 @@
 package ua.desktop.chat.messenger.domain;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.dto.MessageDTO;
+import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeMessage;
 import ua.desktop.chat.messenger.models.Message;
 import ua.desktop.chat.messenger.models.User;
@@ -9,14 +13,16 @@ import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClientHandler implements Runnable {
-    private ConnectionHandler connectionHandler;
-    private Socket conn;
+    private final static Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
+    private final ConnectionHandler connectionHandler;
+    private final Socket conn;
     private Boolean isActive = true;
-    private User user;
-    private BufferedReader in;
-    private PrintStream out;
+    private UserDTO user;
+    private final BufferedReader in;
+    private final PrintStream out;
 
     public ClientHandler(ConnectionHandler cHandler, Socket conn) {
         try {
@@ -26,96 +32,86 @@ public class ClientHandler implements Runnable {
             in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             out = new PrintStream(conn.getOutputStream(), true);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Unable to init streams in clientHandler", e);
+            throw new RuntimeException("Unable to init streams in clientHandler", e);
         }
     }
 
     public void run() {
-        String receivedObjectString;
+        String receivedObjectString, userInput;
         while (isActive) {
             try {
                 if (user == null) {
-                    out.println("Type your Username:");
                     while ((receivedObjectString = in.readLine()) != null) {
-                        user = (User) ParserJSON.convertStringToObject(receivedObjectString);
-                        if (connectionHandler.getClients().containsKey(user.getUsername())) {
-                            System.out.println("You cannot chose this username");
+                        user = (UserDTO) ParserJSON.convertStringToObject(receivedObjectString);
+                        if (connectionHandler.getClientHandlers().containsKey(user.getUsername())) {
+                            logger.info("You cannot chose this username");
                         } else if (!user.getUsername().isEmpty()) {
-                            System.out.println("Username accepted");
-                            System.out.println(user.getUsername());
+                            logger.info("Username accepted: ".concat(user.getUsername()));
                             connectionHandler.addClient(user.getUsername(), this);
                             break;
                         } else {
-                            System.out.println("No Username chosen.");
+                            logger.info("No Username chosen.");
                         }
                     }
                 }
 
-                System.out.println("+++++++++++1" + Thread.currentThread().getName());
-                String userInput;
-
                 OUTER:
-                while ((userInput = in.readLine()) != null && !userInput.equals(".")) {
-                    System.out.println("+++++++++++2");
+                while ((userInput = in.readLine()) != null) {
                     switch (userInput) {
                         case "/M":
-                            Message message;
-                            System.out.println("+++++++++++3");
-                            if (connectionHandler.getClients().size() > 1) {
+                            MessageDTO message;
+                            if (connectionHandler.getClientHandlers().size() > 1) {
                                 String receiver;
-                                while ((receiver = in.readLine()) != null) {
-                                    System.out.println("SENDER / " + receiver);
-                                    while ((receivedObjectString = in.readLine()) != null) {
-                                        message = (Message) ParserJSON.convertStringToObject(receivedObjectString);
-                                        System.out.println(user.getUsername() + " " + message.getMessage());
+                                if ((receiver = in.readLine()) != null) {
+                                    logger.info("SENDER / " + receiver);
+                                    if ((receivedObjectString = in.readLine()) != null) {
+                                        message = (MessageDTO) ParserJSON.convertStringToObject(receivedObjectString);
+                                        logger.info("userName:  ".concat(user.getUsername()).concat(", message: ").concat(message.getMessage()));
                                         String msgJSON = ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT);
                                         String userJSON = ParserJSON.convertObjectToString(user, TypeMessage.USER_OBJECT);
                                         connectionHandler.sendMessage(this, receiver, userJSON, msgJSON);
-                                        break;
                                     }
                                     break;
                                 }
                             } else {
-                                System.out.println("+++++++++++4");
                                 out.println("/M");
                                 String msgJSON = ParserJSON.convertObjectToString("[NOBODY IS HERE]", TypeMessage.STRING_NOTIFICATION);
                                 out.println(msgJSON);
                             }
                             break OUTER;
                         case "/EXIT":
-                            try {
-                                System.out.println("Exit!!!!!!!!!!!!!!!!!!!!!!");
-                                connectionHandler.removeClient(user.getUsername());
-                                conn.close();
-                                isActive = false;
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+                            connectionHandler.removeClient(user.getUsername());
+                            conn.close();
+                            isActive = false;
                             break;
                     }
                 }
-            } catch (SocketException se) {
+            } catch (SocketException e) {
                 try {
-                    se.printStackTrace();
                     connectionHandler.removeClient(user.getUsername());
                     conn.close();
                     isActive = false;
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    logger.warn("Socket was closed. U successful exit from client!");
+                } catch (IOException e1) {
+                    logger.error("SocketException. Problem with closed Socket.", e1);
+                    throw new RuntimeException("SocketException. Problem with closed Socket.", e1);
                 }
             } catch (Exception e) {
-                System.out.println(e);
+                logger.error("Unable to exit from clientHandler, problem with close Socket.", e);
+                throw new RuntimeException("Unable to exit from clientHandler, problem with close Socket.", e);
             }
         }
+
     }
 
-    public void sendUserList(ArrayList<String> ul) {
+    public void sendUserNameList(List<String> ul) {
         StringBuilder userListResponse = new StringBuilder();
-        out.println("/GAU");
+        out.println("/USERS");
         for (String string : ul) {
-            userListResponse.append(string).append(":");
+            userListResponse.append(string).append(",");
         }
-        out.println(userListResponse + "[END]");
+        out.println(userListResponse);
         userListResponse.delete(0, userListResponse.length());
     }
 

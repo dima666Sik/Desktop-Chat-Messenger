@@ -15,6 +15,8 @@
         <module>Client-Messenger</module>
         <module>ParserJson</module>
         <module>Auth</module>
+        <module>DatabaseCon</module>
+        <module>Starter</module>
     </modules>
 
     <properties>

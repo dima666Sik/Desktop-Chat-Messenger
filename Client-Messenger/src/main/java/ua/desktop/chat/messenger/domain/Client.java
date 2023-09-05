@@ -1,13 +1,16 @@
 package ua.desktop.chat.messenger.domain;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.auth.ui.swing.auth.AuthorizationGUI;
+import ua.desktop.chat.messenger.dto.MessageDTO;
+import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.env.TypeMessage;
-import ua.desktop.chat.messenger.exception.DomainClientExceptionUI;
 import ua.desktop.chat.messenger.models.Message;
-import ua.desktop.chat.messenger.models.User;
 import ua.desktop.chat.messenger.parser.ParserJSON;
-import ua.desktop.chat.messenger.ui.PreIntermediateConnectUI;
-import ua.desktop.chat.messenger.ui.chat.ChatMessenger;
+import ua.desktop.chat.messenger.ui.PreIntermediateConnectGUI;
+import ua.desktop.chat.messenger.ui.chat.ChatMessengerGUI;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,21 +20,21 @@ import java.net.ConnectException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.List;
 
 public class Client implements Runnable {
-    private String host = "DESKTOP-OCNPFLI";
-    private int portNumber = 5000;
+    private final static Logger logger = LogManager.getLogger(Client.class.getName());
+    private String host;
+    private int portNumber;
     private Socket s;
-    private PrintWriter s_out = null;
-    private BufferedReader s_in = null;
-    private User user;
+    private PrintWriter s_out;
+    private BufferedReader s_in;
+    private UserDTO user;
     private final CommunicationHandler communicationHandler;
     private Boolean isConnected = false;
-    public ChatMessenger windowChatMessenger;
+    private ChatMessengerGUI windowChatMessenger;
+
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
     public Client(CommunicationHandler cH) {
@@ -40,38 +43,41 @@ public class Client implements Runnable {
 
     @Override
     public void run() {
-        try {
-            connect();
-            if (isConnected) {
-                System.out.println("open chat!");
-                openChat();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+        connect();
+        if (isConnected) {
+            logger.info("Open chat!");
+            openChat();
         }
     }
 
     public void openChat() {
-        try {
-            windowChatMessenger = new ChatMessenger(this);
-            communicationHandler.setIsConnected(true);
-            setCHConfiguration();
-            System.out.println("_+_+_+_+_+ " + getIsConnected());
-            windowChatMessenger.open();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        windowChatMessenger = new ChatMessengerGUI(this);
+        communicationHandler.setIsConnected(true);
+        setCHConfiguration();
+        windowChatMessenger.startGUI();
     }
 
     public void connect() {
         try {
-            new PreIntermediateConnectUI(this);
-            if (user != null) {
-                String serializedObject = ParserJSON.convertObjectToString(user, TypeMessage.USER_OBJECT);
-                s_out.println(serializedObject);
+
+            AuthorizationGUI authorizationGUI = new AuthorizationGUI();
+            authorizationGUI.startGUI();
+
+            while (true) {
+                if (!authorizationGUI.isDisplayable()) {
+                    PreIntermediateConnectGUI preIntermediateConnectGUI = new PreIntermediateConnectGUI(this);
+                    preIntermediateConnectGUI.startGUI();
+
+                    if (authorizationGUI.getUser() != null) {
+                        user = new UserDTO(authorizationGUI.getUser());
+                        String serializedObject = ParserJSON.convertObjectToString(user, TypeMessage.USER_OBJECT);
+                        s_out.println(serializedObject);
+                    }
+                    break;
+                }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Exception when u try to connection into server!.", e);
             connect();
         }
     }
@@ -80,18 +86,16 @@ public class Client implements Runnable {
         try {
             s = new Socket();
             s.connect(new InetSocketAddress(host, portNumber));
-            System.out.println("Connected");
-            //writer for socket
+            logger.info("Connected");
             s_out = new PrintWriter(s.getOutputStream(), true);
-            //reader for socket
             s_in = new BufferedReader(new InputStreamReader(s.getInputStream()));
             isConnected = true;
         } catch (ConnectException cE) {
-            System.err.println("Cannot Connect");
-            new DomainClientExceptionUI("Cannot Connect");
+            logger.error("Cannot Connect");
+            throw new RuntimeException("Cannot Connect");
         } catch (UnknownHostException e) {
-            System.err.println("Don't know about host : " + host);
-            new DomainClientExceptionUI("Don't know about host : " + host);
+            logger.error("Don't know about host : " + host);
+            throw new RuntimeException("Don't know about host : " + host);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -103,18 +107,16 @@ public class Client implements Runnable {
         communicationHandler.setS(s);
     }
 
-    public void updateUserListChatGUI(ArrayList<String> users) {
+    public void updateUserListChatGUI(List<String> users) {
         windowChatMessenger.addUserList(users);
     }
 
-    public void updateMessageChatGUI(Message msg) {
+    public void updateMessageChatGUI(MessageDTO msg) {
         try {
-            System.out.println("msg:" + msg);
             if (msg.getChat().getTypeChat() == TypeChat.GLOBAL) {
-                System.out.println(msg.getMessage().substring(9, 9 + user.getUsername().length()));
+                logger.info(msg.getMessage().substring(9, 9 + user.getUsername().length()));
                 if (!msg.getMessage().substring(9, 9 + user.getUsername().length()).equals(user.getUsername())) {
                     msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
-                    System.out.println(msg.getMessage());
                     windowChatMessenger.updateChat(msg.getMessage());
                 }
             } else {
@@ -131,7 +133,7 @@ public class Client implements Runnable {
     public void updateMessageChatGUI(String msg) {
         try {
             if (msg.startsWith("[GLOBAL]")) {
-                System.out.println(msg.substring(9, 9 + user.getUsername().length()));
+                logger.info(msg.substring(9, 9 + user.getUsername().length()));
                 if (!msg.substring(9, 9 + user.getUsername().length()).equals(user.getUsername())) {
                     windowChatMessenger.updateChat(msg);
                 }
@@ -144,7 +146,7 @@ public class Client implements Runnable {
         }
     }
 
-    public void sendMessage(Message message) {
+    public void sendMessage(MessageDTO message) {
         s_out.println("/M");
         s_out.println((message.getChat().getNameChat().isEmpty()) ? TypeChat.GLOBAL.name() : message.getChat().getNameChat());
         String msg = ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT);
@@ -163,6 +165,14 @@ public class Client implements Runnable {
         this.isConnected = isConnected;
     }
 
+    public synchronized CommunicationHandler getCommunicationHandler() {
+        return communicationHandler;
+    }
+
+    public synchronized UserDTO getUser() {
+        return user;
+    }
+
     public synchronized String getHost() {
         return host;
     }
@@ -171,30 +181,11 @@ public class Client implements Runnable {
         this.host = host;
     }
 
-    public synchronized int getPortNumber() {
+    public int getPortNumber() {
         return portNumber;
     }
 
-    public synchronized void setPortNumber(int portNumber) {
+    public void setPortNumber(int portNumber) {
         this.portNumber = portNumber;
-    }
-
-    public synchronized CommunicationHandler getCommunicationHandler() {
-        return communicationHandler;
-    }
-//    public synchronized String getUsername() {
-//        return username;
-//    }
-//
-//    public synchronized void setUsername(String username) {
-//        this.username = username;
-//    }
-
-    public synchronized User getUser() {
-        return user;
-    }
-
-    public synchronized void setUser(User user) {
-        this.user = user;
     }
 }
