@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Core</artifactId>
+    <artifactId>Auth</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

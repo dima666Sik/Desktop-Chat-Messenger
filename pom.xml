@@ -9,11 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>Server</module>
-        <module>Client</module>
         <module>Models</module>
         <module>Core</module>
-        <module>Closable</module>
+        <module>Server-Messenger</module>
+        <module>Client-Messenger</module>
+        <module>ParserJson</module>
+        <module>Auth</module>
     </modules>
 
     <properties>

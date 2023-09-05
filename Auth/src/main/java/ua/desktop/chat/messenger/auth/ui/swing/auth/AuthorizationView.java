@@ -1,10 +1,9 @@
-package ua.desktop.chat.messenger.ui.swing.auth;
+package ua.desktop.chat.messenger.auth.ui.swing.auth;
 
-import ua.desktop.chat.messenger.domain.impl.auth.AuthServiceImpl;
-import ua.desktop.chat.messenger.domain.ifaces.AuthService;
+import ua.desktop.chat.messenger.auth.domain.ifaces.AuthService;
+import ua.desktop.chat.messenger.auth.domain.impl.AuthServiceImpl;
+import ua.desktop.chat.messenger.auth.ui.swing.menuview.HomeView;
 import ua.desktop.chat.messenger.models.User;
-import ua.desktop.chat.messenger.ui.swing.chat.ChatMessenger;
-import ua.desktop.chat.messenger.ui.swing.menuview.HomeView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +27,6 @@ public class AuthorizationView extends JDialog {
         previousButton.addActionListener(e -> {
             dispose();
             new HomeView();
-
         });
 
         confirmAuthorizationButton.addActionListener(e -> authorization());
@@ -74,7 +72,7 @@ public class AuthorizationView extends JDialog {
         }
 
         dispose();
-        new ChatMessenger(user);
+//        new ChatMessenger(user);
     }
 
     private void clearFieldsForm() {

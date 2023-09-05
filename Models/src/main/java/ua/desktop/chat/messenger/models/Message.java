@@ -22,8 +22,9 @@ public class Message implements Serializable {
     public Message() {
     }
 
-    public Message(String message, Chat chat) {
+    public Message(String message, LocalDateTime localDateTime, Chat chat) {
         this.message = message;
+        this.localDateTime = localDateTime;
         this.chat = chat;
     }
 
