@@ -61,6 +61,8 @@
                     </constraints>
                     <properties>
                       <background color="-7432810"/>
+                      <font name="Fira Code" size="14"/>
+                      <foreground color="-65794"/>
                     </properties>
                   </component>
                   <component id="bcd08" class="javax.swing.JButton" binding="sendMessage">

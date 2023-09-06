@@ -27,7 +27,6 @@ public class AuthorizationGUI extends JDialog {
         confirmAuthorizationButton.addActionListener(e -> authorization());
 
         registrationButton.addActionListener(e -> {
-//            dispose();
             RegistrationGUI registrationGUI = new RegistrationGUI(this);
             registrationGUI.startGUI();
         });

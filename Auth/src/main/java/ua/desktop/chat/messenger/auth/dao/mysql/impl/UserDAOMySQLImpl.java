@@ -16,7 +16,7 @@ public class UserDAOMySQLImpl implements UserDAO {
     @Override
     public boolean createUser(final User user) throws DAOException {
 
-        if (emailUserIsExist(user)) {
+        if (isExistUserWithEmailAndUserName(user)) {
             logger.warn("Such user with email `"
                     .concat(user.getEmail())
                     .concat("` is defined, please change email..."));
@@ -38,13 +38,14 @@ public class UserDAOMySQLImpl implements UserDAO {
         return true;
     }
 
-    private boolean emailUserIsExist(User user) throws DAOException {
+    private boolean isExistUserWithEmailAndUserName(User user) throws DAOException {
 
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            Query<User> query = session.createQuery(QueryUser.findUserByEmail(), User.class);
+            Query<User> query = session.createQuery(QueryUser.findUserByEmailORUserName(), User.class);
             query.setParameter("email", user.getEmail());
+            query.setParameter("username", user.getUsername());
 
             User foundUser = query.uniqueResult();
 
@@ -53,11 +54,15 @@ public class UserDAOMySQLImpl implements UserDAO {
             if (foundUser != null) {
                 logger.info("User with this email `"
                         .concat(user.getEmail())
-                        .concat("` was existed!"));
+                        .concat("` or username `")
+                        .concat(user.getUsername())
+                        .concat("`was existed!"));
                 return true;
             }
             logger.info("User with this email `"
                     .concat(user.getEmail())
+                    .concat("` or username `")
+                    .concat(user.getUsername())
                     .concat("` was not existed!"));
             return false;
         }

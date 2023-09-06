@@ -4,8 +4,7 @@ public class QueryUser {
     public static String findUserByEmailAndPassword() {
         return "FROM User u WHERE u.email = :email AND u.password = :password";
     }
-    public static String findUserByEmail() {
-        return "FROM User u WHERE u.email = :email";
+    public static String findUserByEmailORUserName() {
+        return "FROM User u WHERE u.email = :email OR u.username = :username";
     }
-
 }

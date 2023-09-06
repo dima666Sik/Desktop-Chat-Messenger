@@ -511,3 +511,172 @@ java.lang.ClassCastException: class ua.desktop.chat.messenger.dto.MessageDTO can
 [INFO ] 2023-09-05 23:38:45.034 [Thread-0] CommunicationHandler - response: /USERS
 [WARN ] 2023-09-05 23:38:45.034 [Thread-2] ConnectionHandler - Socket was closed. U successful exit from client!
 [WARN ] 2023-09-05 23:38:50.947 [Thread-1] ConnectionHandler - Socket was closed. U successful exit from client!
+[INFO ] 2023-09-06 18:12:50.928 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 18:12:59.987 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 18:13:08.645 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 18:13:09.999 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 18:13:11.531 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 18:13:11.650 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 18:13:16.079 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 60427
+[INFO ] 2023-09-06 18:13:16.155 [Thread-1] ConnectionHandler - Username accepted: dd
+[INFO ] 2023-09-06 18:13:16.157 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 18:13:25.737 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 18:13:34.029 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 18:13:34.712 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 18:13:35.876 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 18:13:35.939 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 18:13:40.409 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 60439
+[INFO ] 2023-09-06 18:13:40.411 [Thread-2] ConnectionHandler - Username accepted: ff
+[INFO ] 2023-09-06 18:13:40.412 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 18:13:40.413 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 18:13:47.691 [Thread-2] ConnectionHandler - SENDER / 🟢 dd
+[INFO ] 2023-09-06 18:13:47.711 [Thread-2] ConnectionHandler - userName:  ff, message: fffffff
+[INFO ] 2023-09-06 18:13:47.722 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 18:13:51.259 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 18:13:51.268 [Thread-0] CommunicationHandler - response: /USERS
+[WARN ] 2023-09-06 18:13:51.268 [Thread-1] ConnectionHandler - Socket was closed. U successful exit from client!
+[WARN ] 2023-09-06 18:13:51.919 [Thread-2] ConnectionHandler - Socket was closed. U successful exit from client!
+[INFO ] 2023-09-06 20:05:59.379 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 20:06:45.064 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 20:06:47.063 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 20:06:59.536 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 20:07:54.846 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 20:07:59.589 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 20:08:01.464 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 20:08:12.122 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 20:08:12.986 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `dd` or username `dd`was existed!
+[WARN ] 2023-09-06 20:08:12.988 [AWT-EventQueue-0] UserDAOMySQLImpl - Such user with email `dd` is defined, please change email...
+[INFO ] 2023-09-06 20:08:23.085 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 20:08:23.103 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `dd` or username `ddf`was existed!
+[WARN ] 2023-09-06 20:08:23.104 [AWT-EventQueue-0] UserDAOMySQLImpl - Such user with email `dd` is defined, please change email...
+[INFO ] 2023-09-06 20:08:33.626 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 20:08:33.642 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `ddd` or username `dd`was existed!
+[WARN ] 2023-09-06 20:08:33.642 [AWT-EventQueue-0] UserDAOMySQLImpl - Such user with email `ddd` is defined, please change email...
+[INFO ] 2023-09-06 20:08:45.654 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 20:08:45.664 [AWT-EventQueue-0] UserDAOMySQLImpl - User with this email `ddd` or username `ddd` was not existed!
+[INFO ] 2023-09-06 20:08:45.961 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 20:08:45.998 [AWT-EventQueue-0] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-06 20:08:46.311 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 20:08:46.395 [AWT-EventQueue-0] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-09-06 21:20:49.386 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 21:20:52.234 [Thread-2] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 21:20:54.839 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 21:21:02.981 [Thread-2] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 21:21:16.339 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 21:21:17.384 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 21:21:19.942 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 21:21:20.168 [Thread-2] Client - Open chat!
+[INFO ] 2023-09-06 21:21:24.518 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 62831
+[INFO ] 2023-09-06 21:21:24.749 [Thread-1] ConnectionHandler - Username accepted: dd
+[INFO ] 2023-09-06 21:21:24.753 [Thread-1] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 21:21:35.694 [Thread-1] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 21:21:38.318 [Thread-1] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 21:21:39.658 [Thread-1] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 21:21:41.466 [Thread-1] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 21:21:43.884 [Thread-1] CommunicationHandler - response: /M
+[WARN ] 2023-09-06 21:21:45.714 [Thread-1] ConnectionHandler - Socket was closed. U successful exit from client!
+[INFO ] 2023-09-06 21:21:56.241 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 21:21:56.247 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 21:22:00.773 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 62838
+[INFO ] 2023-09-06 21:24:20.336 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:17:57.427 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 23:18:02.410 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:18:15.378 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 23:18:16.136 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 23:18:17.688 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 23:18:17.806 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 23:18:22.247 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 63579
+[INFO ] 2023-09-06 23:18:22.329 [Thread-1] ConnectionHandler - Username accepted: dd
+[INFO ] 2023-09-06 23:18:22.332 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:18:22.333 [Thread-0] CommunicationHandler - response: /M
+[WARN ] 2023-09-06 23:18:25.470 [Thread-1] ConnectionHandler - Socket was closed. U successful exit from client!
+[INFO ] 2023-09-06 23:22:56.925 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 23:23:05.812 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:23:21.637 [AWT-EventQueue-0] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:23:29.270 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 23:23:30.279 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 23:23:31.597 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 23:23:31.697 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 23:23:36.233 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 63618
+[INFO ] 2023-09-06 23:23:36.435 [Thread-1] ConnectionHandler - Username accepted: dd
+[INFO ] 2023-09-06 23:23:36.438 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:23:36.439 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:23:51.471 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:24:00.946 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 23:24:01.637 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 23:24:02.611 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 23:24:02.683 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 23:24:07.139 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 63626
+[INFO ] 2023-09-06 23:24:07.142 [Thread-2] ConnectionHandler - Username accepted: ff
+[INFO ] 2023-09-06 23:24:07.144 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:24:07.144 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:24:07.148 [Thread-2] ConnectionHandler - SENDER / GLOBAL
+[INFO ] 2023-09-06 23:24:07.170 [Thread-2] ConnectionHandler - userName:  ff, message: www
+[INFO ] 2023-09-06 23:24:07.190 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:24:07.191 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:24:07.196 [Thread-0] Client - ff
+[INFO ] 2023-09-06 23:24:07.196 [Thread-0] Client - ff
+[INFO ] 2023-09-06 23:25:26.495 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:25:36.123 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 23:25:37.082 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 23:25:38.432 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 23:25:38.624 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 23:25:43.133 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 63645
+[INFO ] 2023-09-06 23:25:43.194 [Thread-3] ConnectionHandler - Username accepted: ss
+[INFO ] 2023-09-06 23:25:43.203 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:25:43.262 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:25:43.290 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:25:43.863 [Thread-3] ConnectionHandler - SENDER / GLOBAL
+[INFO ] 2023-09-06 23:25:43.876 [Thread-3] ConnectionHandler - userName:  ss, message: sss
+[INFO ] 2023-09-06 23:25:43.890 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:25:43.891 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:25:43.894 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:25:43.900 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:25:43.953 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:25:44.009 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:25:53.075 [Thread-3] ConnectionHandler - SENDER / GLOBAL
+[INFO ] 2023-09-06 23:25:53.079 [Thread-3] ConnectionHandler - userName:  ss, message: swsww
+[INFO ] 2023-09-06 23:25:53.083 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:25:53.084 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:25:53.086 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:25:53.088 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:25:53.149 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:25:53.160 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:26:19.912 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 23:26:23.864 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:26:32.516 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 23:26:33.325 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 23:26:34.659 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 23:26:34.811 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 23:26:39.236 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 63660
+[INFO ] 2023-09-06 23:26:39.388 [Thread-1] ConnectionHandler - Username accepted: dd
+[INFO ] 2023-09-06 23:26:39.390 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:26:41.348 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:26:49.785 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 23:26:50.810 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 23:26:52.159 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 23:26:52.286 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 23:26:56.736 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 63667
+[INFO ] 2023-09-06 23:26:56.738 [Thread-2] ConnectionHandler - Username accepted: ss
+[INFO ] 2023-09-06 23:26:56.739 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:26:56.740 [Thread-2] ConnectionHandler - SENDER / GLOBAL
+[INFO ] 2023-09-06 23:26:56.740 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:26:56.755 [Thread-2] ConnectionHandler - userName:  ss, message: ss
+[INFO ] 2023-09-06 23:26:56.795 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:26:56.796 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:26:56.802 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:26:56.805 [Thread-0] Client - ss
+[INFO ] 2023-09-06 23:27:17.881 [Thread-2] ConnectionHandler - SENDER / dd
+[INFO ] 2023-09-06 23:27:17.885 [Thread-2] ConnectionHandler - userName:  ss, message: sss
+[INFO ] 2023-09-06 23:27:17.891 [Thread-0] CommunicationHandler - response: /M
+[INFO ] 2023-09-06 23:38:36.868 [Thread-0] ConnectionHandler - InetAddress : DESKTOP-OCNPFLI/192.168.56.1
+[INFO ] 2023-09-06 23:38:42.328 [Thread-1] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-06 23:38:51.568 [AWT-EventQueue-0] DBConnector - Get session was successful!
+[INFO ] 2023-09-06 23:38:52.325 [AWT-EventQueue-0] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-06 23:38:54.121 [AWT-EventQueue-0] Client - Connected
+[INFO ] 2023-09-06 23:38:54.203 [Thread-1] Client - Open chat!
+[INFO ] 2023-09-06 23:38:58.694 [Thread-0] ConnectionHandler - Connection received from DESKTOP-OCNPFLI : 63866
+[INFO ] 2023-09-06 23:38:58.769 [Thread-1] ConnectionHandler - Username accepted: dd
+[INFO ] 2023-09-06 23:38:58.772 [Thread-0] CommunicationHandler - response: /USERS
+[INFO ] 2023-09-06 23:38:58.773 [Thread-0] CommunicationHandler - response: /M
+[WARN ] 2023-09-06 23:39:00.158 [Thread-1] ConnectionHandler - Socket was closed. U successful exit from client!

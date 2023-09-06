@@ -12,6 +12,7 @@ import ua.desktop.chat.messenger.parser.ParserJSON;
 import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,8 +69,10 @@ public class ClientHandler implements Runnable {
                                     if ((receivedObjectString = in.readLine()) != null) {
                                         message = (MessageDTO) ParserJSON.convertStringToObject(receivedObjectString);
                                         logger.info("userName:  ".concat(user.getUsername()).concat(", message: ").concat(message.getMessage()));
+                                        System.out.println(message);
                                         String msgJSON = ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT);
                                         String userJSON = ParserJSON.convertObjectToString(user, TypeMessage.USER_OBJECT);
+                                        //2. TODO Send message in db for need chat for user
                                         connectionHandler.sendMessage(this, receiver, userJSON, msgJSON);
                                     }
                                     break;

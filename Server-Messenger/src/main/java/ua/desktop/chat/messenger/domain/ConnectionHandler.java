@@ -125,6 +125,7 @@ public class ConnectionHandler implements Runnable {
         userNameList.clear();
         for (String key : clientHandlers.keySet()) {
             ClientHandler client = clientHandlers.get(key);
+            // 1. TODO Add chats with this names into db if them not exist there
             userNameList.add(client.getUsername());
         }
     }
