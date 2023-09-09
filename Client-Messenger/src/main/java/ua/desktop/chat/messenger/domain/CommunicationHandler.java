@@ -2,16 +2,19 @@ package ua.desktop.chat.messenger.domain;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.domain.ifaces.ChatSystemHandling;
+import ua.desktop.chat.messenger.domain.ifaces.MessageSystemHandling;
 import ua.desktop.chat.messenger.dto.MessageDTO;
+import ua.desktop.chat.messenger.dto.UserDTO;
+import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.models.Message;
+import ua.desktop.chat.messenger.models.User;
 import ua.desktop.chat.messenger.parser.ParserJSON;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class CommunicationHandler implements Runnable {
     private final static Logger logger = LogManager.getLogger(CommunicationHandler.class.getName());
@@ -21,6 +24,13 @@ public class CommunicationHandler implements Runnable {
     private BufferedReader s_in;
     private Client client;
     private boolean isConnected = false;
+    private final ChatSystemHandling chatSystemMessaging;
+    private final MessageSystemHandling messageSystemHandling;
+
+    public CommunicationHandler(ChatSystemHandling chatSystemMessaging, MessageSystemHandling messageSystemHandling) {
+        this.chatSystemMessaging = chatSystemMessaging;
+        this.messageSystemHandling = messageSystemHandling;
+    }
 
     public void run() {
         try {
@@ -32,12 +42,12 @@ public class CommunicationHandler implements Runnable {
             while (isActive) {
                 if (getIsConnected()) {
                     String response;
-                    while ((response = s_in.readLine()) != null) {
+                    while (s_in != null && (response = s_in.readLine()) != null) {
                         logger.info("response: " + response);
                         if (response.equals("/USERS")) {
                             String uList;
                             if ((uList = s_in.readLine()) != null) {
-                                List<String> userList = setUserList(uList);
+                                Set<String> userList = setUserList(uList);
                                 client.updateUserListChatGUI(userList);
                                 break;
                             }
@@ -64,8 +74,8 @@ public class CommunicationHandler implements Runnable {
         }
     }
 
-    public List<String> setUserList(String rspUserList) {
-        return new ArrayList<>(Arrays.asList(rspUserList.split(",")));
+    public Set<String> setUserList(String rspUserList) {
+        return new HashSet<>(Arrays.asList(rspUserList.split(",")));
     }
 
     public synchronized boolean getIsConnected() {
@@ -102,5 +112,13 @@ public class CommunicationHandler implements Runnable {
 
     public synchronized void setS_in(BufferedReader s_in) {
         this.s_in = s_in;
+    }
+
+    public synchronized ChatSystemHandling getChatSystemMessaging() {
+        return chatSystemMessaging;
+    }
+
+    public synchronized MessageSystemHandling getMessageSystemHandling() {
+        return messageSystemHandling;
     }
 }

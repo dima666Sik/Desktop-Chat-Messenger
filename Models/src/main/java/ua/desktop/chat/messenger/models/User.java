@@ -1,6 +1,7 @@
 package ua.desktop.chat.messenger.models;
 
 import jakarta.persistence.*;
+import ua.desktop.chat.messenger.dto.UserDTO;
 
 import java.util.List;
 import java.util.Objects;
@@ -21,6 +22,13 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    public User(UserDTO userDTO) {
+        this.id = userDTO.getId();
+        this.username = userDTO.getUsername();
+        this.email = userDTO.getEmail();
+        this.password = userDTO.getPassword();
     }
 
     public User() {

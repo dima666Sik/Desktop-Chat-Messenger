@@ -5,6 +5,7 @@ import ua.desktop.chat.messenger.env.TypeChat;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "chats")
@@ -71,6 +72,19 @@ public class Chat {
 
     public void setMessageList(List<Message> messageList) {
         this.messageList = messageList;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Chat chat = (Chat) object;
+        return Objects.equals(id, chat.id) && Objects.equals(nameChat, chat.nameChat) && typeChat == chat.typeChat && Objects.equals(user, chat.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nameChat, typeChat, user);
     }
 
     @Override

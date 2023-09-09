@@ -14,9 +14,10 @@ import java.awt.event.WindowEvent;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Set;
 
 public class ChatMessengerGUI extends JDialog {
-    private static final String DEFAULT_NAME_CHAT = "Nope choose chat!";
+    private static final String DEFAULT_NAME_CHAT = "GLOBAL";
     private JTextArea textArea;
     private JTextField textFieldMessage;
     private JButton sendMessage;
@@ -28,14 +29,17 @@ public class ChatMessengerGUI extends JDialog {
     private final StringBuilder text = new StringBuilder();
     private JList<String> jListChats;
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+    private String textNameChat;
+    private TypeChat typeChat;
 
     public ChatMessengerGUI(Client client) {
         this.client = client;
     }
 
-    public void addUserList(final List<String> users) {
+    public void addUserList(final Set<String> users) {
         new Thread(() -> SwingUtilities.invokeLater(() -> {
             try {
+                System.out.println("Before updating " + nameChat);
                 removeAllUsernames();
                 for (String user : users) {
                     if (!user.equals(client.getUser().getUsername())) {
@@ -43,6 +47,7 @@ public class ChatMessengerGUI extends JDialog {
                         jListChats.setModel(model);
                     }
                 }
+                System.out.println("After updating " + nameChat);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -52,10 +57,22 @@ public class ChatMessengerGUI extends JDialog {
     public void updateChat(final String serverMSG) {
         new Thread(() -> SwingUtilities.invokeLater(() -> {
             try {
-                System.out.println("-------------" + serverMSG);
                 text.append(serverMSG).append(" \n");
                 textArea.append(text.toString());
                 clearText();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        })).start();
+    }
+
+    public void prePrinterMessagesInChatForUser(List<MessageDTO> messageDTOs) {
+        new Thread(() -> SwingUtilities.invokeLater(() -> {
+            try {
+                for (MessageDTO messageDTO : messageDTOs) {
+                    textArea.append(messageDTO.getMessage().concat("\n"));
+                    clearText();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -68,7 +85,6 @@ public class ChatMessengerGUI extends JDialog {
 
     private void removeAllUsernames() {
         model.clear();
-        model.addElement("GLOBAL");
         jListChats.setModel(model);
     }
 
@@ -82,6 +98,11 @@ public class ChatMessengerGUI extends JDialog {
 
         nameChat.setText(DEFAULT_NAME_CHAT);
         model = new DefaultListModel<>();
+
+        if (nameChat.getText().isEmpty()) nameChat.setText(DEFAULT_NAME_CHAT);
+
+        textNameChat = nameChat.getText().equals(DEFAULT_NAME_CHAT) ? DEFAULT_NAME_CHAT : nameChat.getText();
+        typeChat = nameChat.getText().equals(DEFAULT_NAME_CHAT) ? TypeChat.GLOBAL : TypeChat.PRIVATE;
 
         textArea.append("Username "
                 .concat("[")
@@ -115,13 +136,9 @@ public class ChatMessengerGUI extends JDialog {
         sendMessage.addActionListener(e -> {
             String textMessage = textFieldMessage.getText();
 
-            if (nameChat.getText().isEmpty() || nameChat.getText().equals(DEFAULT_NAME_CHAT))
-                nameChat.setText("GLOBAL");
-            String textNameChat = nameChat.getText().equals("GLOBAL") ? TypeChat.GLOBAL.name() : nameChat.getText();
-            TypeChat typeChat = nameChat.getText().equals("GLOBAL") ? TypeChat.GLOBAL : TypeChat.PRIVATE;
-
             if (!textMessage.isEmpty()) {
                 //TODO
+
                 LocalDateTime localDateTime = LocalDateTime.now();
                 ChatDTO chat = new ChatDTO(textNameChat, typeChat, client.getUser());
                 MessageDTO message = new MessageDTO(textMessage, localDateTime, chat);
@@ -168,8 +185,14 @@ public class ChatMessengerGUI extends JDialog {
 
             if (!e.getValueIsAdjusting()) {
                 // Get the selected value from the JList
-                int selectedChatIndex = jListChats.getSelectedIndex();
-                nameChat.setText(jListChats.getSelectedValue());
+                if (jListChats.getSelectedValue() == null) nameChat.setText(textNameChat);
+                else nameChat.setText(jListChats.getSelectedValue());
+
+                textNameChat = nameChat.getText();
+                typeChat = nameChat.getText().equals(DEFAULT_NAME_CHAT) ? TypeChat.GLOBAL : TypeChat.PRIVATE;
+                ChatDTO chat = new ChatDTO(nameChat.getText(), typeChat, client.getUser());
+                System.out.println("++++____ " + nameChat.getText() + " " + textNameChat + " " + client.getUser().getUsername());
+                prePrinterMessagesInChatForUser(client.getMessagesInChatForUser(chat));
             }
         });
     }

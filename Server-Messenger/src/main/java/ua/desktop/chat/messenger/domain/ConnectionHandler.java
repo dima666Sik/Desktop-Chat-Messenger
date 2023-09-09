@@ -2,10 +2,12 @@ package ua.desktop.chat.messenger.domain;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.domain.ifaces.ChatSystemHandling;
+import ua.desktop.chat.messenger.domain.ifaces.MessageSystemHandling;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
+import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.env.TypeMessage;
-import ua.desktop.chat.messenger.models.Message;
 import ua.desktop.chat.messenger.models.User;
 import ua.desktop.chat.messenger.parser.ParserJSON;
 
@@ -14,21 +16,22 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ConnectionHandler implements Runnable {
     private final static Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
     private Map<String, ClientHandler> clientHandlers = new HashMap<>();
-    private final List<String> userNameList = new ArrayList<>();
+    private final Set<String> userNameList = new HashSet<>();
     private Boolean isActive = true;
     private Boolean newUser = true;
     private final int portNumber;
+    private final ChatSystemHandling chatSystemMessaging;
+    private final MessageSystemHandling messageSystemHandling;
 
-    public ConnectionHandler(int portNumber) {
+    public ConnectionHandler(int portNumber, ChatSystemHandling chatSystemMessaging, MessageSystemHandling messageSystemHandling) {
         this.portNumber = portNumber;
+        this.chatSystemMessaging = chatSystemMessaging;
+        this.messageSystemHandling = messageSystemHandling;
     }
 
     public void run() {
@@ -103,33 +106,6 @@ public class ConnectionHandler implements Runnable {
         }
     }
 
-    public synchronized void addClient(String username, ClientHandler ch) {
-        clientHandlers.put(username, ch);
-        informAllClientsUserNameList();
-    }
-
-    public synchronized void removeClient(String username) {
-        clientHandlers.remove(username);
-        informAllClientsUserNameList();
-    }
-
-    public void informAllClientsUserNameList() {
-        fillUserNameList();
-        for (String key : clientHandlers.keySet()) {
-            ClientHandler client = clientHandlers.get(key);
-            client.sendUserNameList(userNameList);
-        }
-    }
-
-    private void fillUserNameList() {
-        userNameList.clear();
-        for (String key : clientHandlers.keySet()) {
-            ClientHandler client = clientHandlers.get(key);
-            // 1. TODO Add chats with this names into db if them not exist there
-            userNameList.add(client.getUsername());
-        }
-    }
-
     public void terminate() {
         isActive = false;
     }
@@ -142,5 +118,15 @@ public class ConnectionHandler implements Runnable {
         this.clientHandlers = clients;
     }
 
+    public synchronized ChatSystemHandling getChatSystemMessaging() {
+        return chatSystemMessaging;
+    }
 
+    public synchronized MessageSystemHandling getMessageSystemHandling() {
+        return messageSystemHandling;
+    }
+
+    public synchronized Set<String> getUserNameList() {
+        return userNameList;
+    }
 }

@@ -7,10 +7,14 @@ import ua.desktop.chat.messenger.models.User;
 
 import java.util.List;
 
-public interface ChatSystemMessageDAO {
-    boolean isExistChatByUser(String nameChat, User user) throws DAOException;
+public interface ChatSystemHandlerDAO {
+    boolean isExistChatByUser(String nameChat, Long userId) throws DAOException;
 
     Chat createChatByUser(String nameChat, TypeChat typeChat, User user) throws DAOException;
 
     List<Chat> readListChatsByUser(User user) throws DAOException;
+
+    Chat getChat(String nameChat, Long userId)throws DAOException;
+
+    List<Chat> readListChatsByChatName(String nameChat)throws DAOException;
 }
