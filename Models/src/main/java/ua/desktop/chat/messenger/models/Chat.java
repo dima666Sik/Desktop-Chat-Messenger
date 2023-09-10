@@ -21,16 +21,27 @@ public class Chat {
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
     private User user;
+    @Column(name = "user_companion_id")
+    private Long userCompanionId;
     @OneToMany(mappedBy = "chat", fetch = FetchType.LAZY)
     private List<Message> messageList;
 
     public Chat() {
     }
 
-    public Chat(String nameChat, TypeChat typeChat, User user) {
+    public Chat(String nameChat, TypeChat typeChat, User user, Long userCompanionId) {
         this.nameChat = nameChat;
         this.typeChat = typeChat;
         this.user = user;
+        this.userCompanionId = userCompanionId;
+    }
+
+    public Long getUserCompanionId() {
+        return userCompanionId;
+    }
+
+    public void setUserCompanionId(Long userCompanionId) {
+        this.userCompanionId = userCompanionId;
     }
 
     public Long getId() {

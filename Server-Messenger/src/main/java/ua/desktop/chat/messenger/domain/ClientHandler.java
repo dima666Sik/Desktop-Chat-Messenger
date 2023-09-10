@@ -20,6 +20,7 @@ import java.net.SocketException;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class ClientHandler implements Runnable {
@@ -56,9 +57,8 @@ public class ClientHandler implements Runnable {
                             logger.info("You cannot chose this username");
                         } else if (!userDTO.getUsername().isEmpty()) {
                             logger.info("Username accepted: ".concat(userDTO.getUsername()));
-                            connectionHandler.getUserNameList().add("GLOBAL");
+                            connectionHandler.getUserNameAndIdList().put("GLOBAL", null);
                             addClient(userDTO.getUsername(), this);
-                            System.out.println("1." + " " + connectionHandler.getUserNameList().size());
                             break;
                         } else {
                             logger.info("No Username chosen.");
@@ -78,7 +78,6 @@ public class ClientHandler implements Runnable {
                                     if ((receivedObjectString = in.readLine()) != null) {
                                         messageDTO = (MessageDTO) ParserJSON.convertStringToObject(receivedObjectString);
                                         logger.info("userName:  ".concat(userDTO.getUsername()).concat(", message: ").concat(messageDTO.getMessage()));
-                                        System.out.println(messageDTO);
 
                                         String msgJSON = ParserJSON.convertObjectToString(messageDTO, TypeMessage.MESSAGE_OBJECT);
                                         String userJSON = ParserJSON.convertObjectToString(userDTO, TypeMessage.USER_OBJECT);
@@ -130,78 +129,64 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    public void sendUserNameList(Set<String> ul) {
+    public void sendUserNameList(Map<String, Long> ul) {
         StringBuilder userListResponse = new StringBuilder();
         out.println("/USERS");
-        System.out.println("+++++1: " + ul.size());
         User userORM = new User(userDTO);
-        ul.forEach(System.out::print);
-        for (String userChat : ul) {
-            System.out.println("+++++2");
+
+        for (Map.Entry<String, Long> entry : ul.entrySet()) {
+            String userChat = entry.getKey();
+            Long idUserCompanion = entry.getValue();
+
             // 1. TODO Add chats with this names into db if them not exist there
-            System.out.println("+++" + userChat);
-            System.out.println("+++++2.5");
             userListResponse.append(userChat).append(",");
             new Thread(() -> {
                 synchronized (this) {
                     if (!connectionHandler.getChatSystemMessaging().isExistChatByUser(userChat, userDTO.getId())) {
                         if (userChat.equals(TypeChat.GLOBAL.name())) {
-                            System.out.println(userChat + " " + userORM.getUsername() + " " + userORM.getId());
-                            connectionHandler.getChatSystemMessaging().createChatByUser(TypeChat.GLOBAL.name(), TypeChat.GLOBAL, userORM);
+                            connectionHandler.getChatSystemMessaging().createChatByUser(TypeChat.GLOBAL.name(), TypeChat.GLOBAL, userORM, idUserCompanion);
                         } else {
                             if (!userChat.equals(userORM.getUsername())) {
-                                System.out.println(userChat + " " + userORM.getUsername() + " " + userORM.getId());
-                                connectionHandler.getChatSystemMessaging().createChatByUser(userChat, TypeChat.PRIVATE, userORM);
+                                connectionHandler.getChatSystemMessaging().createChatByUser(userChat, TypeChat.PRIVATE, userORM, idUserCompanion);
                             }
                         }
                     }
                 }
             }).start();
-            System.out.println("+++++4");
         }
         out.println(userListResponse);
     }
 
     public synchronized void addClient(String username, ClientHandler ch) {
-        System.out.println("+++1");
         connectionHandler.getClientHandlers().put(username, ch);
-        System.out.println(connectionHandler.getClientHandlers());
-        System.out.println("+++1.5 " + connectionHandler.getClientHandlers().size());
-        System.out.println("+++2");
         informAllClientsUserNameList();
     }
 
     public synchronized void removeClient(String username) {
         connectionHandler.getClientHandlers().remove(username);
-        connectionHandler.getUserNameList().remove(username);
+        connectionHandler.getUserNameAndIdList().remove(username);
         informAllClientsUserNameList();
     }
 
     public void informAllClientsUserNameList() {
-        System.out.println("+++3");
         fillChatNameList();
-        System.out.println("+++4");
 
         if (flagGlobalChat) {
-            this.sendUserNameList(connectionHandler.getUserNameList());
+            this.sendUserNameList(connectionHandler.getUserNameAndIdList());
             flagGlobalChat = false;
         }
 
         for (String key : connectionHandler.getClientHandlers().keySet()) {
             ClientHandler client = connectionHandler.getClientHandlers().get(key);
-            client.sendUserNameList(connectionHandler.getUserNameList());
+            client.sendUserNameList(connectionHandler.getUserNameAndIdList());
         }
     }
 
     private void fillChatNameList() {
-        System.out.println("+++3.5");
-        System.out.println("2." + " " + connectionHandler.getClientHandlers().size());
-        System.out.println("2." + " " + connectionHandler.getUserNameList().size());
 
         for (String key : connectionHandler.getClientHandlers().keySet()) {
             ClientHandler client = connectionHandler.getClientHandlers().get(key);
-            System.out.println("___" + client.getUsername() + "+++" + userDTO.getUsername());
-            connectionHandler.getUserNameList().add(client.getUsername());
+            connectionHandler.getUserNameAndIdList().put(client.getUsername(), client.getUserDTO().getId());
         }
     }
 

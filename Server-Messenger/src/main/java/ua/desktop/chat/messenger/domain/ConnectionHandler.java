@@ -21,7 +21,7 @@ import java.util.*;
 public class ConnectionHandler implements Runnable {
     private final static Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
     private Map<String, ClientHandler> clientHandlers = new HashMap<>();
-    private final Set<String> userNameList = new HashSet<>();
+    private final Map<String, Long> userNameAndIdList = new HashMap<>();
     private Boolean isActive = true;
     private Boolean newUser = true;
     private final int portNumber;
@@ -84,10 +84,8 @@ public class ConnectionHandler implements Runnable {
 
         if (clientRCVR.equals("GLOBAL")) {
             message.setMessage("[".concat(message.getChat().getTypeChat().name()).concat("] ").concat(user.getUsername()).concat(": ").concat(message.getMessage()));
-            System.out.println(message.getMessage());
             for (String key : clientHandlers.keySet()) {
                 ClientHandler client = clientHandlers.get(key);
-                System.out.println(client.getUsername());
                 client.sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));
             }
         } else {
@@ -126,7 +124,7 @@ public class ConnectionHandler implements Runnable {
         return messageSystemHandling;
     }
 
-    public synchronized Set<String> getUserNameList() {
-        return userNameList;
+    public synchronized Map<String, Long> getUserNameAndIdList() {
+        return userNameAndIdList;
     }
 }

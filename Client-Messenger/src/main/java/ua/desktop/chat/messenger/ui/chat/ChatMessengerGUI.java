@@ -13,6 +13,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 
@@ -66,8 +68,15 @@ public class ChatMessengerGUI extends JDialog {
         })).start();
     }
 
+    private List<MessageDTO> sortListMessageForDate(List<MessageDTO> messageDTOs) {
+        messageDTOs.sort(Comparator.comparing(MessageDTO::getLocalDateTime));
+        return messageDTOs;
+    }
+
     public void prePrinterMessagesInChatForUser(List<MessageDTO> messageDTOs) {
         new Thread(() -> SwingUtilities.invokeLater(() -> {
+            textArea.setText("");
+            clearText();
             try {
                 for (MessageDTO messageDTO : messageDTOs) {
                     textArea.append(messageDTO.getMessage().concat("\n"));
@@ -143,10 +152,8 @@ public class ChatMessengerGUI extends JDialog {
                 ChatDTO chat = new ChatDTO(textNameChat, typeChat, client.getUser());
                 MessageDTO message = new MessageDTO(textMessage, localDateTime, chat);
 
-                System.out.println("====================" + message.getMessage());
                 client.sendMessage(message);
 
-                System.out.println(textNameChat);
                 if (textNameChat.equals("GLOBAL")) {
                     text.append("(")
                             .append(localDateTime.format(formatter))
@@ -191,8 +198,7 @@ public class ChatMessengerGUI extends JDialog {
                 textNameChat = nameChat.getText();
                 typeChat = nameChat.getText().equals(DEFAULT_NAME_CHAT) ? TypeChat.GLOBAL : TypeChat.PRIVATE;
                 ChatDTO chat = new ChatDTO(nameChat.getText(), typeChat, client.getUser());
-                System.out.println("++++____ " + nameChat.getText() + " " + textNameChat + " " + client.getUser().getUsername());
-                prePrinterMessagesInChatForUser(client.getMessagesInChatForUser(chat));
+                prePrinterMessagesInChatForUser(sortListMessageForDate(client.getMessagesInChatForUser(chat)));
             }
         });
     }

@@ -20,8 +20,9 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     @Override
     public boolean isExistChatByUser(String nameChat, Long userId) throws DAOException {
         try (Session session = DBConnector.getSession()) {
+            session.beginTransaction();
 
-            Chat foundChat = findChatByChatNameAndUserId(nameChat, userId, session);
+            Chat foundChat = findChatByChatNameAndUserId(nameChat, userId);
 
             if (foundChat != null) {
                 logger.info("Chat with this name `"
@@ -32,18 +33,20 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             logger.info("Chat with this name `"
                     .concat(nameChat)
                     .concat("` was not existed!"));
+            session.getTransaction().commit();
+
             return false;
         }
     }
 
     @Override
-    public Chat createChatByUser(String nameChat, TypeChat typeChat, User user) throws DAOException {
+    public Chat createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion) throws DAOException {
         Chat chat = null;
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
             System.out.println(user + " " + user.getId());
             User userORM = session.get(User.class, user.getId()); // Replace userId with the actual user ID
-            chat = new Chat(nameChat, typeChat, userORM);
+            chat = new Chat(nameChat, typeChat, userORM, idUserCompanion);
             session.persist(chat);
             session.getTransaction().commit();
             logger.info("Create chat was successful!");
@@ -74,7 +77,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            Chat chatORM = findChatByChatNameAndUserId(nameChat, userId, session);
+            Chat chatORM = findChatByChatNameAndUserId(nameChat, userId);
             logger.info("Read chats was successful!");
             session.getTransaction().commit();
 
@@ -97,15 +100,35 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
         }
     }
 
-    private Chat findChatByChatNameAndUserId(String nameChat, Long userId, Session session) {
-        session.beginTransaction();
+    @Override
+    public Chat getChatCompanion(Chat chat) throws DAOException {
+        try (Session session = DBConnector.getSession()) {
+            session.beginTransaction();
 
-        Query<Chat> query = session.createQuery(QueryChatSystemHandler.findChatByChatNameAndUserId(), Chat.class);
-        query.setParameter("nameChat", nameChat);
-        query.setParameter("userId", userId);
+            Query<Chat> query = session.createQuery(QueryChatSystemHandler.findChatCompanionByUserCompanionIdAndUserId(), Chat.class);
+            query.setParameter("userCompanionId", chat.getUser().getId());
+            query.setParameter("userId", chat.getUserCompanionId());
 
-        Chat chatORM = query.uniqueResult();
-        session.getTransaction().commit();
-        return chatORM;
+            Chat chatORM = query.uniqueResult();
+
+            logger.info("Read chats was successful!");
+            session.getTransaction().commit();
+
+            return chatORM;
+        }
+    }
+
+    private Chat findChatByChatNameAndUserId(String nameChat, Long userId) throws DAOException {
+        try (Session session = DBConnector.getSession()) {
+            session.beginTransaction();
+
+            Query<Chat> query = session.createQuery(QueryChatSystemHandler.findChatByChatNameAndUserId(), Chat.class);
+            query.setParameter("nameChat", nameChat);
+            query.setParameter("userId", userId);
+
+            Chat chatORM = query.uniqueResult();
+            session.getTransaction().commit();
+            return chatORM;
+        }
     }
 }

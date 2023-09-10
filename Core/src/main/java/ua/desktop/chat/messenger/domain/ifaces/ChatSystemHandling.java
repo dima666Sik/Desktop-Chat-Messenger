@@ -10,11 +10,12 @@ import java.util.List;
 public interface ChatSystemHandling {
     boolean isExistChatByUser(String nameChat, Long userId);
 
-    Chat createChatByUser(String nameChat, TypeChat typeChat, User user);
+    Chat createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion);
 
     List<Chat> readListChatsByUser(User user);
 
     List<Chat> readListChatsByChatName(String nameChat);
 
     Chat getChat(String nameChat, Long userId);
+    Chat getChatCompanion(Chat chat);
 }

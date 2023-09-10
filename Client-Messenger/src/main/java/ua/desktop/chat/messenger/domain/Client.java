@@ -75,7 +75,6 @@ public class Client implements Runnable {
 
                     if (authorizationGUI.getUser() != null) {
                         user = new UserDTO(authorizationGUI.getUser());
-                        System.out.println(user);
                         String serializedObject = ParserJSON.convertObjectToString(user, TypeMessage.USER_OBJECT);
                         s_out.println(serializedObject);
                     }
@@ -114,8 +113,6 @@ public class Client implements Runnable {
     }
 
     public void updateUserListChatGUI(Set<String> users) {
-        System.out.println("+-+");
-        users.forEach(user -> System.out.println(user));
         windowChatMessenger.addUserList(users);
     }
 
@@ -169,8 +166,15 @@ public class Client implements Runnable {
         try {
             //TODO create read message from db!
             if (communicationHandler.getChatSystemMessaging().isExistChatByUser(chatDTO.getNameChat(), user.getId())) {
-
-                List<Chat> chatORMList = communicationHandler.getChatSystemMessaging().readListChatsByChatName(chatDTO.getNameChat());
+                List<Chat> chatORMList = new ArrayList<>();
+                if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
+                    Chat chatOwner = communicationHandler.getChatSystemMessaging().getChat(chatDTO.getNameChat(), user.getId());
+                    chatORMList.add(chatOwner);
+                    Chat chatCompanion = communicationHandler.getChatSystemMessaging().getChatCompanion(chatOwner);
+                    chatORMList.add(chatCompanion);
+                } else {
+                    chatORMList = communicationHandler.getChatSystemMessaging().readListChatsByChatName(chatDTO.getNameChat());
+                }
 
                 return messageToMessageDTO(communicationHandler.getMessageSystemHandling().readListMessageByChats(chatORMList));
             } else throw new RuntimeException("Message in chat was not added!");

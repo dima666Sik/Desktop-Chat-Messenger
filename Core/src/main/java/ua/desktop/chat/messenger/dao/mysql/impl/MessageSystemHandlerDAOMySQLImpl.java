@@ -41,13 +41,13 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            List<Message> chatMessages = null;
+            List<Message> chatMessages = new ArrayList<>();
 
-            // Для каждого чата выполняем запрос и добавляем результаты в список
             for (Chat chat : chatList) {
+                System.out.println("===" + chat.getNameChat() + " " + chat.getId());
                 Query<Message> messageQuery = session.createQuery(QueryMessageSystemHandler.readMessagesByChatId(), Message.class);
                 messageQuery.setParameter("chatId", chat.getId());
-                chatMessages = messageQuery.list();
+                chatMessages.addAll(messageQuery.list());
             }
 
             session.getTransaction().commit();
