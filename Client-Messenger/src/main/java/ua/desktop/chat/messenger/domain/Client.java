@@ -175,7 +175,6 @@ public class Client implements Runnable {
                 } else {
                     chatORMList = communicationHandler.getChatSystemMessaging().readListChatsByChatName(chatDTO.getNameChat());
                 }
-
                 return messageToMessageDTO(communicationHandler.getMessageSystemHandling().readListMessageByChats(chatORMList));
             } else throw new RuntimeException("Message in chat was not added!");
 
@@ -187,7 +186,8 @@ public class Client implements Runnable {
     private synchronized List<MessageDTO> messageToMessageDTO(List<Message> messages) {
         List<MessageDTO> messageDTOS = new ArrayList<>();
         for (Message message : messages) {
-            ChatDTO chatDTO = new ChatDTO(message.getChat().getNameChat(), message.getChat().getTypeChat(), user);
+            UserDTO userDTO = new UserDTO(message.getChat().getUser());
+            ChatDTO chatDTO = new ChatDTO(message.getChat().getNameChat(), message.getChat().getTypeChat(), userDTO);
             messageDTOS.add(new MessageDTO(message.getMessage(), message.getLocalDateTime(), chatDTO));
         }
         return messageDTOS;

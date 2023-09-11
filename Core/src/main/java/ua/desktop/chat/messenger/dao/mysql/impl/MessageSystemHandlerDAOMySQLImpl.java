@@ -2,6 +2,7 @@ package ua.desktop.chat.messenger.dao.mysql.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import ua.desktop.chat.messenger.dao.exceptions.DAOException;
@@ -23,7 +24,6 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
 
     @Override
     public Message createMessageByChat(Message message) throws DAOException {
-
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -31,9 +31,9 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
 
             session.getTransaction().commit();
             logger.info("Create message in chat was successful!");
-        }
 
-        return message;
+            return message;
+        }
     }
 
     @Override
@@ -49,6 +49,7 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
                 messageQuery.setParameter("chatId", chat.getId());
                 chatMessages.addAll(messageQuery.list());
             }
+//            Hibernate.initialize(chatMessages);
 
             session.getTransaction().commit();
             logger.info("Read messages from chat was successful!");

@@ -19,8 +19,11 @@ public class DBConnector {
                     .addAnnotatedClass(User.class)
                     .addAnnotatedClass(Chat.class)
                     .addAnnotatedClass(Message.class);
+
             SessionFactory sessionFactory = configuration.buildSessionFactory();
+
             session = sessionFactory.openSession();
+
             logger.info("Get session was successful!");
         } catch (Exception e) {
             logger.error(e);

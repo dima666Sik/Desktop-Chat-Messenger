@@ -41,18 +41,20 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
 
     @Override
     public Chat createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion) throws DAOException {
-        Chat chat = null;
         try (Session session = DBConnector.getSession()) {
+
             session.beginTransaction();
-            System.out.println(user + " " + user.getId());
+
             User userORM = session.get(User.class, user.getId()); // Replace userId with the actual user ID
-            chat = new Chat(nameChat, typeChat, userORM, idUserCompanion);
+            Chat chat = new Chat(nameChat, typeChat, userORM, idUserCompanion);
+
             session.persist(chat);
             session.getTransaction().commit();
-            logger.info("Create chat was successful!");
-        }
 
-        return chat;
+            logger.info("Create chat was successful!");
+
+            return chat;
+        }
     }
 
     @Override
@@ -79,6 +81,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
 
             Chat chatORM = findChatByChatNameAndUserId(nameChat, userId);
             logger.info("Read chats was successful!");
+//            Hibernate.initialize(chatORM);
             session.getTransaction().commit();
 
             return chatORM;
@@ -110,6 +113,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             query.setParameter("userId", chat.getUserCompanionId());
 
             Chat chatORM = query.uniqueResult();
+//            Hibernate.initialize(chatORM);
 
             logger.info("Read chats was successful!");
             session.getTransaction().commit();
