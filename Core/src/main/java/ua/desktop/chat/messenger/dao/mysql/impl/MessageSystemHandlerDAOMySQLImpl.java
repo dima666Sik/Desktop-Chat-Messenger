@@ -27,9 +27,16 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            session.persist(message);
+            try {
+                session.persist(message);
 
-            session.getTransaction().commit();
+                session.getTransaction().commit();
+            } catch (Exception e) {
+                session.getTransaction().rollback();
+                logger.error(e);
+                throw new DAOException("Transaction isn't successful! Rollback data.", e);
+            }
+
             logger.info("Create message in chat was successful!");
 
             return message;
@@ -49,7 +56,6 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
                 messageQuery.setParameter("chatId", chat.getId());
                 chatMessages.addAll(messageQuery.list());
             }
-//            Hibernate.initialize(chatMessages);
 
             session.getTransaction().commit();
             logger.info("Read messages from chat was successful!");

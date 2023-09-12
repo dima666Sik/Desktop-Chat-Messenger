@@ -12,23 +12,28 @@ import ua.desktop.chat.messenger.models.User;
 
 public class DBConnector {
     private final static Logger logger = LogManager.getLogger(DBConnector.class.getName());
+    private final static SessionFactory sessionFactory;
+
+    static {
+        Configuration configuration = new Configuration()
+                .addAnnotatedClass(User.class)
+                .addAnnotatedClass(Chat.class)
+                .addAnnotatedClass(Message.class);
+
+        sessionFactory = configuration.buildSessionFactory();
+    }
+
     public static Session getSession() throws DAOException {
-        Session session = null;
         try {
-            Configuration configuration = new Configuration()
-                    .addAnnotatedClass(User.class)
-                    .addAnnotatedClass(Chat.class)
-                    .addAnnotatedClass(Message.class);
-
-            SessionFactory sessionFactory = configuration.buildSessionFactory();
-
-            session = sessionFactory.openSession();
-
             logger.info("Get session was successful!");
+            return sessionFactory.openSession();
         } catch (Exception e) {
             logger.error(e);
             throw new DAOException("Get session was not successful!", e);
         }
-        return session;
+    }
+
+    public static void closeSessionFactory() {
+        sessionFactory.close();
     }
 }

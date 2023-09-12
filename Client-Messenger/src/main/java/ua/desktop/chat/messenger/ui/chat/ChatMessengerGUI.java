@@ -1,5 +1,6 @@
 package ua.desktop.chat.messenger.ui.chat;
 
+import ua.desktop.chat.messenger.dao.util.DBConnector;
 import ua.desktop.chat.messenger.domain.Client;
 import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
@@ -136,12 +137,6 @@ public class ChatMessengerGUI extends JDialog {
                 });
 
                 thread.start();
-
-                try {
-                    thread.join();
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
-                }
             }
         });
     }
@@ -234,18 +229,13 @@ public class ChatMessengerGUI extends JDialog {
                     if (client.getIsConnected()) {
                         client.setIsConnected(false);
                         client.getCommunicationHandler().setActive(false);
+                        DBConnector.closeSessionFactory();
                         client.sendEXIT();
                         System.out.println("Exit from chat!");
                     }
                 });
 
                 thread.start();
-
-                try {
-                    thread.join();
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
-                }
             }
         });
     }

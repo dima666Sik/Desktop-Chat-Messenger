@@ -30,8 +30,14 @@ public class UserDAOMySQLImpl implements UserDAO {
 
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
-            session.persist(user);
-            session.getTransaction().commit();
+            try {
+                session.persist(user);
+                session.getTransaction().commit();
+            } catch (Exception e) {
+                session.getTransaction().rollback();
+                logger.error(e);
+                throw new DAOException("Transaction isn't successful! Rollback data.", e);
+            }
             logger.info("Create user was successful!");
         }
 

@@ -48,8 +48,14 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             User userORM = session.get(User.class, user.getId()); // Replace userId with the actual user ID
             Chat chat = new Chat(nameChat, typeChat, userORM, idUserCompanion);
 
-            session.persist(chat);
-            session.getTransaction().commit();
+            try {
+                session.persist(chat);
+                session.getTransaction().commit();
+            } catch (Exception e) {
+                session.getTransaction().rollback();
+                logger.error(e);
+                throw new DAOException("Transaction isn't successful! Rollback data.", e);
+            }
 
             logger.info("Create chat was successful!");
 
@@ -81,7 +87,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
 
             Chat chatORM = findChatByChatNameAndUserId(nameChat, userId);
             logger.info("Read chats was successful!");
-//            Hibernate.initialize(chatORM);
+
             session.getTransaction().commit();
 
             return chatORM;
@@ -113,7 +119,6 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             query.setParameter("userId", chat.getUserCompanionId());
 
             Chat chatORM = query.uniqueResult();
-//            Hibernate.initialize(chatORM);
 
             logger.info("Read chats was successful!");
             session.getTransaction().commit();
