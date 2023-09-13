@@ -122,16 +122,16 @@ public class Client implements Runnable {
                 logger.info(msg.getMessage().substring(9, 9 + user.getUsername().length()));
                 if (!msg.getMessage().substring(9, 9 + user.getUsername().length()).equals(user.getUsername())) {
                     msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
-                    windowChatMessenger.updateChat(msg.getMessage());
+                    windowChatMessenger.updateChat(msg);
                 }
             } else {
                 msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
-                windowChatMessenger.updateChat(msg.getMessage());
+                windowChatMessenger.updateChat(msg);
             }
 
         } catch (StringIndexOutOfBoundsException e) {
             msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
-            windowChatMessenger.updateChat(msg.getMessage());
+            windowChatMessenger.updateChat(msg);
         }
     }
 

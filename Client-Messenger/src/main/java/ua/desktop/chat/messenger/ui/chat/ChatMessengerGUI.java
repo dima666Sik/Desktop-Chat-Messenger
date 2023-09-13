@@ -67,6 +67,19 @@ public class ChatMessengerGUI extends JDialog {
             }
         });
     }
+    public void updateChat(final MessageDTO serverMSG) {
+        SwingUtilities.invokeLater(() -> {
+            try {
+                if (serverMSG.getChat().getNameChat().equals(nameChat.getText())) {
+                    text.append(serverMSG.getMessage()).append(" \n");
+                    textArea.append(text.toString());
+                    clearText();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+    }
 
     private List<MessageDTO> sortListMessageForDate(List<MessageDTO> messageDTOs) {
         messageDTOs.sort(Comparator.comparing(MessageDTO::getLocalDateTime));
