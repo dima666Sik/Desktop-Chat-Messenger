@@ -36,6 +36,14 @@ public class Chat {
         this.userCompanionId = userCompanionId;
     }
 
+    public Chat(Long id, String nameChat, TypeChat typeChat, User user, Long userCompanionId) {
+        this.id = id;
+        this.nameChat = nameChat;
+        this.typeChat = typeChat;
+        this.user = user;
+        this.userCompanionId = userCompanionId;
+    }
+
     public Long getUserCompanionId() {
         return userCompanionId;
     }

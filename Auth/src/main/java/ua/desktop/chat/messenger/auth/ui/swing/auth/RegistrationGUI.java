@@ -24,6 +24,7 @@ public class RegistrationGUI extends JDialog {
     }
 
     public void startGUI() {
+        setUndecorated(true);
         setContentPane(panelRegistration);
         setMinimumSize(new Dimension(520, 500));
         setModal(true);

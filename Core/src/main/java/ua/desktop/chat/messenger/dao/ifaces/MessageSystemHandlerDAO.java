@@ -7,9 +7,10 @@ import ua.desktop.chat.messenger.models.Message;
 import ua.desktop.chat.messenger.models.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface MessageSystemHandlerDAO {
-    Message createMessageByChat(Message message) throws DAOException;
+    void createMessageByChat(Message message) throws DAOException;
 
-    List<Message> readListMessageByChats(List<Chat> chatList) throws DAOException;
+    Optional<List<Message>> readListMessageByChats(List<Chat> chatList) throws DAOException;
 }

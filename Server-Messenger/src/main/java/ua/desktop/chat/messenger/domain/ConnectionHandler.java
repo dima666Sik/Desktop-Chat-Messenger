@@ -11,6 +11,7 @@ import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.env.TypeMessage;
+import ua.desktop.chat.messenger.models.Message;
 import ua.desktop.chat.messenger.parser.ParserJSON;
 
 import java.io.IOException;
@@ -105,6 +106,22 @@ public class ConnectionHandler implements Runnable {
                 throw new RuntimeException("Unable to send message on clientHandler", e);
             }
         }
+    }
+
+    public void sendMessageInDB(String receiver, UserDTO userDTO, MessageDTO message) {
+        new Thread(() -> {
+            synchronized (this) {
+                //2. TODO Send message in db in chat current user
+                if (chatSystemMessaging.isExistChatByUser(receiver, userDTO.getId())) {
+
+                    Optional<ChatDTO> chatDTO = chatSystemMessaging.readChat(receiver, userDTO.getId());
+                    if(chatDTO.isEmpty()) throw new RuntimeException("Chat was not found!");
+                    MessageDTO messageDTO = new MessageDTO(message.getMessage(), message.getLocalDateTime(), chatDTO.get());
+
+                    messageSystemHandling.createMessageByChat(messageDTO);
+                } else throw new RuntimeException("Message in chat was not added!");
+            }
+        }).start();
     }
 
     public void terminate() {

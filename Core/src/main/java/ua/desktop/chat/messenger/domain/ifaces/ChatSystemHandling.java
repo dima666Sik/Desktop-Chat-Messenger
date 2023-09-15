@@ -1,23 +1,25 @@
 package ua.desktop.chat.messenger.domain.ifaces;
 
-import ua.desktop.chat.messenger.dao.exceptions.DAOException;
+import ua.desktop.chat.messenger.dto.ChatDTO;
+import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.models.Chat;
 import ua.desktop.chat.messenger.models.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ChatSystemHandling {
     boolean isExistChatByUser(String nameChat, Long userId);
 
-    Chat createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion);
+    void createChatByUser(String nameChat, TypeChat typeChat, UserDTO userDTO, Long idUserCompanion);
 
-    List<Chat> readListChatsByUser(User user);
+    Optional<List<ChatDTO>> readListChatsByUser(UserDTO userDTO);
 
-    List<Chat> readListChatsByChatName(String nameChat);
+    Optional<List<ChatDTO>> readListChatsByChatName(String nameChat);
 
-    Chat readChat(String nameChat, Long userId);
-    Chat readChatCompanion(Chat chat);
+    Optional<ChatDTO> readChat(String nameChat, Long userId);
+    Optional<ChatDTO> readChatCompanion(ChatDTO chat);
 
-    List<Chat> readChatsByType(TypeChat typeChat, Long userId);
+    Optional<List<ChatDTO>> readChatsByType(TypeChat typeChat, Long userId);
 }

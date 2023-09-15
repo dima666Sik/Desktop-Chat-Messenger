@@ -8,11 +8,13 @@ import ua.desktop.chat.messenger.dao.exceptions.DAOException;
 import ua.desktop.chat.messenger.dao.ifaces.ChatSystemHandlerDAO;
 import ua.desktop.chat.messenger.dao.query.hql.QueryChatSystemHandler;
 import ua.desktop.chat.messenger.dao.util.DBConnector;
+import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.models.Chat;
 import ua.desktop.chat.messenger.models.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     private final static Logger logger = LogManager.getLogger(ChatSystemHandlerDAOMySQLImpl.class.getName());
@@ -22,14 +24,15 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            Chat foundChat = findChatByChatNameAndUserId(nameChat, userId);
+            Optional<Chat> foundChat = findChatByChatNameAndUserId(nameChat, userId);
 
-            if (foundChat != null) {
+            if (foundChat.isPresent()) {
                 logger.info("Chat with this name `"
                         .concat(nameChat)
                         .concat("` was existed!"));
                 return true;
             }
+
             logger.info("Chat with this name `"
                     .concat(nameChat)
                     .concat("` was not existed!"));
@@ -64,14 +67,14 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public List<Chat> readListChatsByUser(User user) throws DAOException {
+    public Optional<List<Chat>> readListChatsByUser(User user) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
             Query<Chat> query = session.createQuery(QueryChatSystemHandler.readChatsByUserId(), Chat.class);
             query.setParameter("userId", user.getId());
 
-            List<Chat> chatList = query.list();
+            Optional<List<Chat>> chatList = Optional.ofNullable(query.list());
 
             session.getTransaction().commit();
             logger.info("Read chats was successful!");
@@ -81,11 +84,11 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public Chat readChat(String nameChat, Long userId) throws DAOException {
+    public Optional<Chat> readChat(String nameChat, Long userId) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            Chat chatORM = findChatByChatNameAndUserId(nameChat, userId);
+            Optional<Chat> chatORM = findChatByChatNameAndUserId(nameChat, userId);
             logger.info("Read chats was successful!");
 
             session.getTransaction().commit();
@@ -96,7 +99,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public List<Chat> readChatsByType(TypeChat typeChat, Long userId) throws DAOException {
+    public Optional<List<Chat>> readChatsByType(TypeChat typeChat, Long userId) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -104,7 +107,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             query.setParameter("typeChat", typeChat);
             query.setParameter("userId", userId);
 
-            List<Chat> chatList = query.list();
+            Optional<List<Chat>> chatList = Optional.ofNullable(query.list());
 
             logger.info("Read chats was successful!");
 
@@ -116,13 +119,13 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public List<Chat> readListChatsByChatName(String nameChat) throws DAOException {
+    public Optional<List<Chat>> readListChatsByChatName(String nameChat) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
             Query<Chat> chatQuery = session.createQuery(QueryChatSystemHandler.findChatsByName(), Chat.class);
             chatQuery.setParameter("nameChat", nameChat);
-            List<Chat> chatList = chatQuery.list();
+            Optional<List<Chat>> chatList = Optional.ofNullable(chatQuery.list());
 
             session.getTransaction().commit();
             return chatList;
@@ -130,7 +133,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public Chat readChatCompanion(Chat chat) throws DAOException {
+    public Optional<Chat> readChatCompanion(Chat chat) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -138,7 +141,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             query.setParameter("userCompanionId", chat.getUser().getId());
             query.setParameter("userId", chat.getUserCompanionId());
 
-            Chat chatORM = query.uniqueResult();
+            Optional<Chat> chatORM = Optional.ofNullable(query.uniqueResult());
 
             logger.info("Read chats was successful!");
             session.getTransaction().commit();
@@ -147,7 +150,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
         }
     }
 
-    private Chat findChatByChatNameAndUserId(String nameChat, Long userId) throws DAOException {
+    private Optional<Chat> findChatByChatNameAndUserId(String nameChat, Long userId) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -155,8 +158,9 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             query.setParameter("nameChat", nameChat);
             query.setParameter("userId", userId);
 
-            Chat chatORM = query.uniqueResult();
+            Optional<Chat> chatORM = Optional.ofNullable(query.uniqueResult());
             session.getTransaction().commit();
+
             return chatORM;
         }
     }

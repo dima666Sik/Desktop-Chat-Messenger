@@ -6,10 +6,13 @@ import ua.desktop.chat.messenger.dao.exceptions.DAOException;
 import ua.desktop.chat.messenger.dao.ifaces.MessageSystemHandlerDAO;
 import ua.desktop.chat.messenger.dao.util.DAOFactory;
 import ua.desktop.chat.messenger.domain.ifaces.MessageSystemHandling;
-import ua.desktop.chat.messenger.models.Chat;
+import ua.desktop.chat.messenger.dto.ChatDTO;
+import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.models.Message;
+import ua.desktop.chat.messenger.util.Converter;
 
 import java.util.List;
+import java.util.Optional;
 
 public class MessageSystemHandlerImpl implements MessageSystemHandling {
     private final static Logger logger = LogManager.getLogger(MessageSystemHandlerImpl.class.getName());
@@ -21,22 +24,22 @@ public class MessageSystemHandlerImpl implements MessageSystemHandling {
     }
 
     @Override
-    public Message createMessageByChat(Message message) {
+    public void createMessageByChat(MessageDTO message) {
         try {
-            return messageSystemHandlerDAO.createMessageByChat(message);
+            messageSystemHandlerDAO.createMessageByChat(Converter.convertMessageDTOIntoMessage(message));
         } catch (DAOException e) {
             logger.warn("Cannot create user message in the chat `".concat(message.getChat().getNameChat()).concat("`!"), e);
-            return null;
         }
     }
 
     @Override
-    public List<Message> readListMessageByChats(List<Chat> chatList) {
+    public Optional<List<MessageDTO>> readListMessageByChats(List<ChatDTO> chatList) {
         try {
-            return messageSystemHandlerDAO.readListMessageByChats(chatList);
+            Optional<List<Message>> optionalMessageDTOList = messageSystemHandlerDAO.readListMessageByChats(Converter.convertListChatIntoListChatDTO(chatList));
+            return optionalMessageDTOList.map(Converter::convertListMessageIntoListMessageDTO);
         } catch (DAOException e) {
-            logger.warn("Cannot read chats for user!", e);
-            return null;
+            logger.warn("Cannot read messages for chats!", e);
+            return Optional.empty();
         }
     }
 }

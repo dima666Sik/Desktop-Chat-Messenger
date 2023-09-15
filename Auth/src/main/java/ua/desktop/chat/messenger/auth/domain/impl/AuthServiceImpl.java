@@ -8,7 +8,11 @@ import ua.desktop.chat.messenger.auth.dao.util.DAOFactory;
 import ua.desktop.chat.messenger.auth.dao.util.Encryption;
 import ua.desktop.chat.messenger.auth.domain.exceptions.DomainException;
 import ua.desktop.chat.messenger.auth.domain.ifaces.AuthService;
+import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.util.Converter;
+
+import java.util.Optional;
 
 /**
  * Implementation of {@link AuthService} interface for user authentication and registration.
@@ -54,21 +58,22 @@ public class AuthServiceImpl implements AuthService {
      * @return a user object if authentication succeeds, or null if the user is not found or authentication fails
      */
     @Override
-    public User authorization(final String email, final String password) {
-        User user = null;
-
+    public Optional<UserDTO> authorization(final String email, final String password) {
+        Optional<UserDTO> userDTO = Optional.empty();
         try {
-            user = userDAO.findUserByEmailAndPassword(email, Encryption.encryptionSHA3256(password));
-            if (user == null) {
+            Optional<User> userORM = userDAO.findUserByEmailAndPassword(email, Encryption.encryptionSHA3256(password));
+            if (userORM.isEmpty()) {
                 logger.warn("User is empty! Finding user wasn't successful!");
+                return userDTO;
             }
+            userDTO = Optional.of(Converter.convertUserIntoUserDTO(userORM.get()));
         } catch (DAOException e) {
             logger.error("Cannot create user!", e);
         } catch (DomainException e) {
             logger.error("Cryptographic algorithm isn't available!", e);
         }
 
-        return user;
+        return userDTO;
     }
 
 

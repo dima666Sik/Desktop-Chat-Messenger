@@ -16,9 +16,9 @@ public class CreateChatGUI extends JDialog {
     private JComboBox comboBoxTypeChat;
     private JPanel panelCreateChat;
     private final ChatSystemHandling chatSystemHandling;
-    private final User user;
+    private final UserDTO user;
 
-    public CreateChatGUI(ChatSystemHandling chatSystemHandling, User user) {
+    public CreateChatGUI(ChatSystemHandling chatSystemHandling, UserDTO user) {
         this.chatSystemHandling = chatSystemHandling;
         this.user = user;
     }

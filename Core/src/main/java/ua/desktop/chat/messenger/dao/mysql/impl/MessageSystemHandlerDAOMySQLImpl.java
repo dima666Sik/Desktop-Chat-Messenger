@@ -18,12 +18,13 @@ import ua.desktop.chat.messenger.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO {
     private final static Logger logger = LogManager.getLogger(MessageSystemHandlerDAOMySQLImpl.class.getName());
 
     @Override
-    public Message createMessageByChat(Message message) throws DAOException {
+    public void createMessageByChat(Message message) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -38,20 +39,17 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
             }
 
             logger.info("Create message in chat was successful!");
-
-            return message;
         }
     }
 
     @Override
-    public List<Message> readListMessageByChats(List<Chat> chatList) throws DAOException {
+    public Optional<List<Message>> readListMessageByChats(List<Chat> chatList) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
             List<Message> chatMessages = new ArrayList<>();
 
             for (Chat chat : chatList) {
-                System.out.println("===" + chat.getNameChat() + " " + chat.getId());
                 Query<Message> messageQuery = session.createQuery(QueryMessageSystemHandler.readMessagesByChatId(), Message.class);
                 messageQuery.setParameter("chatId", chat.getId());
                 chatMessages.addAll(messageQuery.list());
@@ -60,7 +58,7 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
             session.getTransaction().commit();
             logger.info("Read messages from chat was successful!");
 
-            return chatMessages;
+            return Optional.of(chatMessages);
         }
     }
 }

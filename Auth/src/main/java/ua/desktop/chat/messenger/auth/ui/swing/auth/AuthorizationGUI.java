@@ -2,10 +2,12 @@ package ua.desktop.chat.messenger.auth.ui.swing.auth;
 
 import ua.desktop.chat.messenger.auth.domain.ifaces.AuthService;
 import ua.desktop.chat.messenger.auth.domain.impl.AuthServiceImpl;
+import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.models.User;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Optional;
 
 public class AuthorizationGUI extends JDialog {
     private JTextField emailField;
@@ -13,10 +15,11 @@ public class AuthorizationGUI extends JDialog {
     private JButton registrationButton;
     private JButton confirmAuthorizationButton;
     private JPanel panelAuthorization;
-    private User user;
+    private UserDTO user;
     private final AuthService authService = new AuthServiceImpl();
 
     public void startGUI() {
+        setUndecorated(true);
         setContentPane(panelAuthorization);
         setMinimumSize(new Dimension(480, 300));
 
@@ -53,9 +56,9 @@ public class AuthorizationGUI extends JDialog {
 
         }
 
-        user = authService.authorization(emailField.getText(), new String(passwordField.getPassword()));
+        Optional<UserDTO> optionalUserDTO = authService.authorization(emailField.getText(), new String(passwordField.getPassword()));
 
-        if (user == null) {
+        if (optionalUserDTO.isEmpty()) {
             JOptionPane.showMessageDialog(this,
                     "Authorization not successful!",
                     "Try again",
@@ -65,6 +68,7 @@ public class AuthorizationGUI extends JDialog {
             return;
         }
 
+        user = optionalUserDTO.get();
         dispose();
     }
 
@@ -73,7 +77,7 @@ public class AuthorizationGUI extends JDialog {
         passwordField.setText("");
     }
 
-    public User getUser() {
+    public UserDTO getUser() {
         return user;
     }
 }

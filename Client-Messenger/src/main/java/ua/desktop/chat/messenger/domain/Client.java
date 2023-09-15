@@ -28,6 +28,7 @@ import java.net.UnknownHostException;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Client implements Runnable {
     private final static Logger logger = LogManager.getLogger(Client.class.getName());
@@ -74,7 +75,7 @@ public class Client implements Runnable {
                     preIntermediateConnectGUI.startGUI();
 
                     if (authorizationGUI.getUser() != null) {
-                        user = new UserDTO(authorizationGUI.getUser());
+                        user = authorizationGUI.getUser();
                         String serializedObject = ParserJSON.convertObjectToString(user, TypeMessage.USER_OBJECT);
                         s_out.println(serializedObject);
                     }
@@ -147,33 +148,37 @@ public class Client implements Runnable {
 
     public synchronized List<MessageDTO> getMessagesInChatForUser(ChatDTO chatDTO) {
         try {
+            System.out.println("++");
             //TODO create read message from db!
             if (communicationHandler.getChatSystemMessaging().isExistChatByUser(chatDTO.getNameChat(), user.getId())) {
-                List<Chat> chatORMList = new ArrayList<>();
+                System.out.println("++1");
+                List<ChatDTO> chatORMList = new ArrayList<>();
                 if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
-                    Chat chatOwner = communicationHandler.getChatSystemMessaging().readChat(chatDTO.getNameChat(), user.getId());
-                    chatORMList.add(chatOwner);
-                    Chat chatCompanion = communicationHandler.getChatSystemMessaging().readChatCompanion(chatOwner);
-                    chatORMList.add(chatCompanion);
+                    Optional<ChatDTO> chatOwner = communicationHandler.getChatSystemMessaging().readChat(chatDTO.getNameChat(), user.getId());
+                    if (chatOwner.isEmpty()) throw new RuntimeException("Chat is not found!");
+                    chatORMList.add(chatOwner.get());
+                    System.out.println("++1.5 "+chatOwner.get());
+
+                    Optional<ChatDTO> chatCompanion = communicationHandler.getChatSystemMessaging().readChatCompanion(chatOwner.get());
+                    if (chatCompanion.isEmpty()) throw new RuntimeException("Chat Companion is not found!");
+                    chatORMList.add(chatCompanion.get());
+                    System.out.println("++1.55 "+chatCompanion.get());
                 } else {
-                    chatORMList = communicationHandler.getChatSystemMessaging().readListChatsByChatName(chatDTO.getNameChat());
+
+                    Optional<List<ChatDTO>> chatDTOList = communicationHandler.getChatSystemMessaging().readListChatsByChatName(chatDTO.getNameChat());
+                    if (chatDTOList.isEmpty()) throw new RuntimeException("Chats is not found!");
+                    chatORMList = chatDTOList.get();
+                    System.out.println("++2"+chatDTOList.get());
                 }
-                return messageToMessageDTO(communicationHandler.getMessageSystemHandling().readListMessageByChats(chatORMList));
+                Optional<List<MessageDTO>> optionalMessageDTOList = communicationHandler.getMessageSystemHandling().readListMessageByChats(chatORMList);
+                if (optionalMessageDTOList.isEmpty()) throw new RuntimeException("Message not found for this chat!");
+                System.out.println("++4"+optionalMessageDTOList.get());
+                return optionalMessageDTOList.get();
             } else throw new RuntimeException("Message in chat was not added!");
 
         } catch (Exception e) {
             throw new RuntimeException("Messages isn`t read from db!", e);
         }
-    }
-
-    private synchronized List<MessageDTO> messageToMessageDTO(List<Message> messages) {
-        List<MessageDTO> messageDTOS = new ArrayList<>();
-        for (Message message : messages) {
-            UserDTO userDTO = new UserDTO(message.getChat().getUser());
-            ChatDTO chatDTO = new ChatDTO(message.getChat().getNameChat(), message.getChat().getTypeChat(), userDTO);
-            messageDTOS.add(new MessageDTO(message.getMessage(), message.getLocalDateTime(), chatDTO));
-        }
-        return messageDTOS;
     }
 
     public synchronized Boolean getIsConnected() {

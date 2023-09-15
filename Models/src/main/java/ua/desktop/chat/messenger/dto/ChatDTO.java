@@ -14,6 +14,14 @@ public class ChatDTO implements Serializable {
     private UserDTO user;
     private Long userCompanionId;
 
+    public ChatDTO(Long id, String nameChat, TypeChat typeChat, UserDTO user, Long userCompanionId) {
+        this.id = id;
+        this.nameChat = nameChat;
+        this.typeChat = typeChat;
+        this.user = user;
+        this.userCompanionId = userCompanionId;
+    }
+
     public ChatDTO(String nameChat, TypeChat typeChat, UserDTO user) {
         this.nameChat = nameChat;
         this.typeChat = typeChat;

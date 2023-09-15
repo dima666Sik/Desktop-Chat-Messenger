@@ -18,6 +18,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class ClientHandler implements Runnable {
     private final static Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
@@ -27,7 +28,6 @@ public class ClientHandler implements Runnable {
     private UserDTO userDTO;
     private final BufferedReader in;
     private final PrintStream out;
-    private boolean flagGlobalChat = true;
 
     public ClientHandler(ConnectionHandler cHandler, Socket conn) {
         try {
@@ -78,24 +78,11 @@ public class ClientHandler implements Runnable {
                                         String userJSON = ParserJSON.convertObjectToString(userDTO, TypeMessage.USER_OBJECT);
 
                                         connectionHandler.sendMessage(this, receiver, userJSON, msgJSON);
-
-                                        new Thread(() -> {
-                                            synchronized (this) {
-                                                //2. TODO Send message in db in chat current user
-                                                if (connectionHandler.getChatSystemMessaging().isExistChatByUser(receiver, userDTO.getId())) {
-
-                                                    Chat chatORM = connectionHandler.getChatSystemMessaging().readChat(receiver, userDTO.getId());
-                                                    Message messageORM = new Message(messageDTO, chatORM);
-
-                                                    connectionHandler.getMessageSystemHandling().createMessageByChat(messageORM);
-                                                } else throw new RuntimeException("Message in chat was not added!");
-                                            }
-                                        }).start();
+                                        connectionHandler.sendMessageInDB(receiver, userDTO, messageDTO);
                                     }
                                     break;
                                 }
-                            }
-                            else {
+                            } else {
                                 out.println("/M");
                                 String msgJSON = ParserJSON.convertObjectToString("[NOBODY IS HERE. YOUR MESSAGES NOT SAVED!]", TypeMessage.STRING_NOTIFICATION);
                                 out.println(msgJSON);
@@ -128,7 +115,6 @@ public class ClientHandler implements Runnable {
     public void sendUserNameList(Multimap<String, ChatDTO> ul) {
         StringBuilder userListResponse = new StringBuilder();
         out.println("/USERS");
-        User userORM = new User(userDTO);
 
         for (Map.Entry<String, ChatDTO> entry : ul.entries()) {
             String userChat = entry.getKey();
@@ -138,22 +124,27 @@ public class ClientHandler implements Runnable {
             userListResponse.append(userChat)
                     .append(":").append(chatDTO.getTypeChat())
                     .append(":").append(chatDTO.getUser().getUsername()).append(",");
-            System.out.println("..."+userListResponse);
-            new Thread(() -> {
-                synchronized (this) {
-                    if (!connectionHandler.getChatSystemMessaging().isExistChatByUser(userChat, userDTO.getId())) {
-                        if (chatDTO.getTypeChat() == TypeChat.GLOBAL) {
-                            connectionHandler.getChatSystemMessaging().createChatByUser(TypeChat.GLOBAL.name(), TypeChat.GLOBAL, userORM, chatDTO.getUserCompanionId());
-                        } else if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
-                            if (!userChat.equals(userORM.getUsername())) {
-                                connectionHandler.getChatSystemMessaging().createChatByUser(userChat, TypeChat.PRIVATE, userORM, chatDTO.getUserCompanionId());
-                            }
+            System.out.println("..." + userListResponse);
+
+            createChatsIfNotExist(userChat, chatDTO);
+        }
+        out.println(userListResponse);
+    }
+
+    private void createChatsIfNotExist(String userChat, ChatDTO chatDTO) {
+        new Thread(() -> {
+            synchronized (this) {
+                if (!connectionHandler.getChatSystemMessaging().isExistChatByUser(userChat, userDTO.getId())) {
+                    if (chatDTO.getTypeChat() == TypeChat.GLOBAL) {
+                        connectionHandler.getChatSystemMessaging().createChatByUser(TypeChat.GLOBAL.name(), TypeChat.GLOBAL, userDTO, chatDTO.getUserCompanionId());
+                    } else if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
+                        if (!userChat.equals(userDTO.getUsername())) {
+                            connectionHandler.getChatSystemMessaging().createChatByUser(userChat, TypeChat.PRIVATE, userDTO, chatDTO.getUserCompanionId());
                         }
                     }
                 }
-            }).start();
-        }
-        out.println(userListResponse);
+            }
+        }).start();
     }
 
     public synchronized void addClient(String username, ClientHandler ch) {
@@ -163,7 +154,7 @@ public class ClientHandler implements Runnable {
 
     public synchronized void removeClient(String username, ChatDTO chatDTO) {
         connectionHandler.getClientHandlers().remove(username);
-//        connectionHandler.getUserNameAndChatInfo().remove(username, chatDTO);
+        connectionHandler.getUserNameAndChatInfo().remove(username, chatDTO);
         informAllClientsUserNameList();
     }
 
@@ -188,15 +179,14 @@ public class ClientHandler implements Runnable {
     }
 
     private void fillChatNameListGroup() {
-        System.out.println("++");
         for (String key : connectionHandler.getClientHandlers().keySet()) {
             ClientHandler client = connectionHandler.getClientHandlers().get(key);
             // TODO read chats with type group!
 
-            List<Chat> chatList = connectionHandler.getChatSystemMessaging().readChatsByType(TypeChat.GROUP, client.getUserDTO().getId());
-            for (Chat chat : chatList) {
-                connectionHandler.getUserNameAndChatInfo().put(chat.getNameChat(), new ChatDTO(TypeChat.GROUP, null, client.getUserDTO()));
-                System.out.println("++" + connectionHandler.getUserNameAndChatInfo().get(chat.getNameChat()));
+            Optional<List<ChatDTO>> chatList = connectionHandler.getChatSystemMessaging().readChatsByType(TypeChat.GROUP, client.getUserDTO().getId());
+            if (chatList.isEmpty()) throw new RuntimeException("Chats was not found!");
+            for (ChatDTO chat : chatList.get()) {
+                connectionHandler.getUserNameAndChatInfo().put(chat.getNameChat(), new ChatDTO(chat.getTypeChat(), null, chat.getUser()));
             }
         }
     }

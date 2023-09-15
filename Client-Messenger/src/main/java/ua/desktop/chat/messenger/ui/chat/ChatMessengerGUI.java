@@ -109,11 +109,6 @@ public class ChatMessengerGUI extends JDialog {
             textArea.setText("");
             clearText();
             try {
-//                Optional<String> companionName =
-//                        messageDTOs.stream()
-//                                .filter(messageDTO -> !messageDTO.getChat().getNameChat().equals(client.getUser().getUsername()))
-//                                .map(messageDTO -> messageDTO.getChat().getNameChat())
-//                                .findFirst();
                 for (MessageDTO messageDTO : messageDTOs) {
                     String messageText = null;
                     String companionName = messageDTO.getChat().getUser().getUsername();
@@ -301,14 +296,14 @@ public class ChatMessengerGUI extends JDialog {
 
     private void createChat() {
         createChatButton.addActionListener((e) -> {
-            CreateChatGUI createChatGUI = new CreateChatGUI(new ChatSystemHandlerImpl(), new User(client.getUser()));
+            CreateChatGUI createChatGUI = new CreateChatGUI(new ChatSystemHandlerImpl(), client.getUser());
             createChatGUI.startGUI();
         });
     }
 
     private void inviteIntoChat() {
         inviteIntoChatButton.addActionListener((e) -> {
-            InviteIntoChatGUI inviteIntoChatGUI = new InviteIntoChatGUI(new ChatSystemHandlerImpl(), new User(client.getUser()));
+            InviteIntoChatGUI inviteIntoChatGUI = new InviteIntoChatGUI(new ChatSystemHandlerImpl(), client.getUser());
             inviteIntoChatGUI.startGUI();
         });
     }

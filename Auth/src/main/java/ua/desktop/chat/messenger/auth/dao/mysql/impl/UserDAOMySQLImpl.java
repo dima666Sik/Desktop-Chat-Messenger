@@ -10,6 +10,8 @@ import ua.desktop.chat.messenger.auth.dao.query.hql.QueryUser;
 import ua.desktop.chat.messenger.dao.util.DBConnector;
 import ua.desktop.chat.messenger.models.User;
 
+import java.util.Optional;
+
 public class UserDAOMySQLImpl implements UserDAO {
     private final static Logger logger = LogManager.getLogger(UserDAOMySQLImpl.class.getName());
 
@@ -75,7 +77,7 @@ public class UserDAOMySQLImpl implements UserDAO {
     }
 
     @Override
-    public User findUserByEmailAndPassword(String email, String password) throws DAOException {
+    public Optional<User> findUserByEmailAndPassword(String email, String password) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -88,10 +90,11 @@ public class UserDAOMySQLImpl implements UserDAO {
 
             if (foundUser != null) {
                 logger.info("User was found!");
-                return foundUser;
+                return Optional.of(foundUser);
             }
+
             logger.info("User was not found!");
-            return null;
+            return Optional.empty();
         }
     }
 
