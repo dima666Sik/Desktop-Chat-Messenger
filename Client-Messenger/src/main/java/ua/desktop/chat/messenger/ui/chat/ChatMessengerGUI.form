@@ -141,7 +141,7 @@
         <border type="none"/>
         <children/>
       </grid>
-      <grid id="73e5a" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="73e5a" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="20" left="20" bottom="20" right="20"/>
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -158,6 +158,22 @@
               </grid>
             </constraints>
             <properties/>
+          </component>
+          <component id="3c6b2" class="javax.swing.JButton" binding="createChatButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Create chat"/>
+            </properties>
+          </component>
+          <component id="2ab28" class="javax.swing.JButton" binding="inviteIntoChatButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Invite into chat"/>
+            </properties>
           </component>
         </children>
       </grid>

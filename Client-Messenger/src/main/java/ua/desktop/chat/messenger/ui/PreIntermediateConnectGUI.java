@@ -22,7 +22,7 @@ public class PreIntermediateConnectGUI extends JDialog {
     public void startGUI() {
         setUndecorated(true);
         setContentPane(panelPreIntermediateConnect);
-        setMinimumSize(new Dimension(480, 300));
+        setMinimumSize(new Dimension(440, 200));
 
         hostTextField.setText(HOST);
         portTextField.setText(PORT_NUMBER);

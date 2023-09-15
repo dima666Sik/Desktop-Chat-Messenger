@@ -1,5 +1,6 @@
 package ua.desktop.chat.messenger.domain;
 
+import com.google.common.collect.Multimap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.desktop.chat.messenger.auth.ui.swing.auth.AuthorizationGUI;
@@ -27,7 +28,6 @@ import java.net.UnknownHostException;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class Client implements Runnable {
     private final static Logger logger = LogManager.getLogger(Client.class.getName());
@@ -112,43 +112,26 @@ public class Client implements Runnable {
         communicationHandler.setS(s);
     }
 
-    public void updateUserListChatGUI(Set<String> users) {
-        windowChatMessenger.addUserList(users);
+    public void updateUserListChatGUI(Multimap<String, ChatDTO> chats) {
+        windowChatMessenger.addChatsList(chats);
     }
 
     public void updateMessageChatGUI(MessageDTO msg) {
-        try {
-            if (msg.getChat().getTypeChat() == TypeChat.GLOBAL) {
-                logger.info(msg.getMessage().substring(9, 9 + user.getUsername().length()));
-                if (!msg.getMessage().substring(9, 9 + user.getUsername().length()).equals(user.getUsername())) {
-                    msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
-                    windowChatMessenger.updateChat(msg);
-                }
-            } else {
+        System.out.println("---0" + msg);
+        if (msg.getChat().getTypeChat() == TypeChat.GLOBAL || msg.getChat().getTypeChat() == TypeChat.GROUP) {
+            logger.info(msg.getMessage().substring(9, 9 + user.getUsername().length()));
+            if (!msg.getMessage().substring(9, 9 + user.getUsername().length()).equals(user.getUsername())) {
                 msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
                 windowChatMessenger.updateChat(msg);
             }
-
-        } catch (StringIndexOutOfBoundsException e) {
+        } else {
             msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
             windowChatMessenger.updateChat(msg);
         }
     }
 
     public void updateMessageChatGUI(String msg) {
-        try {
-            if (msg.startsWith("[GLOBAL]")) {
-                logger.info(msg.substring(9, 9 + user.getUsername().length()));
-                if (!msg.substring(9, 9 + user.getUsername().length()).equals(user.getUsername())) {
-                    windowChatMessenger.updateChat(msg);
-                }
-            } else {
-                windowChatMessenger.updateChat(msg);
-            }
-
-        } catch (StringIndexOutOfBoundsException e) {
-            windowChatMessenger.updateChat(msg);
-        }
+        windowChatMessenger.updateChat(msg);
     }
 
     public void sendMessage(MessageDTO message) {
@@ -168,9 +151,9 @@ public class Client implements Runnable {
             if (communicationHandler.getChatSystemMessaging().isExistChatByUser(chatDTO.getNameChat(), user.getId())) {
                 List<Chat> chatORMList = new ArrayList<>();
                 if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
-                    Chat chatOwner = communicationHandler.getChatSystemMessaging().getChat(chatDTO.getNameChat(), user.getId());
+                    Chat chatOwner = communicationHandler.getChatSystemMessaging().readChat(chatDTO.getNameChat(), user.getId());
                     chatORMList.add(chatOwner);
-                    Chat chatCompanion = communicationHandler.getChatSystemMessaging().getChatCompanion(chatOwner);
+                    Chat chatCompanion = communicationHandler.getChatSystemMessaging().readChatCompanion(chatOwner);
                     chatORMList.add(chatCompanion);
                 } else {
                     chatORMList = communicationHandler.getChatSystemMessaging().readListChatsByChatName(chatDTO.getNameChat());

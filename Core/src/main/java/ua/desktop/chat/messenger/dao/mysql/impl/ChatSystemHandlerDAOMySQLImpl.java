@@ -81,7 +81,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public Chat getChat(String nameChat, Long userId) throws DAOException {
+    public Chat readChat(String nameChat, Long userId) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -91,6 +91,26 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
             session.getTransaction().commit();
 
             return chatORM;
+        }
+
+    }
+
+    @Override
+    public List<Chat> readChatsByType(TypeChat typeChat, Long userId) throws DAOException {
+        try (Session session = DBConnector.getSession()) {
+            session.beginTransaction();
+
+            Query<Chat> query = session.createQuery(QueryChatSystemHandler.findChatsByTypeChatAndUserId(), Chat.class);
+            query.setParameter("typeChat", typeChat);
+            query.setParameter("userId", userId);
+
+            List<Chat> chatList = query.list();
+
+            logger.info("Read chats was successful!");
+
+            session.getTransaction().commit();
+
+            return chatList;
         }
 
     }
@@ -110,7 +130,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public Chat getChatCompanion(Chat chat) throws DAOException {
+    public Chat readChatCompanion(Chat chat) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 

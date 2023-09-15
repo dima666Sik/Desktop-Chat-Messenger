@@ -1,9 +1,12 @@
 package ua.desktop.chat.messenger.domain;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ua.desktop.chat.messenger.domain.ifaces.ChatSystemHandling;
 import ua.desktop.chat.messenger.domain.ifaces.MessageSystemHandling;
+import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
@@ -47,7 +50,7 @@ public class CommunicationHandler implements Runnable {
                         if (response.equals("/USERS")) {
                             String uList;
                             if ((uList = s_in.readLine()) != null) {
-                                Set<String> userList = setUserList(uList);
+                                Multimap<String, ChatDTO> userList = setUserList(uList);
                                 client.updateUserListChatGUI(userList);
                                 break;
                             }
@@ -55,9 +58,11 @@ public class CommunicationHandler implements Runnable {
                             String messageResponse;
                             if ((messageResponse = s_in.readLine()) != null) {
                                 Object parsedObject = ParserJSON.convertStringToObject(messageResponse);
+                                System.out.println("++++" + parsedObject);
                                 if (parsedObject instanceof MessageDTO) {
                                     MessageDTO message = (MessageDTO) parsedObject;
                                     client.updateMessageChatGUI(message);
+                                    System.out.println("---00"+message);
                                 } else if (parsedObject instanceof String) {
                                     String textMessage = (String) parsedObject;
                                     client.updateMessageChatGUI(textMessage);
@@ -74,8 +79,16 @@ public class CommunicationHandler implements Runnable {
         }
     }
 
-    public Set<String> setUserList(String rspUserList) {
-        return new HashSet<>(Arrays.asList(rspUserList.split(",")));
+    public Multimap<String, ChatDTO> setUserList(String rspUserList) {
+        Set<String> strChatAndType = new HashSet<>(Arrays.asList(rspUserList.split(",")));
+        Multimap<String, ChatDTO> mapTypeChatMap = ArrayListMultimap.create();
+        strChatAndType.forEach((element) -> {
+            List<String> stringList = Arrays.asList(element.split(":"));
+            UserDTO userDTO = new UserDTO();
+            userDTO.setUsername(stringList.get(2));
+            mapTypeChatMap.put(stringList.get(0), new ChatDTO(TypeChat.valueOf(stringList.get(1)), null, userDTO));
+        });
+        return mapTypeChatMap;
     }
 
     public synchronized boolean getIsConnected() {

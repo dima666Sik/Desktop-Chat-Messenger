@@ -1,9 +1,8 @@
 package ua.desktop.chat.messenger.domain;
 
+import com.google.common.collect.Multimap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ua.desktop.chat.messenger.domain.ifaces.ChatSystemHandling;
-import ua.desktop.chat.messenger.domain.ifaces.MessageSystemHandling;
 import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
@@ -17,11 +16,8 @@ import ua.desktop.chat.messenger.parser.ParserJSON;
 import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class ClientHandler implements Runnable {
     private final static Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
@@ -57,7 +53,6 @@ public class ClientHandler implements Runnable {
                             logger.info("You cannot chose this username");
                         } else if (!userDTO.getUsername().isEmpty()) {
                             logger.info("Username accepted: ".concat(userDTO.getUsername()));
-                            connectionHandler.getUserNameAndIdList().put("GLOBAL", null);
                             addClient(userDTO.getUsername(), this);
                             break;
                         } else {
@@ -89,7 +84,7 @@ public class ClientHandler implements Runnable {
                                                 //2. TODO Send message in db in chat current user
                                                 if (connectionHandler.getChatSystemMessaging().isExistChatByUser(receiver, userDTO.getId())) {
 
-                                                    Chat chatORM = connectionHandler.getChatSystemMessaging().getChat(receiver, userDTO.getId());
+                                                    Chat chatORM = connectionHandler.getChatSystemMessaging().readChat(receiver, userDTO.getId());
                                                     Message messageORM = new Message(messageDTO, chatORM);
 
                                                     connectionHandler.getMessageSystemHandling().createMessageByChat(messageORM);
@@ -99,14 +94,15 @@ public class ClientHandler implements Runnable {
                                     }
                                     break;
                                 }
-                            } else {
+                            }
+                            else {
                                 out.println("/M");
                                 String msgJSON = ParserJSON.convertObjectToString("[NOBODY IS HERE. YOUR MESSAGES NOT SAVED!]", TypeMessage.STRING_NOTIFICATION);
                                 out.println(msgJSON);
                             }
                             break OUTER;
                         case "/EXIT":
-                            removeClient(userDTO.getUsername());
+                            removeClient(userDTO.getUsername(), new ChatDTO(TypeChat.PRIVATE, userDTO.getId(), userDTO));
                             conn.close();
                             isActive = false;
                             break;
@@ -114,7 +110,7 @@ public class ClientHandler implements Runnable {
                 }
             } catch (SocketException e) {
                 try {
-                    removeClient(userDTO.getUsername());
+                    removeClient(userDTO.getUsername(), new ChatDTO(TypeChat.PRIVATE, userDTO.getId(), userDTO));
                     conn.close();
                     isActive = false;
                     logger.warn("Socket was closed. U successful exit from client!");
@@ -129,25 +125,28 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    public void sendUserNameList(Map<String, Long> ul) {
+    public void sendUserNameList(Multimap<String, ChatDTO> ul) {
         StringBuilder userListResponse = new StringBuilder();
         out.println("/USERS");
         User userORM = new User(userDTO);
 
-        for (Map.Entry<String, Long> entry : ul.entrySet()) {
+        for (Map.Entry<String, ChatDTO> entry : ul.entries()) {
             String userChat = entry.getKey();
-            Long idUserCompanion = entry.getValue();
+            ChatDTO chatDTO = entry.getValue();
 
             // 1. TODO Add chats with this names into db if them not exist there
-            userListResponse.append(userChat).append(",");
+            userListResponse.append(userChat)
+                    .append(":").append(chatDTO.getTypeChat())
+                    .append(":").append(chatDTO.getUser().getUsername()).append(",");
+            System.out.println("..."+userListResponse);
             new Thread(() -> {
                 synchronized (this) {
                     if (!connectionHandler.getChatSystemMessaging().isExistChatByUser(userChat, userDTO.getId())) {
-                        if (userChat.equals(TypeChat.GLOBAL.name())) {
-                            connectionHandler.getChatSystemMessaging().createChatByUser(TypeChat.GLOBAL.name(), TypeChat.GLOBAL, userORM, idUserCompanion);
-                        } else {
+                        if (chatDTO.getTypeChat() == TypeChat.GLOBAL) {
+                            connectionHandler.getChatSystemMessaging().createChatByUser(TypeChat.GLOBAL.name(), TypeChat.GLOBAL, userORM, chatDTO.getUserCompanionId());
+                        } else if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
                             if (!userChat.equals(userORM.getUsername())) {
-                                connectionHandler.getChatSystemMessaging().createChatByUser(userChat, TypeChat.PRIVATE, userORM, idUserCompanion);
+                                connectionHandler.getChatSystemMessaging().createChatByUser(userChat, TypeChat.PRIVATE, userORM, chatDTO.getUserCompanionId());
                             }
                         }
                     }
@@ -162,23 +161,20 @@ public class ClientHandler implements Runnable {
         informAllClientsUserNameList();
     }
 
-    public synchronized void removeClient(String username) {
+    public synchronized void removeClient(String username, ChatDTO chatDTO) {
         connectionHandler.getClientHandlers().remove(username);
-        connectionHandler.getUserNameAndIdList().remove(username);
+//        connectionHandler.getUserNameAndChatInfo().remove(username, chatDTO);
         informAllClientsUserNameList();
     }
 
     public void informAllClientsUserNameList() {
+        connectionHandler.getUserNameAndChatInfo().clear();
         fillChatNameList();
-
-        if (flagGlobalChat) {
-            this.sendUserNameList(connectionHandler.getUserNameAndIdList());
-            flagGlobalChat = false;
-        }
+        fillChatNameListGroup();
 
         for (String key : connectionHandler.getClientHandlers().keySet()) {
             ClientHandler client = connectionHandler.getClientHandlers().get(key);
-            client.sendUserNameList(connectionHandler.getUserNameAndIdList());
+            client.sendUserNameList(connectionHandler.getUserNameAndChatInfo());
         }
     }
 
@@ -186,7 +182,22 @@ public class ClientHandler implements Runnable {
 
         for (String key : connectionHandler.getClientHandlers().keySet()) {
             ClientHandler client = connectionHandler.getClientHandlers().get(key);
-            connectionHandler.getUserNameAndIdList().put(client.getUsername(), client.getUserDTO().getId());
+            connectionHandler.getUserNameAndChatInfo().put("GLOBAL", new ChatDTO(TypeChat.GLOBAL, null, client.getUserDTO()));
+            connectionHandler.getUserNameAndChatInfo().put(client.getUsername(), new ChatDTO(TypeChat.PRIVATE, client.getUserDTO().getId(), client.getUserDTO()));
+        }
+    }
+
+    private void fillChatNameListGroup() {
+        System.out.println("++");
+        for (String key : connectionHandler.getClientHandlers().keySet()) {
+            ClientHandler client = connectionHandler.getClientHandlers().get(key);
+            // TODO read chats with type group!
+
+            List<Chat> chatList = connectionHandler.getChatSystemMessaging().readChatsByType(TypeChat.GROUP, client.getUserDTO().getId());
+            for (Chat chat : chatList) {
+                connectionHandler.getUserNameAndChatInfo().put(chat.getNameChat(), new ChatDTO(TypeChat.GROUP, null, client.getUserDTO()));
+                System.out.println("++" + connectionHandler.getUserNameAndChatInfo().get(chat.getNameChat()));
+            }
         }
     }
 

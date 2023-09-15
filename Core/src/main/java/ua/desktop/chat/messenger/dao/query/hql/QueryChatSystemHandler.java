@@ -16,4 +16,8 @@ public class QueryChatSystemHandler {
     public static String findChatCompanionByUserCompanionIdAndUserId() {
         return "FROM Chat c WHERE c.userCompanionId = :userCompanionId AND c.user.id = :userId";
     }
+
+    public static String findChatsByTypeChatAndUserId() {
+        return "FROM Chat c WHERE c.typeChat = :typeChat AND c.user.id = :userId";
+    }
 }

@@ -16,6 +16,8 @@ public interface ChatSystemHandling {
 
     List<Chat> readListChatsByChatName(String nameChat);
 
-    Chat getChat(String nameChat, Long userId);
-    Chat getChatCompanion(Chat chat);
+    Chat readChat(String nameChat, Long userId);
+    Chat readChatCompanion(Chat chat);
+
+    List<Chat> readChatsByType(TypeChat typeChat, Long userId);
 }

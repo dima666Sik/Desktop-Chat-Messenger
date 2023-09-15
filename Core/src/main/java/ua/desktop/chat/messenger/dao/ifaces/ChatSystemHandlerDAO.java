@@ -14,9 +14,11 @@ public interface ChatSystemHandlerDAO {
 
     List<Chat> readListChatsByUser(User user) throws DAOException;
 
-    Chat getChat(String nameChat, Long userId)throws DAOException;
+    Chat readChat(String nameChat, Long userId)throws DAOException;
 
     List<Chat> readListChatsByChatName(String nameChat)throws DAOException;
 
-    Chat getChatCompanion(Chat chat)throws DAOException;
+    Chat readChatCompanion(Chat chat)throws DAOException;
+    List<Chat> readChatsByType(TypeChat typeChat, Long userId) throws DAOException;
+
 }

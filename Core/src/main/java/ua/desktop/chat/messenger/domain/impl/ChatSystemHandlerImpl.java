@@ -62,9 +62,9 @@ public class ChatSystemHandlerImpl implements ChatSystemHandling {
     }
 
     @Override
-    public Chat getChat(String nameChat, Long userId) {
+    public Chat readChat(String nameChat, Long userId) {
         try {
-            return chatSystemMessageDAO.getChat(nameChat, userId);
+            return chatSystemMessageDAO.readChat(nameChat, userId);
         } catch (DAOException e) {
             logger.warn("Cannot read chats for user!", e);
             return null;
@@ -72,9 +72,19 @@ public class ChatSystemHandlerImpl implements ChatSystemHandling {
     }
 
     @Override
-    public Chat getChatCompanion(Chat chat) {
+    public Chat readChatCompanion(Chat chat) {
         try {
-            return chatSystemMessageDAO.getChatCompanion(chat);
+            return chatSystemMessageDAO.readChatCompanion(chat);
+        } catch (DAOException e) {
+            logger.warn("Cannot read chats for user!", e);
+            return null;
+        }
+    }
+
+    @Override
+    public List<Chat> readChatsByType(TypeChat typeChat, Long userId) {
+        try {
+            return chatSystemMessageDAO.readChatsByType(typeChat, userId);
         } catch (DAOException e) {
             logger.warn("Cannot read chats for user!", e);
             return null;

@@ -12,10 +12,17 @@ public class ChatDTO implements Serializable {
     private String nameChat;
     private TypeChat typeChat;
     private UserDTO user;
+    private Long userCompanionId;
 
     public ChatDTO(String nameChat, TypeChat typeChat, UserDTO user) {
         this.nameChat = nameChat;
         this.typeChat = typeChat;
+        this.user = user;
+    }
+
+    public ChatDTO(TypeChat typeChat, Long userCompanionId, UserDTO user) {
+        this.typeChat = typeChat;
+        this.userCompanionId = userCompanionId;
         this.user = user;
     }
 
@@ -49,6 +56,14 @@ public class ChatDTO implements Serializable {
 
     public void setUser(UserDTO user) {
         this.user = user;
+    }
+
+    public Long getUserCompanionId() {
+        return userCompanionId;
+    }
+
+    public void setUserCompanionId(Long userCompanionId) {
+        this.userCompanionId = userCompanionId;
     }
 
     @Override

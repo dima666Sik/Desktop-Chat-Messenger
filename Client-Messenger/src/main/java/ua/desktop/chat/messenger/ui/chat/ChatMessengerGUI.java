@@ -1,10 +1,13 @@
 package ua.desktop.chat.messenger.ui.chat;
 
+import com.google.common.collect.Multimap;
 import ua.desktop.chat.messenger.dao.util.DBConnector;
 import ua.desktop.chat.messenger.domain.Client;
+import ua.desktop.chat.messenger.domain.impl.ChatSystemHandlerImpl;
 import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
+import ua.desktop.chat.messenger.models.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,11 +15,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Comparator;
+import java.util.*;
 import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class ChatMessengerGUI extends JDialog {
     private static final String DEFAULT_NAME_CHAT = "You not choose chat!";
@@ -30,6 +30,8 @@ public class ChatMessengerGUI extends JDialog {
     private final Client client;
     private final StringBuilder text = new StringBuilder();
     private JList<String> jListChats;
+    private JButton createChatButton;
+    private JButton inviteIntoChatButton;
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
     private String textNameChat;
     private TypeChat typeChat;
@@ -38,14 +40,20 @@ public class ChatMessengerGUI extends JDialog {
         this.client = client;
     }
 
-    public void addUserList(final Set<String> users) {
+    public void addChatsList(final Multimap<String, ChatDTO> chats) {
         SwingUtilities.invokeLater(() -> {
             try {
                 System.out.println("Before updating " + nameChat);
                 removeAllUsernames();
-                for (String user : users) {
-                    if (!user.equals(client.getUser().getUsername())) {
-                        model.addElement(user);
+                for (Map.Entry<String, ChatDTO> entry : chats.entries()) {
+                    if (entry.getValue().getTypeChat() == TypeChat.PRIVATE && !entry.getKey().equals(client.getUser().getUsername())) {
+                        model.addElement(String.format("%s [%s]", entry.getKey(), entry.getValue().getTypeChat()));
+                        jListChats.setModel(model);
+                    } else if (entry.getValue().getTypeChat() == TypeChat.GROUP && entry.getValue().getUser().getUsername().equals(client.getUser().getUsername())) {
+                        model.addElement(String.format("%s [%s]", entry.getKey(), entry.getValue().getTypeChat()));
+                        jListChats.setModel(model);
+                    } else if (entry.getValue().getTypeChat() == TypeChat.GLOBAL && entry.getValue().getUser().getUsername().equals(client.getUser().getUsername())) {
+                        model.addElement(String.format("%s [%s]", entry.getKey(), entry.getValue().getTypeChat()));
                         jListChats.setModel(model);
                     }
                 }
@@ -67,10 +75,20 @@ public class ChatMessengerGUI extends JDialog {
             }
         });
     }
+
     public void updateChat(final MessageDTO serverMSG) {
         SwingUtilities.invokeLater(() -> {
             try {
-                if (serverMSG.getChat().getNameChat().equals(nameChat.getText())) {
+                //TODO!
+                System.out.println("---" + serverMSG + " " + serverMSG.getChat().getNameChat().equals(textNameChat));
+                if (serverMSG.getChat().getUser().getUsername().equals(textNameChat) && serverMSG.getChat().getTypeChat() == TypeChat.PRIVATE) {
+                    text.append(serverMSG.getMessage()).append(" \n");
+                    textArea.append(text.toString());
+                    clearText();
+                } else if (serverMSG.getChat().getNameChat().equals(textNameChat)
+                        && (!serverMSG.getChat().getUser().getUsername().equals(client.getUser().getUsername()))
+                        && (serverMSG.getChat().getTypeChat() == TypeChat.GLOBAL
+                        || serverMSG.getChat().getTypeChat() == TypeChat.GROUP)) {
                     text.append(serverMSG.getMessage()).append(" \n");
                     textArea.append(text.toString());
                     clearText();
@@ -101,9 +119,9 @@ public class ChatMessengerGUI extends JDialog {
                     String companionName = messageDTO.getChat().getUser().getUsername();
                     if (messageDTO.getChat().getTypeChat() == TypeChat.PRIVATE) {
                         if (messageDTO.getChat().getNameChat().equals(client.getUser().getUsername())) {
-                            messageText = buildMessageText(messageDTO, companionName, client.getUser().getUsername(), true);
+                            messageText = buildMessageText(messageDTO, companionName, client.getUser().getUsername(), false);
                         } else {
-                            messageText = buildMessageText(messageDTO, messageDTO.getChat().getNameChat(), client.getUser().getUsername(), false);
+                            messageText = buildMessageText(messageDTO, messageDTO.getChat().getNameChat(), client.getUser().getUsername(), true);
                         }
                     } else {
                         if (messageDTO.getChat().getUser().getUsername().equals(client.getUser().getUsername())) {
@@ -139,13 +157,17 @@ public class ChatMessengerGUI extends JDialog {
                     synchronized (this) {
                         sendMessage.setEnabled(true);
                         // Get the selected value from the JList
-                        if (jListChats.getSelectedValue() == null) nameChat.setText(textNameChat);
-                        else nameChat.setText(jListChats.getSelectedValue());
-                        textNameChat = nameChat.getText();
-                        typeChat = nameChat.getText().equals(DEFAULT_NAME_CHAT) ? TypeChat.GLOBAL : nameChat.getText().equals(TypeChat.GLOBAL.name()) ? TypeChat.GLOBAL : TypeChat.PRIVATE;
-                        ChatDTO chat = new ChatDTO(nameChat.getText(), typeChat, client.getUser());
-                        List<MessageDTO> messageDTOList = client.getMessagesInChatForUser(chat);
-                        prePrinterMessagesInChatForUser(sortListMessageForDate(messageDTOList));
+
+                        Map<String, TypeChat> nameAndTypeChatMap = generateMapFromUIDataChatNameAndTypeChat(jListChats.getSelectedValue());
+                        nameAndTypeChatMap.forEach((k, v) -> {
+                            if (jListChats.getSelectedValue() == null) nameChat.setText(textNameChat);
+                            else nameChat.setText(k);
+                            textNameChat = k;
+                            typeChat = v;
+                            ChatDTO chat = new ChatDTO(k, typeChat, client.getUser());
+                            List<MessageDTO> messageDTOList = client.getMessagesInChatForUser(chat);
+                            prePrinterMessagesInChatForUser(sortListMessageForDate(messageDTOList));
+                        });
                     }
                 });
 
@@ -161,7 +183,8 @@ public class ChatMessengerGUI extends JDialog {
         configureSendMessageButton();
         configureWindowCloseListener();
         checkClickChoiceChat();
-
+        createChat();
+        inviteIntoChat();
         setVisible(true);
     }
 
@@ -178,13 +201,30 @@ public class ChatMessengerGUI extends JDialog {
 
     private void configureMainWindow() {
         if (nameChat.getText().isEmpty()) {
-            nameChat.setText(DEFAULT_NAME_CHAT);
+            nameChat.setText(textNameChat);
         }
 
-        textNameChat = nameChat.getText().equals(DEFAULT_NAME_CHAT) ? DEFAULT_NAME_CHAT : nameChat.getText();
-        typeChat = nameChat.getText().equals(DEFAULT_NAME_CHAT) ? TypeChat.GLOBAL : TypeChat.PRIVATE;
-
+        if (!nameChat.getText().equals(DEFAULT_NAME_CHAT)) {
+            Map<String, TypeChat> nameAndTypeChatMap = generateMapFromUIDataChatNameAndTypeChat(nameChat.getText());
+            nameAndTypeChatMap.forEach((k, v) -> {
+                textNameChat = k;
+                typeChat = v;
+            });
+        } else {
+            textNameChat = DEFAULT_NAME_CHAT;
+            typeChat = null;
+        }
         jLabelUserName.setText(client.getUser().getUsername());
+    }
+
+    public Map<String, TypeChat> generateMapFromUIDataChatNameAndTypeChat(String nameChat) {
+        List<String> stringList = Arrays.asList(nameChat.split(" "));
+        Map<String, TypeChat> stringTypeChatMap = new HashMap<>();
+        String originType = stringList.get(1).replace("[", "").replace("]", "");
+        System.out.println("--" + originType);
+        System.out.println(TypeChat.valueOf(originType));
+        stringTypeChatMap.put(stringList.get(0), TypeChat.valueOf(originType));
+        return stringTypeChatMap;
     }
 
     private void configureChatDisplay() {
@@ -222,6 +262,12 @@ public class ChatMessengerGUI extends JDialog {
             } else {
                 messageText.append(")[GLOBAL] ").append(clientUserName).append(": ");
             }
+        } else if (typeChat == TypeChat.GROUP) {
+            if (!flagSender) {
+                messageText.append(")[GROUP] ").append(companionName).append(": ");
+            } else {
+                messageText.append(")[GROUP] ").append(clientUserName).append(": ");
+            }
         } else {
             if (!flagSender) {
                 messageText.append(")[PRIVATE] ").append(companionName).append(": ");
@@ -250,6 +296,20 @@ public class ChatMessengerGUI extends JDialog {
 
                 thread.start();
             }
+        });
+    }
+
+    private void createChat() {
+        createChatButton.addActionListener((e) -> {
+            CreateChatGUI createChatGUI = new CreateChatGUI(new ChatSystemHandlerImpl(), new User(client.getUser()));
+            createChatGUI.startGUI();
+        });
+    }
+
+    private void inviteIntoChat() {
+        inviteIntoChatButton.addActionListener((e) -> {
+            InviteIntoChatGUI inviteIntoChatGUI = new InviteIntoChatGUI(new ChatSystemHandlerImpl(), new User(client.getUser()));
+            inviteIntoChatGUI.startGUI();
         });
     }
 }
