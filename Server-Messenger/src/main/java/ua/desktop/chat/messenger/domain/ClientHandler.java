@@ -147,18 +147,18 @@ public class ClientHandler implements Runnable {
         }).start();
     }
 
-    public synchronized void addClient(String username, ClientHandler ch) {
+    private synchronized void addClient(String username, ClientHandler ch) {
         connectionHandler.getClientHandlers().put(username, ch);
         informAllClientsUserNameList();
     }
 
-    public synchronized void removeClient(String username, ChatDTO chatDTO) {
+    private synchronized void removeClient(String username, ChatDTO chatDTO) {
         connectionHandler.getClientHandlers().remove(username);
         connectionHandler.getUserNameAndChatInfo().remove(username, chatDTO);
         informAllClientsUserNameList();
     }
 
-    public void informAllClientsUserNameList() {
+    private void informAllClientsUserNameList() {
         connectionHandler.getUserNameAndChatInfo().clear();
         fillChatNameList();
         fillChatNameListGroup();

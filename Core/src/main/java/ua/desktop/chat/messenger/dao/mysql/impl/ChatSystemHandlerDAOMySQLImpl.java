@@ -43,7 +43,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
     }
 
     @Override
-    public Chat createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion) throws DAOException {
+    public boolean createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion) throws DAOException {
         try (Session session = DBConnector.getSession()) {
 
             session.beginTransaction();
@@ -62,7 +62,7 @@ public class ChatSystemHandlerDAOMySQLImpl implements ChatSystemHandlerDAO {
 
             logger.info("Create chat was successful!");
 
-            return chat;
+            return true;
         }
     }
 

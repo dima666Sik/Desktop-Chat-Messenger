@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MessageSystemHandlerDAO {
-    void createMessageByChat(Message message) throws DAOException;
+    boolean createMessageByChat(Message message) throws DAOException;
 
     Optional<List<Message>> readListMessageByChats(List<Chat> chatList) throws DAOException;
 }

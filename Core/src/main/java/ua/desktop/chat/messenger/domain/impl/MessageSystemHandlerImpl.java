@@ -24,18 +24,19 @@ public class MessageSystemHandlerImpl implements MessageSystemHandling {
     }
 
     @Override
-    public void createMessageByChat(MessageDTO message) {
+    public boolean createMessageByChat(MessageDTO message) {
         try {
-            messageSystemHandlerDAO.createMessageByChat(Converter.convertMessageDTOIntoMessage(message));
+            return messageSystemHandlerDAO.createMessageByChat(Converter.convertMessageDTOIntoMessage(message));
         } catch (DAOException e) {
             logger.warn("Cannot create user message in the chat `".concat(message.getChat().getNameChat()).concat("`!"), e);
+            return false;
         }
     }
 
     @Override
     public Optional<List<MessageDTO>> readListMessageByChats(List<ChatDTO> chatList) {
         try {
-            Optional<List<Message>> optionalMessageDTOList = messageSystemHandlerDAO.readListMessageByChats(Converter.convertListChatIntoListChatDTO(chatList));
+            Optional<List<Message>> optionalMessageDTOList = messageSystemHandlerDAO.readListMessageByChats(Converter.convertListChatDTOIntoListChat(chatList));
             return optionalMessageDTOList.map(Converter::convertListMessageIntoListMessageDTO);
         } catch (DAOException e) {
             logger.warn("Cannot read messages for chats!", e);

@@ -9,6 +9,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MessageSystemHandling {
-    void createMessageByChat(MessageDTO message);
+    boolean createMessageByChat(MessageDTO message);
     Optional<List<MessageDTO>> readListMessageByChats(List<ChatDTO> chatList);
 }

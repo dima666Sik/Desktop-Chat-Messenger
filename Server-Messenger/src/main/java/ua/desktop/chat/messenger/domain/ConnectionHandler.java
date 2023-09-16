@@ -93,7 +93,6 @@ public class ConnectionHandler implements Runnable {
             }
         } else {
             try {
-                System.out.println("---" + user.getUsername() + " " + clientRCVR + " " + clientHandlers.size());
                 if (clientHandlers.containsKey(clientRCVR)) {
                     message.setMessage("[".concat(message.getChat().getTypeChat().name()).concat("] ").concat(user.getUsername()).concat(": ").concat(message.getMessage()));
                     clientHandlers.get(clientRCVR).sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));

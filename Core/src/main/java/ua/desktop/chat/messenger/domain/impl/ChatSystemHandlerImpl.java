@@ -35,11 +35,12 @@ public class ChatSystemHandlerImpl implements ChatSystemHandling {
     }
 
     @Override
-    public void createChatByUser(String nameChat, TypeChat typeChat, UserDTO userDTO, Long idUserCompanion) {
+    public boolean createChatByUser(String nameChat, TypeChat typeChat, UserDTO userDTO, Long idUserCompanion) {
         try {
-            chatSystemMessageDAO.createChatByUser(nameChat, typeChat, Converter.convertUserDTOIntoUser(userDTO), idUserCompanion);
+            return chatSystemMessageDAO.createChatByUser(nameChat, typeChat, Converter.convertUserDTOIntoUser(userDTO), idUserCompanion);
         } catch (DAOException e) {
             logger.warn("Cannot create user chat!", e);
+            return false;
         }
     }
 
@@ -47,7 +48,7 @@ public class ChatSystemHandlerImpl implements ChatSystemHandling {
     public Optional<List<ChatDTO>> readListChatsByUser(UserDTO userDTO) {
         try {
             Optional<List<Chat>> optionalChatList = chatSystemMessageDAO.readListChatsByUser(Converter.convertUserDTOIntoUser(userDTO));
-            return optionalChatList.map(Converter::convertListChatDTOIntoListChat);
+            return optionalChatList.map(Converter::convertListChatIntoListChatDTO);
         } catch (DAOException e) {
             logger.warn("Cannot read chats for user!", e);
             return Optional.empty();
@@ -58,7 +59,7 @@ public class ChatSystemHandlerImpl implements ChatSystemHandling {
     public Optional<List<ChatDTO>> readListChatsByChatName(String nameChat) {
         try {
             Optional<List<Chat>> optionalChatList = chatSystemMessageDAO.readListChatsByChatName(nameChat);
-            return optionalChatList.map(Converter::convertListChatDTOIntoListChat);
+            return optionalChatList.map(Converter::convertListChatIntoListChatDTO);
         } catch (DAOException e) {
             logger.warn("Cannot read chats for user!", e);
             return Optional.empty();
@@ -91,7 +92,7 @@ public class ChatSystemHandlerImpl implements ChatSystemHandling {
     public Optional<List<ChatDTO>> readChatsByType(TypeChat typeChat, Long userId) {
         try {
             Optional<List<Chat>> optionalChatList = chatSystemMessageDAO.readChatsByType(typeChat, userId);
-            return optionalChatList.map(Converter::convertListChatDTOIntoListChat);
+            return optionalChatList.map(Converter::convertListChatIntoListChatDTO);
         } catch (DAOException e) {
             logger.warn("Cannot read chats for user!", e);
             return Optional.empty();

@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface ChatSystemHandlerDAO {
     boolean isExistChatByUser(String nameChat, Long userId) throws DAOException;
 
-    Chat createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion) throws DAOException;
+    boolean createChatByUser(String nameChat, TypeChat typeChat, User user, Long idUserCompanion) throws DAOException;
 
     Optional<List<Chat>> readListChatsByUser(User user) throws DAOException;
 

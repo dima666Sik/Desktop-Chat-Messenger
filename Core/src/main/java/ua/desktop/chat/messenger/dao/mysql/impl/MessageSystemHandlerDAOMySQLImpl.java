@@ -24,7 +24,7 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
     private final static Logger logger = LogManager.getLogger(MessageSystemHandlerDAOMySQLImpl.class.getName());
 
     @Override
-    public void createMessageByChat(Message message) throws DAOException {
+    public boolean createMessageByChat(Message message) throws DAOException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -40,6 +40,8 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
 
             logger.info("Create message in chat was successful!");
         }
+
+        return true;
     }
 
     @Override

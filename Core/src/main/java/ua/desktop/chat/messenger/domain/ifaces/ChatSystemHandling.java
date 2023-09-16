@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface ChatSystemHandling {
     boolean isExistChatByUser(String nameChat, Long userId);
 
-    void createChatByUser(String nameChat, TypeChat typeChat, UserDTO userDTO, Long idUserCompanion);
+    boolean createChatByUser(String nameChat, TypeChat typeChat, UserDTO userDTO, Long idUserCompanion);
 
     Optional<List<ChatDTO>> readListChatsByUser(UserDTO userDTO);
 

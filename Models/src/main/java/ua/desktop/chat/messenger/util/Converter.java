@@ -32,18 +32,18 @@ public class Converter {
         return new Message(messageDTO, chat);
     }
 
-    public static MessageDTO converMessageIntoMessageDTO(Message message) {
+    public static MessageDTO convertMessageIntoMessageDTO(Message message) {
         ChatDTO chatDTO = convertChatIntoChatDTO(message.getChat());
         return new MessageDTO(message.getMessage(), message.getLocalDateTime(), chatDTO);
     }
 
-    public static List<ChatDTO> convertListChatDTOIntoListChat(List<Chat> chatList) {
+    public static List<ChatDTO> convertListChatIntoListChatDTO(List<Chat> chatList) {
         List<ChatDTO> chatDTOList = new ArrayList<>();
         chatList.forEach((e) -> chatDTOList.add(convertChatIntoChatDTO(e)));
         return chatDTOList;
     }
 
-    public static List<Chat> convertListChatIntoListChatDTO(List<ChatDTO> chatDTOList) {
+    public static List<Chat> convertListChatDTOIntoListChat(List<ChatDTO> chatDTOList) {
         List<Chat> chatList = new ArrayList<>();
         chatDTOList.forEach((e) -> chatList.add(convertChatDTOIntoChat(e)));
         return chatList;
@@ -51,7 +51,7 @@ public class Converter {
 
     public static List<MessageDTO> convertListMessageIntoListMessageDTO(List<Message> messageList) {
         List<MessageDTO> messageDTOList = new ArrayList<>();
-        messageList.forEach((e) -> messageDTOList.add(converMessageIntoMessageDTO(e)));
+        messageList.forEach((e) -> messageDTOList.add(convertMessageIntoMessageDTO(e)));
         return messageDTOList;
     }
 }

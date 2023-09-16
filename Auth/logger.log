@@ -1,0 +1,47 @@
+[INFO ] 2023-09-16 23:05:25.272 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:05:30.448 [main] UserDAOMySQLImpl - User was not found!
+[WARN ] 2023-09-16 23:05:30.448 [main] AuthServiceImpl - User is empty! Finding user wasn't successful!
+[INFO ] 2023-09-16 23:05:30.509 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil` was not existed!
+[INFO ] 2023-09-16 23:05:30.518 [main] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-16 23:05:30.609 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-09-16 23:07:43.267 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:07:47.652 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-16 23:07:47.747 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil`was existed!
+[WARN ] 2023-09-16 23:07:47.747 [main] UserDAOMySQLImpl - Such user with email `devil` is defined, please change email...
+[INFO ] 2023-09-16 23:11:40.382 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:11:44.492 [main] UserDAOMySQLImpl - User was not found!
+[WARN ] 2023-09-16 23:11:44.493 [main] AuthServiceImpl - User is empty! Finding user wasn't successful!
+[INFO ] 2023-09-16 23:11:44.547 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil` was not existed!
+[INFO ] 2023-09-16 23:11:44.555 [main] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-16 23:11:44.633 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-09-16 23:12:31.107 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:12:35.136 [main] UserDAOMySQLImpl - User was not found!
+[WARN ] 2023-09-16 23:12:35.137 [main] AuthServiceImpl - User is empty! Finding user wasn't successful!
+[INFO ] 2023-09-16 23:12:35.198 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil` was not existed!
+[INFO ] 2023-09-16 23:12:35.205 [main] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-16 23:12:35.308 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-09-16 23:14:08.883 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:14:13.017 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-16 23:15:58.562 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:16:02.587 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil` was not existed!
+[INFO ] 2023-09-16 23:16:02.604 [main] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-16 23:16:02.674 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-09-16 23:16:02.729 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-16 23:16:23.828 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:16:27.767 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil`was existed!
+[WARN ] 2023-09-16 23:16:27.769 [main] UserDAOMySQLImpl - Such user with email `devil` is defined, please change email...
+[INFO ] 2023-09-16 23:16:27.835 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-16 23:17:42.807 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-16 23:17:46.919 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil` was not existed!
+[INFO ] 2023-09-16 23:17:46.942 [main] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-16 23:17:47.062 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-09-16 23:17:47.149 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-17 00:59:03.716 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-17 00:59:08.408 [main] UserDAOMySQLImpl - User with this email `devil` or username `devil` was not existed!
+[INFO ] 2023-09-17 00:59:08.438 [main] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-17 00:59:08.531 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2023-09-17 00:59:08.577 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2023-09-17 01:14:28.881 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2023-09-17 01:14:33.391 [main] UserDAOMySQLImpl - User with this email `angel` or username `angel` was not existed!
+[INFO ] 2023-09-17 01:14:33.412 [main] UserDAOMySQLImpl - User was not existed!
+[INFO ] 2023-09-17 01:14:33.502 [main] UserDAOMySQLImpl - Create user was successful!

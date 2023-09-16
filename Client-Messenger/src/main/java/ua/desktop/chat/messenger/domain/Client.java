@@ -148,31 +148,25 @@ public class Client implements Runnable {
 
     public synchronized List<MessageDTO> getMessagesInChatForUser(ChatDTO chatDTO) {
         try {
-            System.out.println("++");
             //TODO create read message from db!
             if (communicationHandler.getChatSystemMessaging().isExistChatByUser(chatDTO.getNameChat(), user.getId())) {
-                System.out.println("++1");
                 List<ChatDTO> chatORMList = new ArrayList<>();
                 if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
                     Optional<ChatDTO> chatOwner = communicationHandler.getChatSystemMessaging().readChat(chatDTO.getNameChat(), user.getId());
                     if (chatOwner.isEmpty()) throw new RuntimeException("Chat is not found!");
                     chatORMList.add(chatOwner.get());
-                    System.out.println("++1.5 "+chatOwner.get());
 
                     Optional<ChatDTO> chatCompanion = communicationHandler.getChatSystemMessaging().readChatCompanion(chatOwner.get());
                     if (chatCompanion.isEmpty()) throw new RuntimeException("Chat Companion is not found!");
                     chatORMList.add(chatCompanion.get());
-                    System.out.println("++1.55 "+chatCompanion.get());
                 } else {
 
                     Optional<List<ChatDTO>> chatDTOList = communicationHandler.getChatSystemMessaging().readListChatsByChatName(chatDTO.getNameChat());
                     if (chatDTOList.isEmpty()) throw new RuntimeException("Chats is not found!");
                     chatORMList = chatDTOList.get();
-                    System.out.println("++2"+chatDTOList.get());
                 }
                 Optional<List<MessageDTO>> optionalMessageDTOList = communicationHandler.getMessageSystemHandling().readListMessageByChats(chatORMList);
                 if (optionalMessageDTOList.isEmpty()) throw new RuntimeException("Message not found for this chat!");
-                System.out.println("++4"+optionalMessageDTOList.get());
                 return optionalMessageDTOList.get();
             } else throw new RuntimeException("Message in chat was not added!");
 
