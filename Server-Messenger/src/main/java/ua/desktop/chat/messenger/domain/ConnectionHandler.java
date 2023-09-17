@@ -13,6 +13,7 @@ import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.env.TypeMessage;
 import ua.desktop.chat.messenger.models.Message;
 import ua.desktop.chat.messenger.parser.ParserJSON;
+import ua.desktop.chat.messenger.ui.ServerGUI;
 
 import java.io.IOException;
 
@@ -30,6 +31,8 @@ public class ConnectionHandler implements Runnable {
     private final int portNumber;
     private final ChatSystemHandling chatSystemMessaging;
     private final MessageSystemHandling messageSystemHandling;
+    private ServerGUI serverGUI;
+    private ServerSocket serverSocket;
 
     public ConnectionHandler(int portNumber, ChatSystemHandling chatSystemMessaging, MessageSystemHandling messageSystemHandling) {
         this.portNumber = portNumber;
@@ -38,22 +41,29 @@ public class ConnectionHandler implements Runnable {
     }
 
     public void run() {
+        serverGUI = new ServerGUI();
+        serverGUI.startGUI();
+        serverGUI.setServer(this);
+
         while (isActive) {
-            ServerSocket s = null;
+
             try {
                 InetAddress addr = InetAddress.getLocalHost();
 
-                s = new ServerSocket(portNumber, 10, addr);
-                s.setReuseAddress(true);
-                logger.info("InetAddress : " + s.getInetAddress());
+                serverSocket = new ServerSocket(portNumber, 10, addr);
+                serverSocket.setReuseAddress(true);
 
-                while (!s.isClosed()) {
+                logger.info("InetAddress : " + serverSocket.getInetAddress());
+                serverGUI.updateChat("InetAddress : " + serverSocket.getInetAddress());
+
+                while (!serverSocket.isClosed()) {
                     if (newUser) {
                         newUser = false;
                     } else {
-                        Socket conn = s.accept();
+                        Socket conn = serverSocket.accept();
 
                         logger.info("Connection received from " + conn.getInetAddress().getHostName() + " : " + conn.getPort());
+                        serverGUI.updateChat("Connection received from " + conn.getInetAddress().getHostName() + " : " + conn.getPort());
 
                         Runnable runnableCH = new ClientHandler(this, conn);
                         Thread thread = new Thread(runnableCH);
@@ -61,15 +71,7 @@ public class ConnectionHandler implements Runnable {
                     }
                 }
             } catch (IOException e) {
-                logger.error(e);
-                throw new RuntimeException(e);
-            }
-
-            try {
-                s.close();
-            } catch (IOException e) {
-                logger.error("Unable to close. IOException", e);
-                throw new RuntimeException("Unable to close. IOException", e);
+                logger.warn("You interrupted accept call! Close server!");
             }
         }
     }
@@ -82,6 +84,9 @@ public class ConnectionHandler implements Runnable {
         if (clientHandlers.size() <= 1) {
             message.setMessage("[MESSAGE COULD NOT BE SEND!]");
             sender.sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));
+
+            logger.info("MESSAGE COULD NOT BE SEND! this message for once user in chat: ".concat(user.getUsername()));
+            serverGUI.updateChat("MESSAGE COULD NOT BE SEND! this message for once user in chat: ".concat(user.getUsername()));
             return;
         }
 
@@ -90,15 +95,24 @@ public class ConnectionHandler implements Runnable {
             for (String key : clientHandlers.keySet()) {
                 ClientHandler client = clientHandlers.get(key);
                 client.sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));
+
+                logger.info("Send message (GLOBAL|GROUP) is successful! Message owner is: ".concat(user.getUsername()));
+                serverGUI.updateChat("Send message (GLOBAL|GROUP) is successful! Message owner is: ".concat(user.getUsername()));
             }
         } else {
             try {
                 if (clientHandlers.containsKey(clientRCVR)) {
                     message.setMessage("[".concat(message.getChat().getTypeChat().name()).concat("] ").concat(user.getUsername()).concat(": ").concat(message.getMessage()));
                     clientHandlers.get(clientRCVR).sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));
+
+                    logger.info("Send message (PRIVATE) is successful! Message owner is: ".concat(user.getUsername()).concat(". Companion is: ").concat(clientRCVR));
+                    serverGUI.updateChat("Send message (PRIVATE) is successful! Message owner is: ".concat(user.getUsername()).concat(". Companion is: ").concat(clientRCVR));
                 } else {
                     message.setMessage("[MESSAGE COULD NOT BE SEND!]");
                     sender.sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));
+
+                    logger.info("MESSAGE COULD NOT BE SEND! this message for once user in chat: ".concat(user.getUsername()));
+                    serverGUI.updateChat("MESSAGE COULD NOT BE SEND! this message for once user in chat: ".concat(user.getUsername()));
                 }
             } catch (Exception e) {
                 logger.error("Unable to send message on clientHandler", e);
@@ -114,17 +128,39 @@ public class ConnectionHandler implements Runnable {
                 if (chatSystemMessaging.isExistChatByUser(receiver, userDTO.getId())) {
 
                     Optional<ChatDTO> chatDTO = chatSystemMessaging.readChat(receiver, userDTO.getId());
-                    if(chatDTO.isEmpty()) throw new RuntimeException("Chat was not found!");
+                    if (chatDTO.isEmpty()) throw new RuntimeException("Chat was not found!");
                     MessageDTO messageDTO = new MessageDTO(message.getMessage(), message.getLocalDateTime(), chatDTO.get());
 
-                    messageSystemHandling.createMessageByChat(messageDTO);
+                    if (messageSystemHandling.createMessageByChat(messageDTO)) {
+                        logger.info("Message is successful adding into db! Message owner is: ".concat(userDTO.getUsername()));
+                        serverGUI.updateChat("Message is successful adding into db! Message owner is: ".concat(userDTO.getUsername()));
+                    }
                 } else throw new RuntimeException("Message in chat was not added!");
             }
         }).start();
     }
 
-    public void terminate() {
-        isActive = false;
+    public synchronized void closeServerSocket() {
+        try {
+            if (serverSocket != null) {
+                serverSocket.close();
+            }
+        } catch (IOException e) {
+            logger.error("Unable to close. IOException", e);
+            throw new RuntimeException("Unable to close. IOException", e);
+        }
+    }
+
+    public synchronized ServerGUI getServerGUI() {
+        return serverGUI;
+    }
+
+    public synchronized Boolean getActive() {
+        return isActive;
+    }
+
+    public synchronized void setActive(Boolean active) {
+        isActive = active;
     }
 
     public synchronized Map<String, ClientHandler> getClientHandlers() {

@@ -86,10 +86,17 @@ public class ClientHandler implements Runnable {
                                 out.println("/M");
                                 String msgJSON = ParserJSON.convertObjectToString("[NOBODY IS HERE. YOUR MESSAGES NOT SAVED!]", TypeMessage.STRING_NOTIFICATION);
                                 out.println(msgJSON);
+
+                                logger.info("NOBODY IS HERE. YOUR MESSAGES NOT SAVED! this message for once user in chat: ".concat(userDTO.getUsername()));
+                                connectionHandler.getServerGUI().updateChat("NOBODY IS HERE. YOUR MESSAGES NOT SAVED! this message for once user in chat: ".concat(userDTO.getUsername()));
                             }
                             break OUTER;
                         case "/EXIT":
                             removeClient(userDTO.getUsername(), new ChatDTO(TypeChat.PRIVATE, userDTO.getId(), userDTO));
+
+                            logger.info("Client was removed from the list chat! Name current client is: ".concat(userDTO.getUsername()));
+                            connectionHandler.getServerGUI().updateChat("Client was removed from the list chat! Name current client is: ".concat(userDTO.getUsername()));
+
                             conn.close();
                             isActive = false;
                             break;
@@ -150,12 +157,16 @@ public class ClientHandler implements Runnable {
     private synchronized void addClient(String username, ClientHandler ch) {
         connectionHandler.getClientHandlers().put(username, ch);
         informAllClientsUserNameList();
+
+        logger.info("Client was added into list chat! Name current client is: ".concat(username));
+        connectionHandler.getServerGUI().updateChat("Client was added into list chat! Name current client is: ".concat(username));
     }
 
     private synchronized void removeClient(String username, ChatDTO chatDTO) {
         connectionHandler.getClientHandlers().remove(username);
         connectionHandler.getUserNameAndChatInfo().remove(username, chatDTO);
         informAllClientsUserNameList();
+
     }
 
     private void informAllClientsUserNameList() {
