@@ -14,6 +14,7 @@
 
 - [Description](#description)
 - [Technologies](#technologies)
+- [Patterns](#patterns)
 - [Project Structure](#project-structure)
 - [Features](#features)
 - [Usage](#usage)
@@ -49,6 +50,9 @@ All technologies you can see in the part of this README.md under the heading [Te
 - `guava` (P.S. this is open-source Java library developed by Google. About using described below.)
 - `gson` (P.S. this is library developed by Google for working with JSON. About using described below.)
 
+
+## Patterns
+- `Observer` - The pattern is a behavioral design pattern that is used when an object, known as the subject, maintains a list of its dependents, called observers, and notifies them of state changes, typically by calling one of their methods.
 ---
 
 ## Project Structure
