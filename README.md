@@ -155,7 +155,7 @@ All technologies you can see in the part of this README.md under the heading [Te
     - ✅ Close Server;
     - ✅️ Show logs;
 ---
-dd
+
 ## Usage
 
 1. To run this project you will need to install:
