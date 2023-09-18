@@ -3,25 +3,21 @@ package ua.desktop.chat.messenger.domain;
 import com.google.common.collect.Multimap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.domain.ifaces.Observer;
 import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.env.TypeMessage;
-import ua.desktop.chat.messenger.models.Chat;
-import ua.desktop.chat.messenger.models.Message;
-import ua.desktop.chat.messenger.models.User;
 import ua.desktop.chat.messenger.parser.ParserJSON;
 
 import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
-import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
-public class ClientHandler implements Runnable {
-    private final static Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
+public class ClientHandler implements Runnable, Observer {
+    private final static Logger logger = LogManager.getLogger(ClientHandler.class.getName());
     private final ConnectionHandler connectionHandler;
     private final Socket conn;
     private Boolean isActive = true;
@@ -53,7 +49,7 @@ public class ClientHandler implements Runnable {
                             logger.info("You cannot chose this username");
                         } else if (!userDTO.getUsername().isEmpty()) {
                             logger.info("Username accepted: ".concat(userDTO.getUsername()));
-                            addClient(userDTO.getUsername(), this);
+                            connectionHandler.addClient(userDTO.getUsername(), this);
                             break;
                         } else {
                             logger.info("No Username chosen.");
@@ -91,8 +87,11 @@ public class ClientHandler implements Runnable {
                                 connectionHandler.getServerGUI().updateChat("NOBODY IS HERE. YOUR MESSAGES NOT SAVED! this message for once user in chat: ".concat(userDTO.getUsername()));
                             }
                             break OUTER;
+                        case "/UPDATE GROUP INTO LIST":
+                            connectionHandler.informAllClientsUserNameList();
+                            break OUTER;
                         case "/EXIT":
-                            removeClient(userDTO.getUsername(), new ChatDTO(TypeChat.PRIVATE, userDTO.getId(), userDTO));
+                            connectionHandler.removeClient(userDTO.getUsername(), new ChatDTO(TypeChat.PRIVATE, userDTO.getId(), userDTO));
 
                             logger.info("Client was removed from the list chat! Name current client is: ".concat(userDTO.getUsername()));
                             connectionHandler.getServerGUI().updateChat("Client was removed from the list chat! Name current client is: ".concat(userDTO.getUsername()));
@@ -104,7 +103,7 @@ public class ClientHandler implements Runnable {
                 }
             } catch (SocketException e) {
                 try {
-                    removeClient(userDTO.getUsername(), new ChatDTO(TypeChat.PRIVATE, userDTO.getId(), userDTO));
+                    connectionHandler.removeClient(userDTO.getUsername(), new ChatDTO(TypeChat.PRIVATE, userDTO.getId(), userDTO));
                     conn.close();
                     isActive = false;
                     logger.warn("Socket was closed. U successful exit from client!");
@@ -119,6 +118,7 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    @Override
     public void sendUserNameList(Multimap<String, ChatDTO> ul) {
         StringBuilder userListResponse = new StringBuilder();
         out.println("/USERS");
@@ -127,81 +127,18 @@ public class ClientHandler implements Runnable {
             String userChat = entry.getKey();
             ChatDTO chatDTO = entry.getValue();
 
-            // 1. TODO Add chats with this names into db if them not exist there
+            // Add chats with current names into db if them not exist there
             userListResponse.append(userChat)
                     .append(":").append(chatDTO.getTypeChat())
                     .append(":").append(chatDTO.getUser().getUsername()).append(",");
             System.out.println("..." + userListResponse);
 
-            createChatsIfNotExist(userChat, chatDTO);
+            connectionHandler.createChatsIfNotExist(userChat, chatDTO, userDTO);
         }
         out.println(userListResponse);
     }
 
-    private void createChatsIfNotExist(String userChat, ChatDTO chatDTO) {
-        new Thread(() -> {
-            synchronized (this) {
-                if (!connectionHandler.getChatSystemMessaging().isExistChatByUser(userChat, userDTO.getId())) {
-                    if (chatDTO.getTypeChat() == TypeChat.GLOBAL) {
-                        connectionHandler.getChatSystemMessaging().createChatByUser(TypeChat.GLOBAL.name(), TypeChat.GLOBAL, userDTO, chatDTO.getUserCompanionId());
-                    } else if (chatDTO.getTypeChat() == TypeChat.PRIVATE) {
-                        if (!userChat.equals(userDTO.getUsername())) {
-                            connectionHandler.getChatSystemMessaging().createChatByUser(userChat, TypeChat.PRIVATE, userDTO, chatDTO.getUserCompanionId());
-                        }
-                    }
-                }
-            }
-        }).start();
-    }
-
-    private synchronized void addClient(String username, ClientHandler ch) {
-        connectionHandler.getClientHandlers().put(username, ch);
-        informAllClientsUserNameList();
-
-        logger.info("Client was added into list chat! Name current client is: ".concat(username));
-        connectionHandler.getServerGUI().updateChat("Client was added into list chat! Name current client is: ".concat(username));
-    }
-
-    private synchronized void removeClient(String username, ChatDTO chatDTO) {
-        connectionHandler.getClientHandlers().remove(username);
-        connectionHandler.getUserNameAndChatInfo().remove(username, chatDTO);
-        informAllClientsUserNameList();
-
-    }
-
-    private void informAllClientsUserNameList() {
-        connectionHandler.getUserNameAndChatInfo().clear();
-        fillChatNameList();
-        fillChatNameListGroup();
-
-        for (String key : connectionHandler.getClientHandlers().keySet()) {
-            ClientHandler client = connectionHandler.getClientHandlers().get(key);
-            client.sendUserNameList(connectionHandler.getUserNameAndChatInfo());
-        }
-    }
-
-    private void fillChatNameList() {
-
-        for (String key : connectionHandler.getClientHandlers().keySet()) {
-            ClientHandler client = connectionHandler.getClientHandlers().get(key);
-            connectionHandler.getUserNameAndChatInfo().put("GLOBAL", new ChatDTO(TypeChat.GLOBAL, null, client.getUserDTO()));
-            connectionHandler.getUserNameAndChatInfo().put(client.getUsername(), new ChatDTO(TypeChat.PRIVATE, client.getUserDTO().getId(), client.getUserDTO()));
-        }
-    }
-
-    private void fillChatNameListGroup() {
-        for (String key : connectionHandler.getClientHandlers().keySet()) {
-            ClientHandler client = connectionHandler.getClientHandlers().get(key);
-            // TODO read chats with type group!
-
-            Optional<List<ChatDTO>> chatList = connectionHandler.getChatSystemMessaging().readChatsByType(TypeChat.GROUP, client.getUserDTO().getId());
-            if (chatList.isEmpty()) throw new RuntimeException("Chats was not found!");
-            for (ChatDTO chat : chatList.get()) {
-                connectionHandler.getUserNameAndChatInfo().put(chat.getNameChat(), new ChatDTO(chat.getTypeChat(), null, chat.getUser()));
-            }
-        }
-    }
-
+    @Override
     public void sendMessage(String msg) {
         out.println("/M");
         out.println(msg);

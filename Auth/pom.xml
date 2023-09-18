@@ -19,6 +19,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.69</version>
+        </dependency>
+        <dependency>
             <groupId>ua.desktop.chat.messenger</groupId>
             <artifactId>DatabaseCon</artifactId>
             <version>1.0-SNAPSHOT</version>

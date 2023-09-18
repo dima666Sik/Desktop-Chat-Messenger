@@ -118,15 +118,20 @@ public class Client implements Runnable {
     }
 
     public void updateMessageChatGUI(MessageDTO msg) {
-        System.out.println("---0" + msg);
+
         if (msg.getChat().getTypeChat() == TypeChat.GLOBAL || msg.getChat().getTypeChat() == TypeChat.GROUP) {
             logger.info(msg.getMessage().substring(9, 9 + user.getUsername().length()));
             if (!msg.getMessage().substring(9, 9 + user.getUsername().length()).equals(user.getUsername())) {
-                msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
+                msg.setMessage("("
+                        .concat(msg.getLocalDateTime().format(formatter))
+                        .concat(")")
+                        .concat(msg.getMessage()));
                 windowChatMessenger.updateChat(msg);
             }
         } else {
-            msg.setMessage("(" + msg.getLocalDateTime().format(formatter) + ")" + msg.getMessage());
+            msg.setMessage("(".concat(msg.getLocalDateTime().format(formatter))
+                    .concat(")")
+                    .concat(msg.getMessage()));
             windowChatMessenger.updateChat(msg);
         }
     }
@@ -144,6 +149,10 @@ public class Client implements Runnable {
 
     public void sendEXIT() {
         s_out.println("/EXIT");
+    }
+
+    public void sendUpdateGroupIntoList() {
+        s_out.println("/UPDATE GROUP INTO LIST");
     }
 
     public synchronized List<MessageDTO> getMessagesInChatForUser(ChatDTO chatDTO) {

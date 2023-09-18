@@ -296,14 +296,14 @@ public class ChatMessengerGUI extends JDialog {
 
     private void createChat() {
         createChatButton.addActionListener((e) -> {
-            CreateChatGUI createChatGUI = new CreateChatGUI(new ChatSystemHandlerImpl(), client.getUser());
+            CreateChatGUI createChatGUI = new CreateChatGUI(new ChatSystemHandlerImpl(), client);
             createChatGUI.startGUI();
         });
     }
 
     private void inviteIntoChat() {
         inviteIntoChatButton.addActionListener((e) -> {
-            InviteIntoChatGUI inviteIntoChatGUI = new InviteIntoChatGUI(new ChatSystemHandlerImpl(), client.getUser());
+            InviteIntoChatGUI inviteIntoChatGUI = new InviteIntoChatGUI(new ChatSystemHandlerImpl(), client);
             inviteIntoChatGUI.startGUI();
         });
     }

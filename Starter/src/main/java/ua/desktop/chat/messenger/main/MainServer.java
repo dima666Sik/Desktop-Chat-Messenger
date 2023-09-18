@@ -5,9 +5,8 @@ import ua.desktop.chat.messenger.domain.impl.ChatSystemHandlerImpl;
 import ua.desktop.chat.messenger.domain.impl.MessageSystemHandlerImpl;
 
 public class MainServer {
-
     public static void main(String[] args) {
-        Runnable runnableCH = new ConnectionHandler( 5000, new ChatSystemHandlerImpl(), new MessageSystemHandlerImpl());
+        Runnable runnableCH = new ConnectionHandler(new ChatSystemHandlerImpl(), new MessageSystemHandlerImpl());
         Thread thread = new Thread(runnableCH);
         thread.start();
     }

@@ -1,5 +1,6 @@
 package ua.desktop.chat.messenger.ui.chat;
 
+import ua.desktop.chat.messenger.domain.Client;
 import ua.desktop.chat.messenger.domain.ifaces.ChatSystemHandling;
 import ua.desktop.chat.messenger.domain.impl.ChatSystemHandlerImpl;
 import ua.desktop.chat.messenger.dto.UserDTO;
@@ -16,11 +17,11 @@ public class CreateChatGUI extends JDialog {
     private JComboBox comboBoxTypeChat;
     private JPanel panelCreateChat;
     private final ChatSystemHandling chatSystemHandling;
-    private final UserDTO user;
+    private final Client client;
 
-    public CreateChatGUI(ChatSystemHandling chatSystemHandling, UserDTO user) {
+    public CreateChatGUI(ChatSystemHandling chatSystemHandling, Client client) {
         this.chatSystemHandling = chatSystemHandling;
-        this.user = user;
+        this.client = client;
     }
 
     public void startGUI() {
@@ -34,7 +35,8 @@ public class CreateChatGUI extends JDialog {
         confirmButton.addActionListener(e -> {
             dispose();
             TypeChat typeChatChoose = TypeChat.valueOf(String.valueOf(comboBoxTypeChat.getSelectedItem()));
-            chatSystemHandling.createChatByUser(textFieldNameChat.getText(), typeChatChoose, user, null);
+            chatSystemHandling.createChatByUser(textFieldNameChat.getText(), typeChatChoose, client.getUser(), null);
+            client.sendUpdateGroupIntoList();
         });
 
         cancelButton.addActionListener(e -> dispose());

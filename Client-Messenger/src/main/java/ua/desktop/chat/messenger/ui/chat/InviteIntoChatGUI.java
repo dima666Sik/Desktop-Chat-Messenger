@@ -1,5 +1,6 @@
 package ua.desktop.chat.messenger.ui.chat;
 
+import ua.desktop.chat.messenger.domain.Client;
 import ua.desktop.chat.messenger.domain.ifaces.ChatSystemHandling;
 import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
@@ -19,11 +20,11 @@ public class InviteIntoChatGUI extends JDialog {
     private JButton cancelButton;
     private JButton confirmButton;
     private final ChatSystemHandling chatSystemHandling;
-    private final UserDTO user;
+    private final Client client;
 
-    public InviteIntoChatGUI(ChatSystemHandling chatSystemHandling, UserDTO user) {
+    public InviteIntoChatGUI(ChatSystemHandling chatSystemHandling, Client client) {
         this.chatSystemHandling = chatSystemHandling;
-        this.user = user;
+        this.client = client;
     }
 
     public void startGUI() {
@@ -44,8 +45,9 @@ public class InviteIntoChatGUI extends JDialog {
                         JOptionPane.ERROR_MESSAGE);
             } else {
                 chatSystemHandling.createChatByUser(listChats.get().get(0).getNameChat(),
-                        TypeChat.GROUP, user, null);
+                        TypeChat.GROUP, client.getUser(), null);
             }
+            client.sendUpdateGroupIntoList();
         });
 
         cancelButton.addActionListener(e -> dispose());
