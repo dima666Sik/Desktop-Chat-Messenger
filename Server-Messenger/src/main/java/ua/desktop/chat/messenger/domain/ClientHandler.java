@@ -20,7 +20,7 @@ public class ClientHandler implements Runnable, Observer {
     private final static Logger logger = LogManager.getLogger(ClientHandler.class.getName());
     private final ConnectionHandler connectionHandler;
     private final Socket conn;
-    private Boolean isActive = true;
+    private volatile boolean isActive = true;
     private UserDTO userDTO;
     private final BufferedReader in;
     private final PrintStream out;

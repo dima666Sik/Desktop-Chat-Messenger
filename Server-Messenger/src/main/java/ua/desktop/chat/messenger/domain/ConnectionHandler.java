@@ -27,7 +27,7 @@ public class ConnectionHandler implements Runnable {
     private final static Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
     private Map<String, Observer> clientHandlers = new HashMap<>();
     private final Multimap<String, ChatDTO> userNameAndChatInfo = ArrayListMultimap.create();
-    private Boolean isActive = true;
+    private volatile Boolean isActive = true;
     private Boolean newUser = true;
     private final ChatSystemHandling chatSystemMessaging;
     private final MessageSystemHandling messageSystemHandling;

@@ -8,7 +8,7 @@ import ua.desktop.chat.messenger.auth.dao.mysql.impl.UserDAOMySQLImpl;
  * Used to obtain instances of DAO implementations for specific objects.
  */
 public class DAOFactory {
-    public static UserDAO getUserAuthDao() {
+    public static UserDAO createUserAuthDao() {
         return new UserDAOMySQLImpl();
     }
 }

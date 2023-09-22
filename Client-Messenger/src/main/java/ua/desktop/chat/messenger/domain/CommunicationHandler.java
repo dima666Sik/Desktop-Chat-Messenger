@@ -10,8 +10,6 @@ import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
-import ua.desktop.chat.messenger.models.Message;
-import ua.desktop.chat.messenger.models.User;
 import ua.desktop.chat.messenger.parser.ParserJSON;
 
 import java.io.BufferedReader;
@@ -21,11 +19,11 @@ import java.util.*;
 
 public class CommunicationHandler implements Runnable {
     private final static Logger logger = LogManager.getLogger(CommunicationHandler.class.getName());
-    private Boolean isActive = true;
+    private volatile boolean isActive = true;
     private Socket s;
     private PrintWriter s_out;
     private BufferedReader s_in;
-    private boolean isConnected = false;
+    private volatile boolean isConnected = false;
     private final ChatSystemHandling chatSystemMessaging;
     private final MessageSystemHandling messageSystemHandling;
 

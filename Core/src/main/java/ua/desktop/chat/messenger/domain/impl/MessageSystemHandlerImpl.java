@@ -20,7 +20,7 @@ public class MessageSystemHandlerImpl implements MessageSystemHandling {
     private final MessageSystemHandlerDAO messageSystemHandlerDAO;
 
     public MessageSystemHandlerImpl() {
-        this.messageSystemHandlerDAO = DAOFactory.getMessageSystemHandlerDAO();
+        this.messageSystemHandlerDAO = DAOFactory.createMessageSystemHandlerDAO();
     }
 
     @Override

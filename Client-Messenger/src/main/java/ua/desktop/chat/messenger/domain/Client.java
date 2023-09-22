@@ -9,14 +9,10 @@ import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
 import ua.desktop.chat.messenger.env.TypeMessage;
-import ua.desktop.chat.messenger.models.Chat;
-import ua.desktop.chat.messenger.models.Message;
-import ua.desktop.chat.messenger.models.User;
 import ua.desktop.chat.messenger.parser.ParserJSON;
 import ua.desktop.chat.messenger.ui.PreIntermediateConnectGUI;
 import ua.desktop.chat.messenger.ui.chat.ChatMessengerGUI;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

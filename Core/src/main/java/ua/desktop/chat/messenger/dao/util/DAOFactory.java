@@ -11,10 +11,10 @@ import ua.desktop.chat.messenger.dao.mysql.impl.MessageSystemHandlerDAOMySQLImpl
  */
 public class DAOFactory {
 
-    public static ChatSystemHandlerDAO getChatSystemHandlerDAO() {
+    public static ChatSystemHandlerDAO createChatSystemHandlerDAO() {
         return new ChatSystemHandlerDAOMySQLImpl();
     }
-    public static MessageSystemHandlerDAO getMessageSystemHandlerDAO() {
+    public static MessageSystemHandlerDAO createMessageSystemHandlerDAO() {
         return new MessageSystemHandlerDAOMySQLImpl();
     }
 }

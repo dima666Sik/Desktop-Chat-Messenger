@@ -21,7 +21,7 @@ public class ChatSystemHandlerImpl implements ChatSystemHandling {
     private final ChatSystemHandlerDAO chatSystemMessageDAO;
 
     public ChatSystemHandlerImpl() {
-        this.chatSystemMessageDAO = DAOFactory.getChatSystemHandlerDAO();
+        this.chatSystemMessageDAO = DAOFactory.createChatSystemHandlerDAO();
     }
 
     @Override

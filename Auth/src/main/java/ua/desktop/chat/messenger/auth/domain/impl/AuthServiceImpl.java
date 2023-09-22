@@ -23,7 +23,7 @@ public class AuthServiceImpl implements AuthService {
     private final UserDAO userDAO;
 
     public AuthServiceImpl() {
-        userDAO = DAOFactory.getUserAuthDao();
+        userDAO = DAOFactory.createUserAuthDao();
         logger.info("Getting user auth instance!");
     }
 
