@@ -200,8 +200,6 @@ hibernate.hbm2ddl.auto=update
     - You can change setting to your logging into `log4j2.properties`.
     - First, you will need to register as a new user.
 
-4. If you want to see documentation, please check javadoc in resources this app for each module.
-
 ---
 
 ## Database
