@@ -166,7 +166,7 @@ All technologies you can see in the part of this README.md under the heading [Te
    <br> If u wanna do this please use this command:
 
 ```md  
-git clone https://github.com/dima666Sik/Get-takes-up-size-of-Java-objects-in-memory.git
+git clone https://github.com/dima666Sik/Desktop-Chat-Messenger.git
 ```
 
 2. To run this project you will need to install:
