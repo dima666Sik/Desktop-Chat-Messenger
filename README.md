@@ -162,11 +162,18 @@ All technologies you can see in the part of this README.md under the heading [Te
 
 ## Usage
 
-1. To run this project you will need to install:
+1. I recommended u to clone my project from the GitHub.
+   <br> If u wanna do this please use this command:
+
+```md  
+git clone https://github.com/dima666Sik/Get-takes-up-size-of-Java-objects-in-memory.git
+```
+
+2. To run this project you will need to install:
     - JDK 11 or higher;
     - MySQL RDBMS.
 
-2. If you have downloaded a project and want to run it with your own database then you have to change .properties file which will be
+3. If you have downloaded a project and want to run it with your own database then you have to change .properties file which will be
    stored in a module `DatabaseCon` in this way `src/main/java/resouces/hibernate.properties` and put your valid data please.
 
 ```properties
@@ -194,7 +201,7 @@ hibernate.show_sql=true
 hibernate.current_session_context_class=thread
 hibernate.hbm2ddl.auto=update
 ```
-3. Here are the steps for you to follow:
+4. Here are the steps for you to follow:
     - Add this project to your IDE as `Maven` project.
     - If necessary, configure `Java SDK 11` in `Project Structure settings`.
     - You can change setting to your logging into `log4j2.properties`.
