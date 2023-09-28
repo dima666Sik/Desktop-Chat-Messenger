@@ -224,4 +224,4 @@ hibernate.hbm2ddl.auto=update
 
 - [GitHub](https://github.com/dima666Sik)
 
-[Back To The Top](#chatbot-game-v2)
+[Back To The Top](#description)
