@@ -29,7 +29,7 @@
 ### Preview, I hope you enjoy it 😊
 
 Welcome to Desktop-Chat-Messenger, a project designed to conversation between users with a user-friendly interface.
-This project is built using Java 11, Hibernate 6, HikariCP, MySQL Driver, and Java Swing for the graphical user
+This project is built using Jdk 11, Hibernate 6, HikariCP, MySQL Driver, and Java Swing for the graphical user
 interface.
 All technologies you can see in the part of this README.md under the heading [Technologies](#technologies).
 
@@ -220,7 +220,7 @@ hibernate.hbm2ddl.auto=update
 
 ## Author Info
 
-- [Linkedin](https://www.linkedin.com)
+- [Linkedin](https://www.linkedin.com/in/dmytro-kohol-441a042a7/)
 
 - [GitHub](https://github.com/dima666Sik)
 

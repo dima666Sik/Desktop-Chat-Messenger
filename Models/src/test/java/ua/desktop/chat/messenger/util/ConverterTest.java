@@ -7,9 +7,9 @@ import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
-import ua.desktop.chat.messenger.models.Chat;
-import ua.desktop.chat.messenger.models.Message;
-import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.model.Chat;
+import ua.desktop.chat.messenger.model.Message;
+import ua.desktop.chat.messenger.model.User;
 
 import java.time.LocalDateTime;
 import java.util.List;

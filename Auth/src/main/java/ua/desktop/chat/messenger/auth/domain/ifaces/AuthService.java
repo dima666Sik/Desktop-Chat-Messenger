@@ -1,7 +1,6 @@
 package ua.desktop.chat.messenger.auth.domain.ifaces;
 
 import ua.desktop.chat.messenger.dto.UserDTO;
-import ua.desktop.chat.messenger.models.User;
 
 import java.util.Optional;
 

@@ -6,9 +6,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import ua.desktop.chat.messenger.dao.exceptions.DAOException;
-import ua.desktop.chat.messenger.models.Chat;
-import ua.desktop.chat.messenger.models.Message;
-import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.model.Chat;
+import ua.desktop.chat.messenger.model.Message;
+import ua.desktop.chat.messenger.model.User;
 
 public class DBConnector {
     private final static Logger logger = LogManager.getLogger(DBConnector.class.getName());

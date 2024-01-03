@@ -1,14 +1,14 @@
 package ua.desktop.chat.messenger.domain.impl;
 
 import org.junit.jupiter.api.*;
-import ua.desktop.chat.messenger.dao.util.Encryption;
-import ua.desktop.chat.messenger.domain.exceptions.DomainException;
-import ua.desktop.chat.messenger.domain.ifaces.ChatSystemHandling;
+import ua.desktop.chat.messenger.core.dao.util.Encryption;
+import ua.desktop.chat.messenger.core.domain.exceptions.DomainException;
+import ua.desktop.chat.messenger.core.domain.ifaces.ChatSystemHandling;
+import ua.desktop.chat.messenger.core.domain.impl.ChatSystemHandlerImpl;
 import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
 import ua.desktop.chat.messenger.env.TypeChat;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 

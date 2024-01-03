@@ -1,7 +1,7 @@
 package ua.desktop.chat.messenger.auth.dao.ifaces;
 
 import ua.desktop.chat.messenger.dao.exceptions.DAOException;
-import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.model.User;
 
 import java.util.Optional;
 

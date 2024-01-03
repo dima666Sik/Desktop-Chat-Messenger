@@ -3,9 +3,9 @@ package ua.desktop.chat.messenger.util;
 import ua.desktop.chat.messenger.dto.ChatDTO;
 import ua.desktop.chat.messenger.dto.MessageDTO;
 import ua.desktop.chat.messenger.dto.UserDTO;
-import ua.desktop.chat.messenger.models.Chat;
-import ua.desktop.chat.messenger.models.Message;
-import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.model.Chat;
+import ua.desktop.chat.messenger.model.Message;
+import ua.desktop.chat.messenger.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

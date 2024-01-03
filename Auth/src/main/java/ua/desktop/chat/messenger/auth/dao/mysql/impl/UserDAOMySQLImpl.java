@@ -8,7 +8,7 @@ import ua.desktop.chat.messenger.dao.exceptions.DAOException;
 import ua.desktop.chat.messenger.auth.dao.ifaces.UserDAO;
 import ua.desktop.chat.messenger.auth.dao.query.hql.QueryUser;
 import ua.desktop.chat.messenger.dao.util.DBConnector;
-import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.model.User;
 
 import java.util.Optional;
 

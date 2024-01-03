@@ -1,19 +1,41 @@
-package ua.desktop.chat.messenger.dto;
+package ua.desktop.chat.messenger.model;
 
+import jakarta.persistence.*;
 import ua.desktop.chat.messenger.env.TypeChat;
 
-import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
-public class ChatDTO implements Serializable {
-    private static final long serialVersionUID = 8683709059678144396L;
+@Entity
+@Table(name = "chats")
+public class Chat {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name_chat")
     private String nameChat;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "type_chat")
     private TypeChat typeChat;
-    private UserDTO user;
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
+    private User user;
+    @Column(name = "user_companion_id")
     private Long userCompanionId;
+    @OneToMany(mappedBy = "chat", fetch = FetchType.LAZY)
+    private List<Message> messageList;
 
-    public ChatDTO(Long id, String nameChat, TypeChat typeChat, UserDTO user, Long userCompanionId) {
+    public Chat() {
+    }
+
+    public Chat(String nameChat, TypeChat typeChat, User user, Long userCompanionId) {
+        this.nameChat = nameChat;
+        this.typeChat = typeChat;
+        this.user = user;
+        this.userCompanionId = userCompanionId;
+    }
+
+    public Chat(Long id, String nameChat, TypeChat typeChat, User user, Long userCompanionId) {
         this.id = id;
         this.nameChat = nameChat;
         this.typeChat = typeChat;
@@ -21,16 +43,12 @@ public class ChatDTO implements Serializable {
         this.userCompanionId = userCompanionId;
     }
 
-    public ChatDTO(String nameChat, TypeChat typeChat, UserDTO user) {
-        this.nameChat = nameChat;
-        this.typeChat = typeChat;
-        this.user = user;
+    public Long getUserCompanionId() {
+        return userCompanionId;
     }
 
-    public ChatDTO(TypeChat typeChat, Long userCompanionId, UserDTO user) {
-        this.typeChat = typeChat;
+    public void setUserCompanionId(Long userCompanionId) {
         this.userCompanionId = userCompanionId;
-        this.user = user;
     }
 
     public Long getId() {
@@ -57,28 +75,29 @@ public class ChatDTO implements Serializable {
         this.typeChat = typeChat;
     }
 
-    public UserDTO getUser() {
+
+    public User getUser() {
         return user;
     }
 
-    public void setUser(UserDTO user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
-    public Long getUserCompanionId() {
-        return userCompanionId;
+    public List<Message> getMessageList() {
+        return messageList;
     }
 
-    public void setUserCompanionId(Long userCompanionId) {
-        this.userCompanionId = userCompanionId;
+    public void setMessageList(List<Message> messageList) {
+        this.messageList = messageList;
     }
 
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
-        ChatDTO chatDTO = (ChatDTO) object;
-        return Objects.equals(id, chatDTO.id) && Objects.equals(nameChat, chatDTO.nameChat) && typeChat == chatDTO.typeChat && Objects.equals(user, chatDTO.user);
+        Chat chat = (Chat) object;
+        return Objects.equals(id, chat.id) && Objects.equals(nameChat, chat.nameChat) && typeChat == chat.typeChat && Objects.equals(user, chat.user);
     }
 
     @Override
@@ -88,11 +107,12 @@ public class ChatDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "ChatDTO{" +
+        return "Chat{" +
                 "id=" + id +
                 ", nameChat='" + nameChat + '\'' +
                 ", typeChat=" + typeChat +
                 ", user=" + user +
+                ", messageList=" + messageList +
                 '}';
     }
 }

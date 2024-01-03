@@ -3,7 +3,6 @@ package ua.desktop.chat.messenger.auth.ui.swing.auth;
 import ua.desktop.chat.messenger.auth.domain.ifaces.AuthService;
 import ua.desktop.chat.messenger.auth.domain.impl.AuthServiceImpl;
 import ua.desktop.chat.messenger.dto.UserDTO;
-import ua.desktop.chat.messenger.models.User;
 
 import javax.swing.*;
 import java.awt.*;

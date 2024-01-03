@@ -9,7 +9,7 @@ import ua.desktop.chat.messenger.auth.dao.util.Encryption;
 import ua.desktop.chat.messenger.auth.domain.exceptions.DomainException;
 import ua.desktop.chat.messenger.auth.domain.ifaces.AuthService;
 import ua.desktop.chat.messenger.dto.UserDTO;
-import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.model.User;
 import ua.desktop.chat.messenger.util.Converter;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package ua.desktop.chat.messenger.dto;
 
-import ua.desktop.chat.messenger.models.User;
+import ua.desktop.chat.messenger.model.User;
 
 import java.io.Serializable;
 import java.util.Objects;
