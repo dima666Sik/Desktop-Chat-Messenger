@@ -1,10 +1,8 @@
 package ua.desktop.chat.messenger.parser;
 
 import org.junit.jupiter.api.*;
-import ua.desktop.chat.messenger.dto.UserDTO;
-import ua.desktop.chat.messenger.env.TypeMessage;
-
-import static org.junit.jupiter.api.Assertions.*;
+import ua.desktop.chat.messenger.domain.dto.UserDTO;
+import ua.desktop.chat.messenger.domain.env.TypeMessage;
 
 class ParserJSONTest {
     private static UserDTO userDTO;

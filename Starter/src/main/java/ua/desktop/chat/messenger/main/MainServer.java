@@ -1,8 +1,8 @@
 package ua.desktop.chat.messenger.main;
 
-import ua.desktop.chat.messenger.server.domain.ConnectionHandler;
-import ua.desktop.chat.messenger.core.domain.impl.ChatSystemHandlerImpl;
-import ua.desktop.chat.messenger.core.domain.impl.MessageSystemHandlerImpl;
+import ua.desktop.chat.messenger.server.service.impl.ConnectionHandler;
+import ua.desktop.chat.messenger.core.service.impl.ChatSystemHandlerImpl;
+import ua.desktop.chat.messenger.core.service.impl.MessageSystemHandlerImpl;
 
 public class MainServer {
     public static void main(String[] args) {

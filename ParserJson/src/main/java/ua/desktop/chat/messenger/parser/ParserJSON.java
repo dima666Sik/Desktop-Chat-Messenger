@@ -3,16 +3,18 @@ package ua.desktop.chat.messenger.parser;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import ua.desktop.chat.messenger.dto.MessageDTO;
-import ua.desktop.chat.messenger.dto.UserDTO;
-import ua.desktop.chat.messenger.env.TypeMessage;
+import ua.desktop.chat.messenger.domain.dto.MessageDTO;
+import ua.desktop.chat.messenger.domain.dto.UserDTO;
+import ua.desktop.chat.messenger.domain.env.TypeMessage;
+import ua.desktop.chat.messenger.exception.UnknownTypeMessageException;
 
 public class ParserJSON {
+    private ParserJSON(){}
 
     /**
-     * Convert object to JSON row
+     * Convert an object to JSON row
      */
-    public synchronized static <T> String convertObjectToString(T myObject, TypeMessage typeMessage) {
+    public static synchronized <T> String convertObjectToString(T myObject, TypeMessage typeMessage) {
         Gson gson = new Gson();
         String json = gson.toJson(myObject);
         JsonObject jsonObject;
@@ -30,7 +32,7 @@ public class ParserJSON {
     /**
      * Convert JSON row to object
      */
-    public synchronized static Object convertStringToObject(String jsonString) {
+    public static synchronized Object convertStringToObject(String jsonString) {
         JsonObject jsonObject = JsonParser.parseString(jsonString).getAsJsonObject();
         String typeValue = jsonObject.get("type").getAsString();
         Gson gson = new Gson();
@@ -41,7 +43,7 @@ public class ParserJSON {
         } else if (typeValue.equals(TypeMessage.STRING_NOTIFICATION.name())) {
             return jsonObject.get("message").getAsString();
         }
-        throw new RuntimeException("Type Message is unknown! Please choose your type message on valid type...");
+        throw new UnknownTypeMessageException("Type Message is unknown! Please choose your type message on valid type...");
     }
 
 }

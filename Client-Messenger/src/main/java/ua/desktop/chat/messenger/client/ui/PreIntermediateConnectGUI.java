@@ -1,7 +1,7 @@
 package ua.desktop.chat.messenger.client.ui;
 
 import ua.desktop.chat.messenger.prop.PropertiesFile;
-import ua.desktop.chat.messenger.client.domain.Client;
+import ua.desktop.chat.messenger.client.service.Client;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,6 @@ public class PreIntermediateConnectGUI extends JDialog {
         setMinimumSize(new Dimension(440, 200));
 
         Properties properties = PropertiesFile.getProp(NAME_PROP_FILE);
-        System.out.println("---"+properties.getProperty(PROP_VALUE_CLIENT_HOST));
         hostTextField.setText(properties.getProperty(PROP_VALUE_CLIENT_HOST));
         portTextField.setText(properties.getProperty(PROP_VALUE_CLIENT_PORT));
 

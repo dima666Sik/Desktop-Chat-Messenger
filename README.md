@@ -48,16 +48,16 @@ All technologies you can see in the part of this README.md under the heading [Te
 - `bcprov-jdk15on` (P.S. this is cryptography library. About using described below.)
 - `JUnit 5`
 - `guava` (P.S. this is open-source Java library developed by Google. About using described below.)
-- `gson` (P.S. this is library developed by Google for working with JSON. About using described below.)
+- `gson` (P.S. this is library was developed by Google for working with JSON. About using described below.)
 
 
 ## Patterns
-- `Observer` - The pattern is a behavioral design pattern that is used when an object, known as the subject, maintains a list of its dependents, called observers, and notifies them of state changes, typically by calling one of their methods.
+- `Observer` - The pattern is a behavioral design pattern used when an object, known as the subject, maintains a list of its dependents, called observers, and notifies them of state changes, typically by calling one of their methods.
 ---
 
 ## Project Structure
 
-- The application consists of 9 modules and each module is divided into ui, domain, dao layers.
+- The application consists of nine modules, and each module is divided into ui, domain, dao layers.
 - An app modules:
     - `Auth`: This module is responsible for authentication-related functionality, including user registration and
       login;
@@ -73,7 +73,7 @@ All technologies you can see in the part of this README.md under the heading [Te
       interactions, connection pooling, and database-related configurations;
     - `Models`: The "Models" module is responsible for defining the data models and entities used throughout the
       application. It includes classes that represent database tables, DTOs (Data Transfer Objects), and other data
-      structures like enum etc.;
+      structures like enum, etc.;
     - `ParserJSON`: This module deals with JSON (JavaScript Object Notation) parsing and serialization/deserialization.
       It's responsible for converting Java objects to JSON and vice versa, facilitating data exchange in JSON format;
     - `Properties`: The module contains a class that is responsible for reading property files;
@@ -97,7 +97,7 @@ All technologies you can see in the part of this README.md under the heading [Te
 
 ### Security
 
-- User password information are encrypted using `SHA3-256` for enhanced security.
+- User password information is encrypted using `SHA3-256` for enhanced security.
 
 ### Extensibility
 
@@ -130,7 +130,7 @@ All technologies you can see in the part of this README.md under the heading [Te
     - `bcprov-jdk15on`: Bouncy Castle Provider (bcprov-jdk15on) is a cryptography library for Java. I use it for
       auth/register user (encryption password).
     - `guava`: Guava is an open-source Java library developed by Google. It provides a collection of utility classes and
-      functions that simplify common programming tasks. In app I use MultiMap, it's so comfortable to use and u don't
+      functions that simplify common programming tasks. In app, I use MultiMap, it's so comfortable to use and u don't
       need to write this code yourself.
     - `gson`: It allows you to serialize Java objects into JSON format and deserialize JSON data into Java objects.
     - `MySQL Driver`: It provides the necessary functionality to establish database connections, execute SQL queries,
@@ -163,13 +163,13 @@ All technologies you can see in the part of this README.md under the heading [Te
 ## Usage
 
 1. I would you recommended to clone my project from the GitHub.
-   <br> If u wanna do this please use this command:
+   <br> If you wanna do this, please use this command:
 
 ```md  
 git clone https://github.com/dima666Sik/Desktop-Chat-Messenger.git
 ```
 
-2. To run this project you will need to install:
+2. To run this project, you will need to install:
     - JDK 11 or higher;
     - MySQL RDBMS.
 

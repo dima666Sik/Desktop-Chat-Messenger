@@ -4,22 +4,21 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-import ua.desktop.chat.messenger.core.dao.ifaces.MessageSystemHandlerDAO;
-import ua.desktop.chat.messenger.dao.exceptions.DAOException;
+import ua.desktop.chat.messenger.core.dao.mysql.MessageSystemHandlerDAO;
+import ua.desktop.chat.messenger.dao.exceptions.OpenSessionException;
 import ua.desktop.chat.messenger.core.dao.query.hql.QueryMessageSystemHandler;
 import ua.desktop.chat.messenger.dao.util.DBConnector;
-import ua.desktop.chat.messenger.model.Chat;
-import ua.desktop.chat.messenger.model.Message;
+import ua.desktop.chat.messenger.domain.model.Chat;
+import ua.desktop.chat.messenger.domain.model.Message;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO {
-    private final static Logger logger = LogManager.getLogger(MessageSystemHandlerDAOMySQLImpl.class.getName());
+    private static final Logger logger = LogManager.getLogger(MessageSystemHandlerDAOMySQLImpl.class.getName());
 
     @Override
-    public boolean createMessageByChat(Message message) throws DAOException {
+    public boolean createMessageByChat(Message message) throws OpenSessionException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
@@ -30,7 +29,7 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
             } catch (Exception e) {
                 session.getTransaction().rollback();
                 logger.error(e);
-                throw new DAOException("Transaction isn't successful! Rollback data.", e);
+                throw new OpenSessionException("Transaction isn't successful! Rollback data.", e);
             }
 
             logger.info("Create message in chat was successful!");
@@ -40,14 +39,14 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
     }
 
     @Override
-    public Optional<List<Message>> readListMessageByChats(List<Chat> chatList) throws DAOException {
+    public List<Message> readListMessageByChats(List<Chat> chatList) throws OpenSessionException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
             List<Message> chatMessages = new ArrayList<>();
 
             for (Chat chat : chatList) {
-                Query<Message> messageQuery = session.createQuery(QueryMessageSystemHandler.readMessagesByChatId(), Message.class);
+                Query<Message> messageQuery = session.createQuery(QueryMessageSystemHandler.READ_MESSAGES_BY_CHAT_ID, Message.class);
                 messageQuery.setParameter("chatId", chat.getId());
                 chatMessages.addAll(messageQuery.list());
             }
@@ -55,7 +54,7 @@ public class MessageSystemHandlerDAOMySQLImpl implements MessageSystemHandlerDAO
             session.getTransaction().commit();
             logger.info("Read messages from chat was successful!");
 
-            return Optional.of(chatMessages);
+            return chatMessages;
         }
     }
 }

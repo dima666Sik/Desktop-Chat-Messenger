@@ -17,7 +17,7 @@
         <module>Auth</module>
         <module>DatabaseCon</module>
         <module>Starter</module>
-        <module>Properties</module>
+        <module>Util</module>
     </modules>
 
     <properties>

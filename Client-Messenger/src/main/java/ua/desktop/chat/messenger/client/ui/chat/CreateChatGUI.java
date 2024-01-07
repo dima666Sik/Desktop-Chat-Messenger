@@ -1,8 +1,8 @@
 package ua.desktop.chat.messenger.client.ui.chat;
 
-import ua.desktop.chat.messenger.client.domain.Client;
-import ua.desktop.chat.messenger.core.domain.ifaces.ChatSystemHandling;
-import ua.desktop.chat.messenger.env.TypeChat;
+import ua.desktop.chat.messenger.client.service.Client;
+import ua.desktop.chat.messenger.core.service.ChatSystemHandling;
+import ua.desktop.chat.messenger.domain.env.TypeChat;
 
 import javax.swing.*;
 import java.awt.*;

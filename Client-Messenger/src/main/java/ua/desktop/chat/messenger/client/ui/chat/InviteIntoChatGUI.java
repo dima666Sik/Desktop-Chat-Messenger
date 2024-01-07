@@ -1,14 +1,13 @@
 package ua.desktop.chat.messenger.client.ui.chat;
 
-import ua.desktop.chat.messenger.client.domain.Client;
-import ua.desktop.chat.messenger.core.domain.ifaces.ChatSystemHandling;
-import ua.desktop.chat.messenger.dto.ChatDTO;
-import ua.desktop.chat.messenger.env.TypeChat;
+import ua.desktop.chat.messenger.client.service.Client;
+import ua.desktop.chat.messenger.core.service.ChatSystemHandling;
+import ua.desktop.chat.messenger.domain.dto.ChatDTO;
+import ua.desktop.chat.messenger.domain.env.TypeChat;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
-import java.util.Optional;
 
 public class InviteIntoChatGUI extends JDialog {
     private JPanel panelInviteIntoChat;
@@ -33,14 +32,14 @@ public class InviteIntoChatGUI extends JDialog {
 
         confirmButton.addActionListener(e -> {
             dispose();
-            Optional<List<ChatDTO>> listChats = chatSystemHandling.readListChatsByChatName(textFieldNameChat.getText());
+            List<ChatDTO> listChats = chatSystemHandling.readListChatsByChatName(textFieldNameChat.getText());
             if (listChats.isEmpty()) {
                 JOptionPane.showMessageDialog(this,
                         "Chat is not exist for anyone user!",
                         "Try again",
                         JOptionPane.ERROR_MESSAGE);
             } else {
-                chatSystemHandling.createChatByUser(listChats.get().get(0).getNameChat(),
+                chatSystemHandling.createChatByUser(listChats.get(0).getNameChat(),
                         TypeChat.GROUP, client.getUser(), null);
             }
             client.sendUpdateGroupIntoList();

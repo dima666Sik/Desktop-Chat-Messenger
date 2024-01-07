@@ -4,29 +4,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-import ua.desktop.chat.messenger.dao.exceptions.DAOException;
-import ua.desktop.chat.messenger.auth.dao.ifaces.UserDAO;
+import ua.desktop.chat.messenger.dao.exceptions.OpenSessionException;
+import ua.desktop.chat.messenger.auth.dao.mysql.UserDAO;
 import ua.desktop.chat.messenger.auth.dao.query.hql.QueryUser;
 import ua.desktop.chat.messenger.dao.util.DBConnector;
-import ua.desktop.chat.messenger.model.User;
+import ua.desktop.chat.messenger.domain.model.User;
 
 import java.util.Optional;
 
 public class UserDAOMySQLImpl implements UserDAO {
-    private final static Logger logger = LogManager.getLogger(UserDAOMySQLImpl.class.getName());
+    private static final Logger logger = LogManager.getLogger(UserDAOMySQLImpl.class.getName());
 
     @Override
-    public boolean createUser(final User user) throws DAOException {
+    public boolean createUser(final User user) throws OpenSessionException {
 
         if (isExistUserWithEmailAndUserName(user)) {
-            logger.warn("Such user with email `"
-                    .concat(user.getEmail())
-                    .concat("` is defined, please change email..."));
-            return false;
-        }
-
-        if (userIsExist(user)) {
-            logger.warn("Such user is defined, please change login...");
+            logger.warn("Such user with email {} is defined, please change email...", user.getEmail());
             return false;
         }
 
@@ -38,7 +31,7 @@ public class UserDAOMySQLImpl implements UserDAO {
             } catch (Exception e) {
                 session.getTransaction().rollback();
                 logger.error(e);
-                throw new DAOException("Transaction isn't successful! Rollback data.", e);
+                throw new OpenSessionException("Transaction isn't successful! Rollback data.", e);
             }
             logger.info("Create user was successful!");
         }
@@ -46,12 +39,12 @@ public class UserDAOMySQLImpl implements UserDAO {
         return true;
     }
 
-    private boolean isExistUserWithEmailAndUserName(User user) throws DAOException {
+    private boolean isExistUserWithEmailAndUserName(User user) throws OpenSessionException {
 
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            Query<User> query = session.createQuery(QueryUser.findUserByEmailORUserName(), User.class);
+            Query<User> query = session.createQuery(QueryUser.FIND_USER_BY_EMAIL_OR_USERNAME, User.class);
             query.setParameter("email", user.getEmail());
             query.setParameter("username", user.getUsername());
 
@@ -60,28 +53,20 @@ public class UserDAOMySQLImpl implements UserDAO {
             session.getTransaction().commit();
 
             if (foundUser != null) {
-                logger.info("User with this email `"
-                        .concat(user.getEmail())
-                        .concat("` or username `")
-                        .concat(user.getUsername())
-                        .concat("`was existed!"));
+                logger.info("User with this email {} or username {} was existed!", user.getEmail(), user.getUsername());
                 return true;
             }
-            logger.info("User with this email `"
-                    .concat(user.getEmail())
-                    .concat("` or username `")
-                    .concat(user.getUsername())
-                    .concat("` was not existed!"));
+            logger.info("User with this email {} or username {} was existed!", user.getEmail(), user.getUsername());
             return false;
         }
     }
 
     @Override
-    public Optional<User> findUserByEmailAndPassword(String email, String password) throws DAOException {
+    public Optional<User> findUserByEmailAndPassword(String email, String password) throws OpenSessionException {
         try (Session session = DBConnector.getSession()) {
             session.beginTransaction();
 
-            Query<User> query = session.createQuery(QueryUser.findUserByEmailAndPassword(), User.class);
+            Query<User> query = session.createQuery(QueryUser.FIND_USER_BY_EMAIL_AND_PASSWORD, User.class);
             query.setParameter("email", email);
             query.setParameter("password", password);
 
@@ -95,28 +80,6 @@ public class UserDAOMySQLImpl implements UserDAO {
 
             logger.info("User was not found!");
             return Optional.empty();
-        }
-    }
-
-    private boolean userIsExist(User user) throws DAOException {
-
-        try (Session session = DBConnector.getSession()) {
-            session.beginTransaction();
-
-            Query<User> query = session.createQuery(QueryUser.findUserByEmailAndPassword(), User.class);
-            query.setParameter("email", user.getEmail());
-            query.setParameter("password", user.getPassword());
-
-            User foundUser = query.uniqueResult();
-
-            session.getTransaction().commit();
-
-            if (foundUser != null) {
-                logger.info("User was existed!");
-                return true;
-            }
-            logger.info("User was not existed!");
-            return false;
         }
     }
 

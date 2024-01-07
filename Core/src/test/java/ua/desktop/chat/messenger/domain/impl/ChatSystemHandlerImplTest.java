@@ -1,13 +1,13 @@
 package ua.desktop.chat.messenger.domain.impl;
 
 import org.junit.jupiter.api.*;
-import ua.desktop.chat.messenger.core.dao.util.Encryption;
-import ua.desktop.chat.messenger.core.domain.exceptions.DomainException;
-import ua.desktop.chat.messenger.core.domain.ifaces.ChatSystemHandling;
-import ua.desktop.chat.messenger.core.domain.impl.ChatSystemHandlerImpl;
-import ua.desktop.chat.messenger.dto.ChatDTO;
-import ua.desktop.chat.messenger.dto.UserDTO;
-import ua.desktop.chat.messenger.env.TypeChat;
+import ua.desktop.chat.messenger.core.service.ChatSystemHandling;
+import ua.desktop.chat.messenger.core.service.impl.ChatSystemHandlerImpl;
+import ua.desktop.chat.messenger.domain.dto.ChatDTO;
+import ua.desktop.chat.messenger.domain.dto.UserDTO;
+import ua.desktop.chat.messenger.encryption.Encryption;
+import ua.desktop.chat.messenger.domain.env.TypeChat;
+import ua.desktop.chat.messenger.exception.EncryptionException;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +25,7 @@ class ChatSystemHandlerImplTest {
 
 
     @BeforeAll
-    static void setUp() throws DomainException {
+    static void setUp() throws EncryptionException {
         chatSystemHandling = new ChatSystemHandlerImpl();
         userDTO1 = new UserDTO(6L, "devil", "devil", Encryption.encryptionSHA3256("devil"));
         userDTO2 = new UserDTO(7L, "angel", "angel", Encryption.encryptionSHA3256("angel"));
@@ -51,17 +51,17 @@ class ChatSystemHandlerImplTest {
     @Test
     @Order(6)
     void readListChatsByUser() {
-        Optional<List<ChatDTO>> optionalChatDTO = chatSystemHandling.readListChatsByUser(userDTO1);
-        if (optionalChatDTO.isEmpty()) fail();
-        Assertions.assertEquals(List.of(chatDTOGroup, chatDTOPrivate1), optionalChatDTO.get());
+        List<ChatDTO> chatDTO = chatSystemHandling.readListChatsByUser(userDTO1);
+        if (chatDTO.isEmpty()) fail();
+        Assertions.assertEquals(List.of(chatDTOGroup, chatDTOPrivate1), chatDTO);
     }
 
     @Test
     @Order(7)
     void readListChatsByChatName() {
-        Optional<List<ChatDTO>> optionalChatDTO = chatSystemHandling.readListChatsByChatName(chatDTOGroup.getNameChat());
-        if (optionalChatDTO.isEmpty()) fail();
-        Assertions.assertEquals(List.of(chatDTOGroup), optionalChatDTO.get());
+        List<ChatDTO> chatDTO = chatSystemHandling.readListChatsByChatName(chatDTOGroup.getNameChat());
+        if (chatDTO.isEmpty()) fail();
+        Assertions.assertEquals(List.of(chatDTOGroup), chatDTO);
     }
 
     @Test
@@ -83,8 +83,8 @@ class ChatSystemHandlerImplTest {
     @Test
     @Order(5)
     void readChatsByType() {
-        Optional<List<ChatDTO>> optionalChatDTO = chatSystemHandling.readChatsByType(chatDTOGroup.getTypeChat(), userDTO1.getId());
-        if (optionalChatDTO.isEmpty()) fail();
-        Assertions.assertEquals(List.of(chatDTOGroup), optionalChatDTO.get());
+        List<ChatDTO> chatDTO = chatSystemHandling.readChatsByType(chatDTOGroup.getTypeChat(), userDTO1.getId());
+        if (chatDTO.isEmpty()) fail();
+        Assertions.assertEquals(List.of(chatDTOGroup), chatDTO);
     }
 }
