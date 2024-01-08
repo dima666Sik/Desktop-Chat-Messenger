@@ -33,7 +33,9 @@ public class CreateChatGUI extends JDialog {
             dispose();
             TypeChat typeChatChoose = TypeChat.valueOf(String.valueOf(comboBoxTypeChat.getSelectedItem()));
             chatSystemHandling.createChatByUser(textFieldNameChat.getText(), typeChatChoose, client.getUser(), null);
-            client.sendUpdateGroupIntoList();
+            client.getMessageManager()
+                    .getChatManager()
+                    .sendUpdateGroupIntoList();
         });
 
         cancelButton.addActionListener(e -> dispose());

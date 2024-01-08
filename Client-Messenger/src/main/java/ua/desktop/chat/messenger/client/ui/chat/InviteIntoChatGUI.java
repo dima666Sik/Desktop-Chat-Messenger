@@ -42,7 +42,9 @@ public class InviteIntoChatGUI extends JDialog {
                 chatSystemHandling.createChatByUser(listChats.get(0).getNameChat(),
                         TypeChat.GROUP, client.getUser(), null);
             }
-            client.sendUpdateGroupIntoList();
+            client.getMessageManager()
+                    .getChatManager()
+                    .sendUpdateGroupIntoList();
         });
 
         cancelButton.addActionListener(e -> dispose());

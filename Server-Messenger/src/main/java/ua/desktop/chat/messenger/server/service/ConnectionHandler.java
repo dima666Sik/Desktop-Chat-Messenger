@@ -1,4 +1,4 @@
-package ua.desktop.chat.messenger.server.service.impl;
+package ua.desktop.chat.messenger.server.service;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -12,6 +12,7 @@ import ua.desktop.chat.messenger.domain.dto.UserDTO;
 import ua.desktop.chat.messenger.server.service.exception.AddMessageException;
 import ua.desktop.chat.messenger.server.service.exception.SocketClosedException;
 import ua.desktop.chat.messenger.server.service.exception.UndefinedChatException;
+import ua.desktop.chat.messenger.server.service.message.MessageHandlerGUI;
 import ua.desktop.chat.messenger.server.ui.ServerGUI;
 
 import java.io.IOException;

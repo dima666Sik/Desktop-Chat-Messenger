@@ -1,6 +1,6 @@
 package ua.desktop.chat.messenger.server.ui;
 
-import ua.desktop.chat.messenger.server.service.impl.ConnectionHandler;
+import ua.desktop.chat.messenger.server.service.ConnectionHandler;
 
 import javax.swing.*;
 import java.awt.*;

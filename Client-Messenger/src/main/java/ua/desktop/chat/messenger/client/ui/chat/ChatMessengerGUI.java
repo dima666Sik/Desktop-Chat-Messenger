@@ -158,7 +158,9 @@ public class ChatMessengerGUI extends JDialog {
                             textNameChat = k;
                             typeChat = v;
                             ChatDTO chat = new ChatDTO(k, typeChat, client.getUser());
-                            List<MessageDTO> messageDTOList = client.getMessagesInChatForUser(chat);
+                            List<MessageDTO> messageDTOList = client
+                                    .getMessageManager()
+                                    .getMessagesInChatForUser(chat);
                             prePrinterMessagesInChatForUser(sortListMessageForDate(messageDTOList));
                         });
                     }
@@ -236,7 +238,7 @@ public class ChatMessengerGUI extends JDialog {
                 ChatDTO chat = new ChatDTO(textNameChat, typeChat, client.getUser());
                 MessageDTO message = new MessageDTO(textMessage, localDateTime, chat);
 
-                client.sendMessage(message);
+                client.getMessageManager().sendMessage(message);
 
                 String messageText = buildMessageText(message, textNameChat, client.getUser().getUsername(), true);
                 textArea.append(messageText);
@@ -283,7 +285,7 @@ public class ChatMessengerGUI extends JDialog {
                         client.setIsConnected(false);
                         client.getCommunicationHandler().setActive(false);
                         DBConnector.closeSessionFactory();
-                        client.sendEXIT();
+                        client.getMessageManager().getChatManager().sendEXIT();
                         logger.info("Exit from chat!");
                     }
                 });

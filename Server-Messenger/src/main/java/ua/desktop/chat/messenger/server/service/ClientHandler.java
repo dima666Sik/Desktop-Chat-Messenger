@@ -1,9 +1,14 @@
-package ua.desktop.chat.messenger.server.service.impl;
+package ua.desktop.chat.messenger.server.service;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.server.service.chat.ChatExitHandler;
+import ua.desktop.chat.messenger.server.service.chat.ChatHandler;
+import ua.desktop.chat.messenger.server.service.chat.ChatHandlerGUI;
+import ua.desktop.chat.messenger.server.service.chat.UserInitializer;
 import ua.desktop.chat.messenger.server.service.exception.SocketClosedException;
 import ua.desktop.chat.messenger.server.service.exception.SocketInitException;
+import ua.desktop.chat.messenger.server.service.message.MessageHandler;
 
 import java.io.BufferedReader;
 import java.io.IOException;
