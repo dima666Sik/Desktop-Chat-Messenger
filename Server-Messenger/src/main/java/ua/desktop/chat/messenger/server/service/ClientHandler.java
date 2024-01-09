@@ -67,7 +67,7 @@ public class ClientHandler implements Runnable {
         return chatHandlerGUI;
     }
 
-    public ChatExitHandler getProcessExitUser() {
+    public synchronized ChatExitHandler getProcessExitUser() {
         return processExitUser;
     }
 

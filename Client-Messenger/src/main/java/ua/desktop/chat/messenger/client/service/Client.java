@@ -110,48 +110,48 @@ public class Client implements Runnable {
         }
     }
 
-    public void setCHConfiguration() {
+    public synchronized void setCHConfiguration() {
         communicationHandler.setSocketInputReader(socketInputReader);
         communicationHandler.setSocketOutputWriter(socketOutputWriter);
     }
 
-    public Boolean getIsConnected() {
+    public synchronized Boolean getIsConnected() {
         return isConnected;
     }
 
-    public void setIsConnected(Boolean isConnected) {
+    public synchronized void setIsConnected(Boolean isConnected) {
         this.isConnected = isConnected;
     }
 
-    public CommunicationHandler getCommunicationHandler() {
+    public synchronized CommunicationHandler getCommunicationHandler() {
         return communicationHandler;
     }
 
-    public UserDTO getUser() {
+    public synchronized UserDTO getUser() {
         return user;
     }
 
-    public String getHost() {
+    public synchronized String getHost() {
         return host;
     }
 
-    public void setHost(String host) {
+    public synchronized void setHost(String host) {
         this.host = host;
     }
 
-    public int getPortNumber() {
+    public synchronized int getPortNumber() {
         return portNumber;
     }
 
-    public void setPortNumber(int portNumber) {
+    public synchronized void setPortNumber(int portNumber) {
         this.portNumber = portNumber;
     }
 
-    public MessageHandler getMessageManager() {
+    public synchronized MessageHandler getMessageManager() {
         return messageHandler;
     }
 
-    public ChatHandlerGUI getChatManagerProcessGUI() {
+    public synchronized ChatHandlerGUI getChatManagerProcessGUI() {
         return chatHandlerGUI;
     }
 

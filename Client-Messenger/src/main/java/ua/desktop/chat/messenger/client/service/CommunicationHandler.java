@@ -8,7 +8,6 @@ import ua.desktop.chat.messenger.core.service.MessageSystemHandling;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
-import java.net.Socket;
 
 public class CommunicationHandler implements Runnable {
     private static final Logger logger = LogManager.getLogger(CommunicationHandler.class.getName());

@@ -33,12 +33,12 @@ public class ServerGUI extends JDialog {
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                System.out.println(server.getActive()+" "+server.getClientHandlers().isEmpty());
                 if (server.getActive() && server.getClientHandlers().isEmpty()) {
                     setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                     server.setActive(false);
-                    server.closeServerSocket();
-                    System.out.println("Exit from server!");
+                    server
+                            .getServerClosedHandler()
+                            .closeServerSocket();
                 }
             }
         });

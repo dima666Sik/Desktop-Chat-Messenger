@@ -23,8 +23,8 @@ import java.net.Socket;
 import java.util.*;
 
 public class ConnectionHandler implements Runnable {
-    private static final Logger logger = LogManager.getLogger(ConnectionHandler.class.getName());
-    private Map<String, ClientHandler> clientHandlers = new HashMap<>();
+    private static final Logger logger = LogManager.getLogger(ConnectionHandler.class);
+    private final Map<String, ClientHandler> clientHandlers = new HashMap<>();
     private final Multimap<String, ChatDTO> userNameAndChatInfo = ArrayListMultimap.create();
     private volatile Boolean isActive = true;
     private Boolean newUser = true;
@@ -33,6 +33,7 @@ public class ConnectionHandler implements Runnable {
     private ServerGUI serverGUI;
     private ServerSocket serverSocket;
     private MessageHandlerGUI messageHandlerGUI;
+    private ServerClosedHandler serverClosedHandler;
 
     public ConnectionHandler(ChatSystemHandling chatSystemMessaging, MessageSystemHandling messageSystemHandling) {
         this.chatSystemMessaging = chatSystemMessaging;
@@ -42,6 +43,7 @@ public class ConnectionHandler implements Runnable {
     public void run() {
         serverGUI = new ServerGUI();
         messageHandlerGUI = new MessageHandlerGUI(this);
+        serverClosedHandler = new ServerClosedHandler(serverSocket);
         serverGUI.startGUI();
         serverGUI.setServer(this);
 
@@ -49,7 +51,7 @@ public class ConnectionHandler implements Runnable {
 
             try {
                 InetAddress addr = InetAddress.getLocalHost();
-                int portNumber = ServerConfiguration.getServerPort();
+                int portNumber = ServerPortConfiguration.getServerPort();
                 serverSocket = new ServerSocket(portNumber, 10, addr);
                 serverSocket.setReuseAddress(true);
 
@@ -79,56 +81,38 @@ public class ConnectionHandler implements Runnable {
         }
     }
 
-
-    public void sendMessageInDB(String receiver, UserDTO userDTO, MessageDTO message) {
-        new Thread(() -> {
-            synchronized (this) {
-                // Send message in db in chat current user
-                if (chatSystemMessaging.isExistChatByUser(receiver, userDTO.getId())) {
-
-                    Optional<ChatDTO> chatDTO = chatSystemMessaging.readChat(receiver, userDTO.getId());
-                    if (chatDTO.isEmpty()) throw new UndefinedChatException("Chat was not found!");
-                    MessageDTO messageDTO = new MessageDTO(message.getMessage(), message.getLocalDateTime(), chatDTO.get());
-
-                    messageSystemHandling.createMessageByChat(messageDTO);
-                    logger.info("Message is successful adding into db! Message owner is: {}", userDTO.getUsername());
-                    serverGUI.updateChat("Message is successful adding into db! Message owner is: " + userDTO.getUsername());
-
-                } else throw new AddMessageException("Message in chat was not added!");
-            }
-        }).start();
+    public synchronized ServerClosedHandler getServerClosedHandler() {
+        return serverClosedHandler;
     }
 
-
-    public synchronized void closeServerSocket() {
-        try {
-            if (serverSocket != null) {
-                serverSocket.close();
-            }
-        } catch (IOException e) {
-            logger.error("Unable to close. IOException", e);
-            throw new SocketClosedException("Unable to close. IOException", e);
-        }
+    public synchronized MessageSystemHandling getMessageSystemHandling() {
+        return messageSystemHandling;
     }
 
     public synchronized Multimap<String, ChatDTO> getUserNameAndChatInfo() {
         return userNameAndChatInfo;
     }
+
     public synchronized MessageHandlerGUI getMessageManagerProcessGUI() {
         return messageHandlerGUI;
     }
+
     public synchronized ChatSystemHandling getChatSystemMessaging() {
         return chatSystemMessaging;
     }
+
     public synchronized ServerGUI getServerGUI() {
         return serverGUI;
     }
+
     public synchronized Boolean getActive() {
         return isActive;
     }
+
     public synchronized void setActive(Boolean active) {
         isActive = active;
     }
+
     public synchronized Map<String, ClientHandler> getClientHandlers() {
         return clientHandlers;
     }

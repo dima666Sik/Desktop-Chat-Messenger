@@ -3,11 +3,11 @@ package ua.desktop.chat.messenger.server.service;
 import ua.desktop.chat.messenger.prop.PropertiesFile;
 
 
-public class ServerConfiguration {
+public class ServerPortConfiguration {
     private static final String NAME_PROP_FILE = "server_connection.properties";
     private static final String PROP_VALUE_SERVER_PORT = "server.connection.port";
 
-    private ServerConfiguration() {
+    private ServerPortConfiguration() {
     }
 
     public static int getServerPort() {

@@ -70,6 +70,7 @@ public class ChatHandler {
         strChatAndType.forEach(element -> {
             List<String> stringList = Arrays.asList(element.split(":"));
             UserDTO userDTO = new UserDTO();
+            System.out.println("stringList: "+stringList);
             userDTO.setUsername(stringList.get(2));
             mapTypeChatMap.put(stringList.get(0), new ChatDTO(TypeChat.valueOf(stringList.get(1)), null, userDTO));
         });
