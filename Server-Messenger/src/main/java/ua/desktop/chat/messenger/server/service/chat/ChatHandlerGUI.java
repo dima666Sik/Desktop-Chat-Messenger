@@ -25,7 +25,7 @@ public class ChatHandlerGUI {
 
         logger.info("Client was added into list chat! Name current client is: {}", username);
         connectionHandler
-                .getServerGUI()
+                .getServerHandlerGUI()
                 .updateChat("Client was added into list chat! Name current client is: " + username);
     }
 

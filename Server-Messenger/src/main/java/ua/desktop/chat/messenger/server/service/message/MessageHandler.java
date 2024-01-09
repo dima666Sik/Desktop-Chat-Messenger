@@ -2,6 +2,8 @@ package ua.desktop.chat.messenger.server.service.message;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.constant.ChatConstant;
+import ua.desktop.chat.messenger.constant.MessageConstant;
 import ua.desktop.chat.messenger.domain.dto.ChatDTO;
 import ua.desktop.chat.messenger.domain.dto.MessageDTO;
 import ua.desktop.chat.messenger.domain.dto.UserDTO;
@@ -68,14 +70,16 @@ public class MessageHandler {
                 }
             }
         } else {
-            clientHandler.getSocketOutputWriter().println("/M");
-            String msgJSON = ParserJSON.convertObjectToString("[NOBODY IS HERE. YOUR MESSAGES NOT SAVED!]", TypeMessage.STRING_NOTIFICATION);
+            clientHandler.getSocketOutputWriter().println(ChatConstant.MESSAGE_COMMAND);
+            String msgJSON = ParserJSON.convertObjectToString(MessageConstant.NOBODY_IS_HERE_MESSAGE, TypeMessage.STRING_NOTIFICATION);
             clientHandler.getSocketOutputWriter().println(msgJSON);
 
-            logger.info("NOBODY IS HERE. YOUR MESSAGES NOT SAVED! this message for once user in chat: {}", clientHandler.getInitializeUser().getUsername());
+            logger.info("{} this message for once user in chat: {}",
+                    MessageConstant.NOBODY_IS_HERE_MESSAGE, clientHandler.getInitializeUser().getUsername());
             connectionHandler
-                    .getServerGUI()
-                    .updateChat("NOBODY IS HERE. YOUR MESSAGES NOT SAVED! this message for once user in chat: "
+                    .getServerHandlerGUI()
+                    .updateChat(MessageConstant.NOBODY_IS_HERE_MESSAGE
+                            + " this message for once user in chat: "
                             + clientHandler
                             .getInitializeUser()
                             .getUsername());
@@ -83,7 +87,7 @@ public class MessageHandler {
     }
 
     public void sendMessage(String msg) {
-        clientHandler.getSocketOutputWriter().println("/M");
+        clientHandler.getSocketOutputWriter().println(ChatConstant.MESSAGE_COMMAND);
         clientHandler.getSocketOutputWriter().println(msg);
     }
 
@@ -99,7 +103,7 @@ public class MessageHandler {
 
                     connectionHandler.getMessageSystemHandling().createMessageByChat(messageDTO);
                     logger.info("Message is successful adding into db! Message owner is: {}", userDTO.getUsername());
-                    connectionHandler.getServerGUI().updateChat("Message is successful adding into db! Message owner is: " + userDTO.getUsername());
+                    connectionHandler.getServerHandlerGUI().updateChat("Message is successful adding into db! Message owner is: " + userDTO.getUsername());
 
                 } else throw new AddMessageException("Message in chat was not added!");
             }

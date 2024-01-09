@@ -27,7 +27,7 @@ public class ChatExitHandler {
                 new ChatDTO(TypeChat.PRIVATE, clientHandler.getInitializeUser().getUserDTO().getId(), clientHandler.getInitializeUser().getUserDTO()));
 
         logger.info("Client was removed from the list chat! Name current client is: {}", clientHandler.getInitializeUser().getUsername());
-        connectionHandler.getServerGUI().updateChat("Client was removed from the list chat! Name current client is: " + clientHandler.getInitializeUser().getUsername());
+        connectionHandler.getServerHandlerGUI().updateChat("Client was removed from the list chat! Name current client is: " + clientHandler.getInitializeUser().getUsername());
 
         clientHandler.getSocket().close();
         clientHandler.setActive(false);

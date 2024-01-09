@@ -3,6 +3,8 @@ package ua.desktop.chat.messenger.server.service.chat;
 import com.google.common.collect.Multimap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.constant.ChatConstant;
+import ua.desktop.chat.messenger.constant.MessageConstant;
 import ua.desktop.chat.messenger.domain.dto.ChatDTO;
 import ua.desktop.chat.messenger.domain.dto.MessageDTO;
 import ua.desktop.chat.messenger.domain.dto.UserDTO;
@@ -26,21 +28,22 @@ public class ChatHandler {
         this.clientHandler = clientHandler;
         this.connectionHandler = connectionHandler;
     }
+
     public void processInputChoice() throws IOException {
         String userInput;
         while ((userInput = clientHandler.getSocketInputReader().readLine()) != null) {
             switch (userInput) {
-                case "/M":
+                case ChatConstant.MESSAGE_COMMAND:
                     clientHandler
                             .getMessageManager()
                             .processUserMessage();
                     break;
-                case "/UPDATE GROUP INTO LIST":
+                case ChatConstant.UPDATE_GROUP_COMMAND:
                     clientHandler
                             .getChatManager()
                             .informAllClientsUserNameList();
                     break;
-                case "/EXIT":
+                case ChatConstant.EXIT_COMMAND:
                     clientHandler
                             .getProcessExitUser()
                             .processExitCommand();
@@ -48,17 +51,18 @@ public class ChatHandler {
             }
         }
     }
+
     public boolean checkCountCompanion(UserDTO user, MessageDTO message, ClientHandler sender) {
         if (connectionHandler.getClientHandlers().size() <= 1) {
-            message.setMessage("[MESSAGE COULD NOT BE SEND!]");
+            message.setMessage(MessageConstant.MESSAGE_NOT_SENT);
             sender
                     .getMessageManager()
                     .sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));
 
-            logger.info("MESSAGE COULD NOT BE SEND! this message for once user in chat: {}", user.getUsername());
+            logger.info("{} this message for once user in chat: {}", MessageConstant.MESSAGE_NOT_SENT, user.getUsername());
             connectionHandler
-                    .getServerGUI()
-                    .updateChat("MESSAGE COULD NOT BE SEND! this message for once user in chat: " + user.getUsername());
+                    .getServerHandlerGUI()
+                    .updateChat(MessageConstant.MESSAGE_NOT_SENT + " this message for once user in chat: " + user.getUsername());
             return false;
         }
         return true;
@@ -66,7 +70,7 @@ public class ChatHandler {
 
     public void sendUserNameList(Multimap<String, ChatDTO> ul) {
         StringBuilder userListResponse = new StringBuilder();
-        clientHandler.getSocketOutputWriter().println("/USERS");
+        clientHandler.getSocketOutputWriter().println(ChatConstant.USERS_COMMAND);
 
         for (Map.Entry<String, ChatDTO> entry : ul.entries()) {
             String userChat = entry.getKey();
@@ -98,7 +102,7 @@ public class ChatHandler {
         Multimap<String, ChatDTO> userNameAndChatInfo = connectionHandler.getUserNameAndChatInfo();
         for (Map.Entry<String, ClientHandler> key : connectionHandler.getClientHandlers().entrySet()) {
             ClientHandler client = key.getValue();
-            userNameAndChatInfo.put("GLOBAL", new ChatDTO(TypeChat.GLOBAL, null, client.getInitializeUser().getUserDTO()));
+            userNameAndChatInfo.put(ChatConstant.GLOBAL_TYPE, new ChatDTO(TypeChat.GLOBAL, null, client.getInitializeUser().getUserDTO()));
             userNameAndChatInfo.put(client.getInitializeUser().getUsername(),
                     new ChatDTO(TypeChat.PRIVATE, client.getInitializeUser().getUserDTO().getId(),
                             client.getInitializeUser().getUserDTO()));

@@ -7,13 +7,7 @@ import org.apache.logging.log4j.Logger;
 import ua.desktop.chat.messenger.core.service.ChatSystemHandling;
 import ua.desktop.chat.messenger.core.service.MessageSystemHandling;
 import ua.desktop.chat.messenger.domain.dto.ChatDTO;
-import ua.desktop.chat.messenger.domain.dto.MessageDTO;
-import ua.desktop.chat.messenger.domain.dto.UserDTO;
-import ua.desktop.chat.messenger.server.service.exception.AddMessageException;
-import ua.desktop.chat.messenger.server.service.exception.SocketClosedException;
-import ua.desktop.chat.messenger.server.service.exception.UndefinedChatException;
 import ua.desktop.chat.messenger.server.service.message.MessageHandlerGUI;
-import ua.desktop.chat.messenger.server.ui.ServerGUI;
 
 import java.io.IOException;
 
@@ -30,10 +24,10 @@ public class ConnectionHandler implements Runnable {
     private Boolean newUser = true;
     private final ChatSystemHandling chatSystemMessaging;
     private final MessageSystemHandling messageSystemHandling;
-    private ServerGUI serverGUI;
     private ServerSocket serverSocket;
     private MessageHandlerGUI messageHandlerGUI;
     private ServerClosedHandler serverClosedHandler;
+    private ServerHandlerGUI serverHandlerGUI;
 
     public ConnectionHandler(ChatSystemHandling chatSystemMessaging, MessageSystemHandling messageSystemHandling) {
         this.chatSystemMessaging = chatSystemMessaging;
@@ -41,11 +35,10 @@ public class ConnectionHandler implements Runnable {
     }
 
     public void run() {
-        serverGUI = new ServerGUI();
+        serverHandlerGUI = new ServerHandlerGUI();
         messageHandlerGUI = new MessageHandlerGUI(this);
         serverClosedHandler = new ServerClosedHandler(serverSocket);
-        serverGUI.startGUI();
-        serverGUI.setServer(this);
+        serverHandlerGUI.setServer(this);
 
         while (isActive) {
 
@@ -56,7 +49,7 @@ public class ConnectionHandler implements Runnable {
                 serverSocket.setReuseAddress(true);
 
                 logger.info("InetAddress : {}", serverSocket.getInetAddress());
-                serverGUI.updateChat("InetAddress : " + serverSocket.getInetAddress());
+                serverHandlerGUI.updateChat("InetAddress : " + serverSocket.getInetAddress());
 
                 while (!serverSocket.isClosed()) {
                     if (newUser) {
@@ -66,7 +59,7 @@ public class ConnectionHandler implements Runnable {
 
                         logger.info("Connection received from {} : {}",
                                 conn.getInetAddress().getHostName(), conn.getPort());
-                        serverGUI.updateChat("Connection received from "
+                        serverHandlerGUI.updateChat("Connection received from "
                                 + conn.getInetAddress().getHostName()
                                 + " : " + conn.getPort());
 
@@ -101,8 +94,8 @@ public class ConnectionHandler implements Runnable {
         return chatSystemMessaging;
     }
 
-    public synchronized ServerGUI getServerGUI() {
-        return serverGUI;
+    public synchronized ServerHandlerGUI getServerHandlerGUI() {
+        return serverHandlerGUI;
     }
 
     public synchronized Boolean getActive() {

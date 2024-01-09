@@ -37,7 +37,6 @@ public class Client implements Runnable {
     private MessageHandler messageHandler;
     private ChatHandlerGUI chatHandlerGUI;
     private ChatHandler chatHandler;
-    private MessageHandlerGUI messageHandlerGUI;
 
     public Client(CommunicationHandler cH) {
         communicationHandler = cH;
@@ -59,7 +58,7 @@ public class Client implements Runnable {
     }
 
     private void initializeProcessChatsGUIAndMessagesGUI(){
-        messageHandlerGUI = new MessageHandlerGUI(windowChatMessenger);
+        MessageHandlerGUI messageHandlerGUI = new MessageHandlerGUI(windowChatMessenger);
         chatHandlerGUI = new ChatHandlerGUI(messageHandlerGUI, windowChatMessenger, chatHandler);
     }
 

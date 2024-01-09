@@ -5,6 +5,7 @@ import com.google.common.collect.Multimap;
 import ua.desktop.chat.messenger.client.exception.AddMessageException;
 import ua.desktop.chat.messenger.client.exception.UndefinedChatException;
 import ua.desktop.chat.messenger.client.service.CommunicationHandler;
+import ua.desktop.chat.messenger.constant.ChatConstant;
 import ua.desktop.chat.messenger.domain.dto.ChatDTO;
 import ua.desktop.chat.messenger.domain.dto.UserDTO;
 import ua.desktop.chat.messenger.domain.env.TypeChat;
@@ -55,13 +56,13 @@ public class ChatHandler {
     public void sendEXIT() {
         communicationHandler
                 .getSocketOutputWriter()
-                .println("/EXIT");
+                .println(ChatConstant.EXIT_COMMAND);
     }
 
     public void sendUpdateGroupIntoList() {
         communicationHandler
                 .getSocketOutputWriter()
-                .println("/UPDATE GROUP INTO LIST");
+                .println(ChatConstant.UPDATE_GROUP_COMMAND);
     }
 
     public Multimap<String, ChatDTO> setUserList(String rspUserList) {
@@ -70,7 +71,6 @@ public class ChatHandler {
         strChatAndType.forEach(element -> {
             List<String> stringList = Arrays.asList(element.split(":"));
             UserDTO userDTO = new UserDTO();
-            System.out.println("stringList: "+stringList);
             userDTO.setUsername(stringList.get(2));
             mapTypeChatMap.put(stringList.get(0), new ChatDTO(TypeChat.valueOf(stringList.get(1)), null, userDTO));
         });

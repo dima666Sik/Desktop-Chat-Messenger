@@ -3,6 +3,7 @@ package ua.desktop.chat.messenger.client.service.chat;
 import com.google.common.collect.Multimap;
 import ua.desktop.chat.messenger.client.service.message.MessageHandlerGUI;
 import ua.desktop.chat.messenger.client.ui.chat.ChatMessengerGUI;
+import ua.desktop.chat.messenger.constant.ChatConstant;
 import ua.desktop.chat.messenger.domain.dto.ChatDTO;
 import ua.desktop.chat.messenger.domain.dto.MessageDTO;
 import ua.desktop.chat.messenger.domain.env.TypeChat;
@@ -45,9 +46,9 @@ public class ChatHandlerGUI {
                 && (response = chatHandler
                 .getSocketInputReader()
                 .readLine()) != null) {
-            if (response.equals("/USERS")) {
+            if (response.equals(ChatConstant.USERS_COMMAND)) {
                 processUserListResponse();
-            } else if (response.equals("/M")) {
+            } else if (response.equals(ChatConstant.MESSAGE_COMMAND)) {
                 processMessageResponse();
             }
         }

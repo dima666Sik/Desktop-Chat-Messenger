@@ -2,6 +2,7 @@ package ua.desktop.chat.messenger.server.service.message;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ua.desktop.chat.messenger.constant.MessageConstant;
 import ua.desktop.chat.messenger.domain.dto.MessageDTO;
 import ua.desktop.chat.messenger.domain.dto.UserDTO;
 import ua.desktop.chat.messenger.domain.env.TypeChat;
@@ -34,16 +35,18 @@ public class MessageHandlerGUI {
 
             logger.info("Send message (PRIVATE) is successful! Message owner is: {}. Companion is: {}", user.getUsername(), clientRCVR);
             connectionHandler
-                    .getServerGUI()
+                    .getServerHandlerGUI()
                     .updateChat("Send message (PRIVATE) is successful! Message owner is: " + user.getUsername() + ". Companion is: " + clientRCVR);
         } else {
-            message.setMessage("[MESSAGE COULD NOT BE SEND!]");
+            message.setMessage(MessageConstant.MESSAGE_NOT_SENT);
             sender.getMessageManager().sendMessage(ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT));
 
-            logger.info("MESSAGE COULD NOT BE SEND! this message for once user in chat: {}", user.getUsername());
+            logger.info("{} this message for once user in chat: {}", MessageConstant.MESSAGE_NOT_SENT, user.getUsername());
             connectionHandler
-                    .getServerGUI()
-                    .updateChat("MESSAGE COULD NOT BE SEND! this message for once user in chat: " + user.getUsername());
+                    .getServerHandlerGUI()
+                    .updateChat(MessageConstant.MESSAGE_NOT_SENT
+                            + " this message for once user in chat: "
+                            + user.getUsername());
         }
     }
 
@@ -61,7 +64,7 @@ public class MessageHandlerGUI {
 
                 logger.info("Send message (GLOBAL|GROUP) is successful! Message owner is: {}", user.getUsername());
                 connectionHandler
-                        .getServerGUI()
+                        .getServerHandlerGUI()
                         .updateChat("Send message (GLOBAL|GROUP) is successful! Message owner is: " + user.getUsername());
             }
             return true;

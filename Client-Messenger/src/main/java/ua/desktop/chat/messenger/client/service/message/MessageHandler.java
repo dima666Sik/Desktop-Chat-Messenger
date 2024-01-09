@@ -2,6 +2,7 @@ package ua.desktop.chat.messenger.client.service.message;
 
 import ua.desktop.chat.messenger.client.exception.UndefinedMessageException;
 import ua.desktop.chat.messenger.client.service.chat.ChatHandler;
+import ua.desktop.chat.messenger.constant.ChatConstant;
 import ua.desktop.chat.messenger.domain.dto.ChatDTO;
 import ua.desktop.chat.messenger.domain.dto.MessageDTO;
 import ua.desktop.chat.messenger.domain.env.TypeChat;
@@ -17,7 +18,6 @@ public class MessageHandler {
         this.chatHandler = chatHandler;
     }
 
-    //sync
     public List<MessageDTO> getMessagesInChatForUser(ChatDTO chatDTO) {
         chatHandler.validateChatExistence(chatDTO);
         List<ChatDTO> chatORMList = chatHandler.getChatList(chatDTO);
@@ -34,7 +34,7 @@ public class MessageHandler {
     }
 
     public void sendMessage(MessageDTO message) {
-        chatHandler.getSocketOutputWriter().println("/M");
+        chatHandler.getSocketOutputWriter().println(ChatConstant.MESSAGE_COMMAND);
         chatHandler.getSocketOutputWriter().println((message.getChat().getNameChat().isEmpty()) ? TypeChat.GLOBAL.name() : message.getChat().getNameChat());
         String msg = ParserJSON.convertObjectToString(message, TypeMessage.MESSAGE_OBJECT);
         chatHandler.getSocketOutputWriter().println(msg);
