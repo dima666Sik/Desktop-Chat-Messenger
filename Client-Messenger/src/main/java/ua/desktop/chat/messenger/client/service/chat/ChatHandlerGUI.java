@@ -1,6 +1,7 @@
 package ua.desktop.chat.messenger.client.service.chat;
 
 import com.google.common.collect.Multimap;
+import ua.desktop.chat.messenger.client.service.CommunicationHandler;
 import ua.desktop.chat.messenger.client.service.message.MessageHandlerGUI;
 import ua.desktop.chat.messenger.client.ui.chat.ChatMessengerGUI;
 import ua.desktop.chat.messenger.constant.ChatConstant;
@@ -9,6 +10,7 @@ import ua.desktop.chat.messenger.domain.dto.MessageDTO;
 import ua.desktop.chat.messenger.domain.env.TypeChat;
 import ua.desktop.chat.messenger.parser.ParserJSON;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 
 public class ChatHandlerGUI {
@@ -41,6 +43,7 @@ public class ChatHandlerGUI {
     }
 
     public void processResponse() throws IOException {
+        System.out.println(Thread.currentThread());
         String response;
         while (chatHandler.getSocketInputReader() != null
                 && (response = chatHandler
@@ -58,10 +61,13 @@ public class ChatHandlerGUI {
         String userList;
         if ((userList = chatHandler
                 .getSocketInputReader()
-                .readLine()) != null) {
+                .readLine()) != null
+                && !userList.equals(ChatConstant.USERS_COMMAND)) {
             Multimap<String, ChatDTO> users = chatHandler.setUserList(userList);
             updateUserListChatGUI(users);
+            return;
         }
+        processUserListResponse();
     }
 
     private void processMessageResponse() throws IOException {

@@ -25,12 +25,9 @@ public class MessageHandler {
     }
 
     private List<MessageDTO> getMessageList(List<ChatDTO> chatORMList) {
-        List<MessageDTO> optionalMessageDTOList
-                = chatHandler.getCommunicationHandler()
+        return chatHandler.getCommunicationHandler()
                 .getMessageSystemHandling()
                 .readListMessageByChats(chatORMList);
-        if (optionalMessageDTOList.isEmpty()) throw new UndefinedMessageException("Message not found for this chat!");
-        return optionalMessageDTOList;
     }
 
     public void sendMessage(MessageDTO message) {
@@ -40,7 +37,7 @@ public class MessageHandler {
         chatHandler.getSocketOutputWriter().println(msg);
     }
 
-    public ChatHandler getChatManager() {
+    public synchronized ChatHandler getChatManager() {
         return chatHandler;
     }
 

@@ -21,7 +21,7 @@ public class ConnectionHandler implements Runnable {
     private final Map<String, ClientHandler> clientHandlers = new HashMap<>();
     private final Multimap<String, ChatDTO> userNameAndChatInfo = ArrayListMultimap.create();
     private volatile Boolean isActive = true;
-    private Boolean newUser = true;
+    private Boolean isNewUser = true;
     private final ChatSystemHandling chatSystemMessaging;
     private final MessageSystemHandling messageSystemHandling;
     private ServerSocket serverSocket;
@@ -52,8 +52,8 @@ public class ConnectionHandler implements Runnable {
                 serverHandlerGUI.updateChat("InetAddress : " + serverSocket.getInetAddress());
 
                 while (!serverSocket.isClosed()) {
-                    if (newUser) {
-                        newUser = false;
+                    if (isNewUser) {
+                        isNewUser = false;
                     } else {
                         Socket conn = serverSocket.accept();
 

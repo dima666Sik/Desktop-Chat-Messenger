@@ -117,7 +117,7 @@ public class ChatHandler {
             List<ChatDTO> chatList = connectionHandler
                     .getChatSystemMessaging()
                     .readChatsByType(TypeChat.GROUP, client.getInitializeUser().getUserDTO().getId());
-            if (chatList.isEmpty()) throw new UndefinedChatException("Chats was not found!");
+            if (chatList.isEmpty()) return;
             for (ChatDTO chat : chatList) {
                 userNameAndChatInfo.put(chat.getNameChat(), new ChatDTO(chat.getTypeChat(), null, chat.getUser()));
             }

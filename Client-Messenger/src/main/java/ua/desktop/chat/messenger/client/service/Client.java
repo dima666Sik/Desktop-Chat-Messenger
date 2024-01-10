@@ -25,13 +25,13 @@ import java.net.UnknownHostException;
 
 public class Client implements Runnable {
     private static final Logger logger = LogManager.getLogger(Client.class.getName());
+    private final CommunicationHandler communicationHandler;
     private String host;
     private int portNumber;
     private Socket socket;
     private PrintWriter socketOutputWriter;
     private BufferedReader socketInputReader;
     private UserDTO user;
-    private final CommunicationHandler communicationHandler;
     private Boolean isConnected = false;
     private ChatMessengerGUI windowChatMessenger;
     private MessageHandler messageHandler;

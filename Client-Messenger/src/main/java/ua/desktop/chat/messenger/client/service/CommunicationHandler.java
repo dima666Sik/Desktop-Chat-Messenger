@@ -8,6 +8,7 @@ import ua.desktop.chat.messenger.core.service.MessageSystemHandling;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
+import java.util.Random;
 
 public class CommunicationHandler implements Runnable {
     private static final Logger logger = LogManager.getLogger(CommunicationHandler.class.getName());
@@ -28,13 +29,16 @@ public class CommunicationHandler implements Runnable {
         try {
             Client client = new Client(this);
             Thread thread = new Thread(client);
+            thread.setName("Thread-Client-" + new Random().nextInt()*10/4+4);
             thread.start();
 
             while (isActive) {
                 if (getIsConnected()) {
+                    System.out.println(Thread.currentThread());
                     client.getChatManagerProcessGUI().processResponse();
                 }
             }
+
         } catch (Exception e) {
             logger.error("Exception. Problem with read from buffer.", e);
             throw new ReadBufferException("Exception. Problem with read from buffer.", e);

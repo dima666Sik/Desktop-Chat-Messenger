@@ -91,6 +91,8 @@ public class ChatMessengerGUI extends JDialog {
             textArea.setText("");
             clearText();
 
+            if (messageDTOs.isEmpty()) textArea.append("Chat history is empty!");
+
             StringBuilder messageBuilder = new StringBuilder();
 
             for (MessageDTO messageDTO : messageDTOs) {

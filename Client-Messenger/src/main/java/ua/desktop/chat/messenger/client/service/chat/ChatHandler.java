@@ -76,7 +76,8 @@ public class ChatHandler {
         });
         return mapTypeChatMap;
     }
-    public CommunicationHandler getCommunicationHandler() {
+
+    public synchronized CommunicationHandler getCommunicationHandler() {
         return communicationHandler;
     }
 
@@ -84,11 +85,11 @@ public class ChatHandler {
         return user;
     }
 
-    public PrintWriter getSocketOutputWriter() {
+    public synchronized PrintWriter getSocketOutputWriter() {
         return communicationHandler.getSocketOutputWriter();
     }
 
-    public BufferedReader getSocketInputReader() {
+    public synchronized BufferedReader getSocketInputReader() {
         return communicationHandler.getSocketInputReader();
     }
 }
