@@ -1,0 +1,841 @@
+[INFO ] 2024-02-24 19:14:34.089 [main] DBConnector - Get session was successful!
+[ERROR] 2024-02-24 19:14:34.661 [main] ChatSystemHandlerDAOMySQLImpl - org.hibernate.PropertyValueException: not-null property references a null or transient value : ua.desktop.chat.messenger.domain.model.Chat.user
+[WARN ] 2024-02-24 19:14:34.662 [main] ChatSystemHandlerImpl - Cannot create user chat!
+ua.desktop.chat.messenger.dao.exceptions.OpenSessionException: Transaction isn't successful! Rollback data.
+	at ua.desktop.chat.messenger.core.dao.mysql.impl.ChatSystemHandlerDAOMySQLImpl.createChatByUser(ChatSystemHandlerDAOMySQLImpl.java:55) ~[classes/:?]
+	at ua.desktop.chat.messenger.core.service.impl.ChatSystemHandlerImpl.createChatByUser(ChatSystemHandlerImpl.java:41) ~[classes/:?]
+	at ua.desktop.chat.messenger.domain.impl.ChatSystemHandlerImplIT.createChatByUser(ChatSystemHandlerImplTest.java:46) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.1.2.jar:3.1.2]
+Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : ua.desktop.chat.messenger.domain.model.Chat.user
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:109) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:54) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:124) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:69) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:290) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:271) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:321) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:766) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:750) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at ua.desktop.chat.messenger.core.dao.mysql.impl.ChatSystemHandlerDAOMySQLImpl.createChatByUser(ChatSystemHandlerDAOMySQLImpl.java:50) ~[classes/:?]
+	... 73 more
+[INFO ] 2024-02-24 19:14:34.713 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:34.718 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.028 [main] ChatSystemHandlerDAOMySQLImpl - Chat with this name `Termopasta Grizli` was not existed!
+[INFO ] 2024-02-24 19:14:36.049 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.053 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.076 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-24 19:14:36.090 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.136 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-24 19:14:36.149 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.177 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-24 19:14:36.192 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.225 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-24 19:14:36.244 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.334 [main] DBConnector - Get session was successful!
+[ERROR] 2024-02-24 19:14:36.481 [main] MessageSystemHandlerDAOMySQLImpl - org.hibernate.exception.ConstraintViolationException: could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`app_world_chat`.`messages`, CONSTRAINT `FK64w44ngcpqp99ptcb9werdfmb` FOREIGN KEY (`chat_id`) REFERENCES `chats` (`id`))] [insert into messages (chat_id,local_date_time,message) values (?,?,?)]
+[WARN ] 2024-02-24 19:14:36.483 [main] MessageSystemHandlerImpl - Cannot create user message in the chat `Termopasta Grizli`!
+ua.desktop.chat.messenger.dao.exceptions.OpenSessionException: Transaction isn't successful! Rollback data.
+	at ua.desktop.chat.messenger.core.dao.mysql.impl.MessageSystemHandlerDAOMySQLImpl.createMessageByChat(MessageSystemHandlerDAOMySQLImpl.java:32) ~[classes/:?]
+	at ua.desktop.chat.messenger.core.service.impl.MessageSystemHandlerImpl.createMessageByChat(MessageSystemHandlerImpl.java:29) ~[classes/:?]
+	at ua.desktop.chat.messenger.domain.impl.MessageSystemHandlerIT.lambda$createMessageByChat$0(MessageSystemHandlerImplTest.java:36) ~[test-classes/:?]
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49) ~[junit-jupiter-api-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36) ~[junit-jupiter-api-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3164) ~[junit-jupiter-api-5.10.0.jar:5.10.0]
+	at ua.desktop.chat.messenger.domain.impl.MessageSystemHandlerIT.createMessageByChat(MessageSystemHandlerImplTest.java:36) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1541) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) [surefire-junit-platform-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.1.2.jar:3.1.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.1.2.jar:3.1.2]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`app_world_chat`.`messages`, CONSTRAINT `FK64w44ngcpqp99ptcb9werdfmb` FOREIGN KEY (`chat_id`) REFERENCES `chats` (`id`))] [insert into messages (chat_id,local_date_time,message) values (?,?,?)]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:283) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:171) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:112) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2855) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:290) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:271) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:321) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:766) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:750) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at ua.desktop.chat.messenger.core.dao.mysql.impl.MessageSystemHandlerDAOMySQLImpl.createMessageByChat(MessageSystemHandlerDAOMySQLImpl.java:26) ~[classes/:?]
+	... 77 more
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`app_world_chat`.`messages`, CONSTRAINT `FK64w44ngcpqp99ptcb9werdfmb` FOREIGN KEY (`chat_id`) REFERENCES `chats` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.2.0.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.2.0.jar:?]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:280) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:171) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:112) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2855) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:290) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:271) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:321) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:766) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:750) ~[hibernate-core-6.3.0.Final.jar:6.3.0.Final]
+	at ua.desktop.chat.messenger.core.dao.mysql.impl.MessageSystemHandlerDAOMySQLImpl.createMessageByChat(MessageSystemHandlerDAOMySQLImpl.java:26) ~[classes/:?]
+	... 77 more
+[INFO ] 2024-02-24 19:14:36.497 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-24 19:14:36.686 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-28 12:51:28.386 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:28.800 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.366 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was not existed!
+[INFO ] 2024-02-28 12:51:30.388 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.439 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 12:51:30.457 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.500 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 12:51:30.520 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.547 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 12:51:30.560 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.594 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 12:51:30.600 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.641 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.665 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 12:51:30.667 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.687 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 12:51:30.687 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.707 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 12:51:30.708 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.735 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-28 12:51:30.736 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 12:51:30.753 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-28 13:07:16.452 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:07:48.030 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:09:35.616 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:20:57.716 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:20:58.278 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:20:58.279 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:20:58.319 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:22:38.684 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:22:39.356 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:22:39.357 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:22:39.401 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:25:18.139 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:27:12.361 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:27:12.662 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:27:12.664 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:27:12.716 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:27:12.764 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:27:12.920 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:27:12.948 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:38:19.714 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:38:19.941 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:38:19.942 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:38:19.976 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:38:19.977 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:38:20.909 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:38:20.911 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:38:20.937 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:38:21.051 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:38:21.104 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:38:21.123 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:45:43.167 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:45:43.398 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:45:43.398 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:45:43.430 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:45:43.430 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:25.393 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:25.606 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:46:25.607 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:25.632 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:46:25.633 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:26.473 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:46:26.475 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:26.508 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:46:26.555 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:26.616 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 13:46:26.618 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:26.664 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 13:46:26.664 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:46:26.700 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 13:55:57.481 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:55:57.773 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:55:57.774 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:55:57.809 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:58:28.714 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:58:29.028 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:58:29.028 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:58:29.074 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:58:29.075 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:15.549 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:15.794 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:59:15.795 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:15.818 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 13:59:15.818 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:16.608 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:59:16.624 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:16.647 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:59:16.678 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:16.729 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 13:59:16.730 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:16.778 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 13:59:16.778 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:16.817 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 13:59:16.836 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:16.907 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-28 13:59:16.910 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:16.937 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 13:59:16.988 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.024 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 13:59:17.038 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.069 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 13:59:17.082 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.122 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 13:59:17.128 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.169 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.196 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 13:59:17.197 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.283 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.309 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 13:59:17.309 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.337 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.361 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 13:59:17.361 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.386 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.400 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:59:17.402 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.437 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 13:59:17.455 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 13:59:17.455 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:04.185 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:04.433 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:01:04.434 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:04.462 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:01:04.463 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.435 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:01:05.438 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.461 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:01:05.516 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.583 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:01:05.586 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.633 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:01:05.634 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.680 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:01:05.706 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.801 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-28 14:01:05.804 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.838 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:01:05.887 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.926 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:01:05.943 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:05.983 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:01:05.999 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.051 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:01:06.058 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.103 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.135 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:01:06.136 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.232 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.270 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:01:06.270 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.298 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.324 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:01:06.324 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.353 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.371 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:01:06.372 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.404 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:01:06.423 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:01:06.423 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:08.528 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:08.765 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:03:08.766 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:08.796 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:03:08.797 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:09.837 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:03:09.838 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:09.859 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:03:09.907 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:09.969 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:03:09.971 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.017 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:03:10.017 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.055 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:03:10.084 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.160 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-28 14:03:10.164 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.192 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:03:10.238 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.267 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:03:10.281 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.315 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:03:10.332 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.375 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:03:10.382 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.426 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.462 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:03:10.465 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.554 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.578 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:03:10.578 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.613 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.636 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:03:10.636 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.663 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.679 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:03:10.680 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.723 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:03:10.741 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:03:10.741 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:12.387 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:12.677 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:14:12.678 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:12.874 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:14:12.874 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:15.677 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:14:15.678 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:15.710 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:14:15.750 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:15.812 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:14:15.814 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:15.849 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:14:15.850 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:15.894 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:14:15.914 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.024 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-28 14:14:16.030 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.059 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:14:16.063 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.093 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:14:16.106 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.136 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:14:16.148 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.224 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:14:16.300 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.351 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.378 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:14:16.378 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.447 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.473 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:14:16.473 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.500 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.522 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:14:16.522 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.554 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.573 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:14:16.574 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.612 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:14:16.632 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:14:16.633 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:38.640 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:39.064 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:16:39.064 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:39.097 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:16:39.098 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:40.768 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:16:40.770 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:40.803 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:16:40.858 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:40.954 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:16:40.956 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.012 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:16:41.013 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.063 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:16:41.091 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.231 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-28 14:16:41.238 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.273 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:16:41.281 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.332 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:16:41.347 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.384 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:16:41.397 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.469 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:16:41.476 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.528 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.562 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:16:41.563 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.759 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.792 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:16:41.792 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.833 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.868 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:16:41.868 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.909 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.932 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:16:41.933 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.971 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:16:41.994 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:16:41.995 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:12.941 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:13.433 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:48:13.434 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:13.535 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:48:13.537 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:15.455 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:48:15.458 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:15.492 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:48:15.495 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:15.620 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 14:48:15.693 [main] DBConnector - Get session was successful!
+[ERROR] 2024-02-28 14:48:15.894 [main] MessageSystemHandlerDAOMySQLImpl - org.hibernate.exception.ConstraintViolationException: could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`app_world_chat`.`messages`, CONSTRAINT `FK64w44ngcpqp99ptcb9werdfmb` FOREIGN KEY (`chat_id`) REFERENCES `chats` (`id`))] [insert into messages (chat_id,local_date_time,message) values (?,?,?)]
+[WARN ] 2024-02-28 14:48:15.906 [main] MessageSystemHandlerImpl - Cannot create user message in the chat ! 'Test Termopasta Grizli. Exception: ua.desktop.chat.messenger.dao.exceptions.OpenSessionException: Transaction isn't successful! Rollback data.'
+[INFO ] 2024-02-28 14:48:15.981 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:16.205 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-28 14:48:16.220 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:16.255 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-28 14:48:16.260 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:16.343 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-28 14:48:16.347 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:16.489 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 14:48:16.522 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:48:16.523 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:15.230 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:15.452 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 16:10:15.452 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:15.479 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 16:10:15.480 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:16.264 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 16:10:16.265 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:44.952 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:45.218 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 16:10:45.219 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:45.250 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 16:10:45.250 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.122 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 16:10:46.131 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.149 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 16:10:46.178 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.238 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 16:10:46.239 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.272 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 16:10:46.272 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.303 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 16:10:46.330 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.396 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.425 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 16:10:46.435 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.463 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 16:10:46.472 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.506 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-28 16:10:46.510 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.545 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.571 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.651 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.679 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.706 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.731 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.754 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.768 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 16:10:46.768 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.796 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 16:10:46.812 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 16:10:46.812 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 22:29:12.030 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 22:29:12.517 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 22:31:11.468 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 22:31:11.890 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 22:36:45.943 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 22:36:46.468 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 22:37:30.585 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 22:37:30.881 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 22:44:33.665 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 22:44:33.985 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-28 22:57:46.405 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-28 23:02:00.255 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 02:56:27.626 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-29 02:56:32.983 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 02:56:34.053 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 02:56:34.106 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-29 02:57:18.948 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-29 02:57:19.240 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-29 10:07:25.925 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:26.357 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:07:26.358 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:26.421 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:07:26.421 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:27.917 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:07:27.919 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:27.950 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:07:27.987 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.059 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:07:28.064 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.127 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:07:28.128 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.176 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:07:28.206 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.311 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.358 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:07:28.373 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.413 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:07:28.431 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.484 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:07:28.489 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.562 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.623 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.724 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.802 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.847 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.890 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.932 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.956 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:07:28.958 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:28.999 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.024 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:07:29.025 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.071 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.102 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:07:29.102 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.124 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:07:29.125 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.174 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:07:29.183 [main] DBConnector - Get session was successful!
+[ERROR] 2024-02-29 10:07:29.316 [main] MessageSystemHandlerDAOMySQLImpl - org.hibernate.exception.ConstraintViolationException: could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`app_world_chat`.`messages`, CONSTRAINT `FK64w44ngcpqp99ptcb9werdfmb` FOREIGN KEY (`chat_id`) REFERENCES `chats` (`id`))] [insert into messages (chat_id,local_date_time,message) values (?,?,?)]
+[INFO ] 2024-02-29 10:07:29.354 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.473 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 10:07:29.478 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.501 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 10:07:29.503 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.540 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.591 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:29.616 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:07:29.616 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:07:31.854 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:07:31.991 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-29 10:17:03.361 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:03.714 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:17:03.714 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:03.756 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:17:03.756 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.376 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:17:05.378 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.412 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:17:05.454 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.530 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:17:05.533 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.620 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:17:05.621 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.678 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:17:05.710 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.827 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.876 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:17:05.896 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:05.939 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:17:05.966 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.019 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:17:06.022 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.069 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.112 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.224 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.268 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.314 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.359 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.418 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.440 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:17:06.441 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.482 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.506 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:17:06.506 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.564 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.623 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:17:06.623 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.654 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:17:06.654 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.706 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:17:06.707 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.749 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.820 [main] MessageSystemHandlerDAOMySQLImpl - Create message in chat was successful!
+[INFO ] 2024-02-29 10:17:06.823 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:06.977 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 10:17:06.979 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:07.016 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 10:17:07.017 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:07.056 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:07.086 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:07.122 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:07.145 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:17:07.146 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:17:09.650 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:17:09.737 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-29 10:51:36.311 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:51:36.482 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-29 10:51:59.670 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:00.451 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:52:00.453 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:00.502 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:52:00.504 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:01.978 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:52:01.979 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.002 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:52:02.044 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.115 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:52:02.117 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.176 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:52:02.177 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.230 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:52:02.266 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.492 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.566 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:52:02.590 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.648 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:52:02.665 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.723 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:52:02.731 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.813 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:02.864 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.059 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.098 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.140 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.181 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.226 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.253 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:52:03.254 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.299 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.327 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:52:03.328 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.400 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.462 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:52:03.464 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.502 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:52:03.502 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.594 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 10:52:03.595 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.667 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:03.741 [main] MessageSystemHandlerDAOMySQLImpl - Create message in chat was successful!
+[INFO ] 2024-02-29 10:52:03.746 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:04.027 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 10:52:04.030 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:04.083 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 10:52:04.084 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:04.136 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:04.207 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:04.264 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:52:04.294 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:52:04.294 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 10:53:33.745 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-29 10:53:33.932 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-29 11:06:40.820 [main] ChatSystemHandlerImpl - Read chats was successful!
+[INFO ] 2024-02-29 11:06:40.950 [main] ChatSystemHandlerImpl - Chat with this name `Test Termopasta Grizli` was existed!
+[INFO ] 2024-02-29 11:07:02.604 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:03.110 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 11:07:03.110 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:03.207 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 11:07:03.208 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:04.708 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:07:04.711 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:04.739 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:07:04.795 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:04.887 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 11:07:04.889 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:04.956 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 11:07:04.958 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.008 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 11:07:05.044 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.185 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.230 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 11:07:05.248 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.298 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 11:07:05.321 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.383 [main] ChatSystemHandlerDAOMySQLImpl - Read chats was successful!
+[INFO ] 2024-02-29 11:07:05.387 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.445 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.484 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.618 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.690 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.748 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.789 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.834 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.861 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:07:05.862 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.903 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:05.935 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:07:05.935 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.011 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.049 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 11:07:06.050 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.073 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:07:06.074 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.126 [main] ChatSystemHandlerDAOMySQLImpl - Create chat was successful!
+[INFO ] 2024-02-29 11:07:06.126 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.196 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.265 [main] MessageSystemHandlerDAOMySQLImpl - Create message in chat was successful!
+[INFO ] 2024-02-29 11:07:06.270 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.476 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 11:07:06.479 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.542 [main] MessageSystemHandlerDAOMySQLImpl - Read messages from chat was successful!
+[INFO ] 2024-02-29 11:07:06.542 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.633 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.680 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.735 [main] DBConnector - Get session was successful!
+[INFO ] 2024-02-29 11:07:06.761 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:07:06.762 [main] DBConnector - Get session was successful!

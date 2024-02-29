@@ -1,0 +1,212 @@
+[INFO ] 2024-02-23 21:53:04.656 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-23 21:58:38.156 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-23 21:58:54.524 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-23 21:58:54.803 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-23 21:58:55.036 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-23 22:21:23.210 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-23 22:21:36.645 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[WARN ] 2024-02-23 22:21:36.646 [main] UserDAOMySQLImpl - Such user with email devil is defined, please change email...
+[INFO ] 2024-02-23 22:21:36.826 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-23 22:23:12.054 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-23 22:23:26.265 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[WARN ] 2024-02-23 22:23:26.268 [main] UserDAOMySQLImpl - Such user with email devil is defined, please change email...
+[INFO ] 2024-02-23 22:23:26.433 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 17:35:16.484 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:36:05.287 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:36:11.298 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 17:36:43.161 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:36:49.280 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 17:36:49.441 [main] UserDAOMySQLImpl - User with this email devil or username devil1 was existed!
+[WARN ] 2024-02-24 17:36:49.443 [main] UserDAOMySQLImpl - Such user with email devil is defined, please change email...
+[INFO ] 2024-02-24 17:37:41.696 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:37:46.652 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 17:37:46.833 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[WARN ] 2024-02-24 17:37:46.835 [main] UserDAOMySQLImpl - Such user with email devil is defined, please change email...
+[INFO ] 2024-02-24 17:39:06.932 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:39:14.232 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 17:39:53.636 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:39:58.548 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 17:40:21.312 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:40:27.242 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 17:41:17.681 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:47:38.167 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:47:48.651 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 17:50:24.311 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:50:39.372 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 17:54:14.356 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 17:54:25.405 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:00:06.627 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:00:18.437 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:02:13.935 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:02:26.538 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:03:24.832 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:03:37.492 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:06:10.486 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:06:22.536 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:06:58.875 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:07:10.241 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:09:02.790 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:09:13.993 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:14:47.710 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:14:58.326 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:49:54.328 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:49:59.626 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 18:49:59.687 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 18:49:59.806 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 18:49:59.874 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:49:59.898 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 18:50:57.554 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:51:02.123 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:51:02.230 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 18:51:02.299 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 18:51:02.344 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:51:02.362 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 18:53:08.138 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:53:12.726 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:53:12.834 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 18:53:12.895 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 18:53:12.937 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:53:12.955 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 18:53:45.475 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:53:50.325 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:53:50.464 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 18:53:50.535 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 18:53:50.611 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:53:50.635 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 18:55:43.024 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 18:55:47.957 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:55:48.073 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 18:55:48.136 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 18:55:48.188 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 18:55:48.207 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 18:58:39.281 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:01:49.004 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:02:07.697 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:02:12.823 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:02:13.009 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:02:13.126 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:02:13.174 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:02:13.203 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:02:50.244 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:02:58.886 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:02:58.998 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:02:59.154 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:02:59.244 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:02:59.311 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:04:08.699 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:04:18.775 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:04:18.876 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:04:19.044 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:04:19.135 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:04:19.202 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:06:07.547 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:06:12.602 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:06:12.886 [main] UserDAOMySQLImpl - User was not found!
+[WARN ] 2024-02-24 19:06:12.886 [main] AuthServiceImpl - User is empty! Finding user wasn't successful!
+[INFO ] 2024-02-24 19:06:12.956 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:07:05.328 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:07:09.786 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:07:09.837 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:07:09.929 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:07:09.980 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:07:09.999 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:07:56.142 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:08:00.631 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:08:00.684 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:08:00.772 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:08:00.834 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:08:00.856 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:08:11.329 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:08:20.111 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:08:20.228 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:08:20.362 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:08:20.449 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:08:20.529 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:09:06.165 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:09:15.463 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:09:15.603 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:09:15.749 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:09:15.839 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:09:15.917 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:09:52.661 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:09:58.146 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:09:58.216 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:09:58.320 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:09:58.399 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:09:58.424 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:10:26.376 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:10:32.122 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:10:32.174 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:10:32.287 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:10:32.344 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:10:32.366 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:10:51.498 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:11:00.283 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:11:00.399 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:11:00.591 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:11:00.689 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:11:00.746 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:13:27.560 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:13:36.283 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:13:36.436 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:13:36.597 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:13:36.694 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:13:36.733 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:13:59.340 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 19:14:11.217 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 19:14:11.475 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 19:14:11.817 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 19:14:11.999 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 19:14:12.054 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 23:11:47.069 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-24 23:11:47.172 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 23:11:47.458 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-24 23:11:47.598 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 23:11:47.643 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-24 23:37:24.727 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 23:38:44.203 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 23:39:28.497 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 23:39:58.358 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 23:43:26.457 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 23:44:57.038 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-24 23:45:12.250 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-24 23:45:12.389 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-25 14:42:50.320 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-25 14:42:50.659 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-25 14:42:50.848 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-25 14:42:50.913 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-25 14:42:50.953 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-25 14:42:51.034 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-25 20:00:09.729 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-25 20:00:09.889 [main] UserDAOMySQLImpl - User with this email devil or username devil was existed!
+[INFO ] 2024-02-25 20:00:10.147 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-25 20:00:10.296 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-25 20:00:10.338 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-25 20:00:10.569 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-27 02:30:29.772 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-27 02:30:58.116 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-27 12:16:46.194 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-27 12:18:03.767 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-27 12:25:47.004 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-27 12:26:42.411 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-27 17:57:23.249 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-28 14:18:46.700 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-28 14:18:46.807 [main] UserDAOMySQLImpl - User was not found!
+[INFO ] 2024-02-28 14:19:33.203 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-28 14:19:35.352 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-28 14:19:35.406 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:51:12.845 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:51:14.242 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:51:14.284 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:51:16.109 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-29 10:51:16.342 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-29 10:53:18.314 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 10:53:20.468 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:53:20.533 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 10:53:22.509 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-29 10:53:22.862 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-29 11:06:25.897 [main] UserDAOMySQLImpl - Create user was successful!
+[INFO ] 2024-02-29 11:06:27.543 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:06:27.583 [main] UserDAOMySQLImpl - User was found!
+[INFO ] 2024-02-29 11:06:29.492 [main] AuthServiceImpl - Getting user auth instance!
+[INFO ] 2024-02-29 11:06:29.688 [main] AuthServiceImpl - Getting user auth instance!
