@@ -1,6 +1,6 @@
 # Desktop Chat Messenger 👨‍💻👩‍💻
 
-![Project Video](Starter/src/main/resources/data_for_readme/media/2023-09-18-02-56-31_FL5hUwpI.gif)
+![Project Video](starter/src/main/resources/data_for_readme/media/2023-09-18-02-56-31_FL5hUwpI.gif)
 
 
 > This application is Client-Server java chat-messenger.
@@ -82,11 +82,6 @@ All technologies you can see in the part of this README.md under the heading [Te
     - `Starter`: The "Starter" module serves as the entry point for the application. This module contains classes for
       starting work with server and clients.
 
-### Diagram modules application
-
-- The modules diagram:<br>
-  ![Modules](Starter/src/main/resources/data_for_readme/imgs/modules_diagram.png)
-
 ### User Interface
 
 - The user interface is built using the `Swing` library, providing an intuitive and interactive access.
@@ -108,9 +103,6 @@ All technologies you can see in the part of this README.md under the heading [Te
 
 - The system is partially tested using `JUnit 5` to ensure its functionality and reliability. Modules that was
   tested: `Auth`, `Core`, `ParserJSON`, and class `Converter` into `Models` module.
-
-- The testing result:<br>
-  ![Testing](Starter/src/main/resources/data_for_readme/imgs/test_coverage.png)
 
 ### Logging
 
@@ -214,7 +206,7 @@ hibernate.hbm2ddl.auto=update
 - You need to create database and add properties to `hibernate.properties`, and this all that u must to do in order to start
   to using this project.
   <br><i><b>Visually it looks like this:</b></i><br>
-  ![DB](Starter/src/main/resources/data_for_readme/imgs/db_diagram.png)
+  ![DB](starter/src/main/resources/data_for_readme/imgs/db_diagram.png)
 
 ---
 
